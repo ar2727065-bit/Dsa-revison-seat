@@ -1,12 +1,135 @@
 // DSA Revision Roadmap Interactive Engine
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initSections();
   initNotesModal();
   initCheckboxes();
+  initRevisionChecklist();
   initProgress();
   initSearch();
 });
+
+// --- Revision Checklist (Independent from Questions Progress Counter) ---
+function initRevisionChecklist() {
+  const revisionState = JSON.parse(localStorage.getItem('dsa_revision_checklist') || '{}');
+
+  document.querySelectorAll('.revision-checkbox').forEach((cb, idx) => {
+    const id = cb.getAttribute('data-revision-id') || `rev_${idx}`;
+    cb.setAttribute('data-revision-id', id);
+
+    if (revisionState[id]) {
+      cb.checked = true;
+    }
+
+    cb.addEventListener('change', () => {
+      revisionState[id] = cb.checked;
+      localStorage.setItem('dsa_revision_checklist', JSON.stringify(revisionState));
+      // Does NOT trigger updateProgress() - revision checklist is independent!
+    });
+  });
+}
+
+// --- Checkboxes & Progress ---
+function initCheckboxes() {
+  const completed = JSON.parse(localStorage.getItem('dsa_completed_slugs') || '{}');
+
+  document.body.addEventListener('change', (e) => {
+    if (e.target.classList.contains('question-checkbox')) {
+      const slug = e.target.getAttribute('data-slug');
+      const isChecked = e.target.checked;
+
+      if (slug) {
+        if (isChecked) {
+          completed[slug] = true;
+        } else {
+          delete completed[slug];
+        }
+
+        // Sync all checkboxes with the same data-slug across the page
+        document.querySelectorAll(`.question-checkbox[data-slug="${slug}"]`).forEach(cb => {
+          cb.checked = isChecked;
+          const item = cb.closest('.question-item');
+          if (item) {
+            if (isChecked) item.classList.add('is-completed');
+            else item.classList.remove('is-completed');
+          }
+        });
+
+        localStorage.setItem('dsa_completed_slugs', JSON.stringify(completed));
+      } else {
+        const item = e.target.closest('.question-item');
+        if (item) {
+          if (isChecked) item.classList.add('is-completed');
+          else item.classList.remove('is-completed');
+        }
+      }
+
+      updateProgress();
+    }
+  });
+
+  // Restore checkbox states
+  document.querySelectorAll('.question-checkbox').forEach(cb => {
+    const slug = cb.getAttribute('data-slug');
+    if (slug && completed[slug]) {
+      cb.checked = true;
+      const item = cb.closest('.question-item');
+      if (item) item.classList.add('is-completed');
+    }
+  });
+}
+
+function initProgress() {
+  updateProgress();
+  updateStatsCounters();
+}
+
+function updateProgress() {
+  const completed = JSON.parse(localStorage.getItem('dsa_completed_slugs') || '{}');
+
+  // Count unique problem slugs strictly from the Questions Sheet (#part-questions)
+  const questionSheetSlugs = new Set();
+  document.querySelectorAll('#part-questions .question-checkbox[data-slug]').forEach(cb => {
+    const slug = cb.getAttribute('data-slug');
+    if (slug) questionSheetSlugs.add(slug);
+  });
+
+  let completedCount = 0;
+  questionSheetSlugs.forEach(slug => {
+    if (completed[slug]) completedCount++;
+  });
+
+  const totalQuestions = questionSheetSlugs.size > 0 ? questionSheetSlugs.size : 197;
+
+  const countEl = document.getElementById('completed-count');
+  const totalEl = document.getElementById('total-count');
+  const fillEl = document.getElementById('progress-bar-fill');
+
+  if (countEl) countEl.textContent = completedCount;
+  if (totalEl) totalEl.textContent = totalQuestions;
+
+  if (fillEl && totalQuestions > 0) {
+    const pct = Math.round((completedCount / totalQuestions) * 100);
+    fillEl.style.width = `${pct}%`;
+  }
+}
+
+// --- Light / Dark Theme ---
+function initTheme() {
+  const savedTheme = localStorage.getItem('dsa_theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('light-mode');
+  const isLight = document.body.classList.contains('light-mode');
+  localStorage.setItem('dsa_theme', isLight ? 'light' : 'dark');
+}
+
+window.toggleTheme = toggleTheme;
 
 // --- Section Expand / Collapse ---
 function initSections() {
