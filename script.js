@@ -1,189 +1,165 @@
-// DSA Sheet — RisingBrain-style Interactive Engine
-'use strict';
+// DSA Revision Roadmap Interactive Engine
 
 document.addEventListener('DOMContentLoaded', () => {
-  countDifficulties();
-  restoreCheckboxes();
-  restoreAccordionStates();
-  updateAllProgress();
-  updateAllNoteButtons();
-  initAccordions();
-  initNoteModal();
+  initSections();
+  initNotesModal();
+  initCheckboxes();
+  initProgress();
   initSearch();
-  initDiffFilter();
 });
 
-// ============================================================
-// DIFFICULTY COUNTERS
-// ============================================================
-function countDifficulties() {
-  const easy = document.querySelectorAll('.question-row[data-difficulty="easy"]').length;
-  const medium = document.querySelectorAll('.question-row[data-difficulty="medium"]').length;
-  const hard = document.querySelectorAll('.question-row[data-difficulty="hard"]').length;
+// --- Section Expand / Collapse ---
+function initSections() {
+  const sections = document.querySelectorAll('.pattern-section-card');
+  const storedStates = JSON.parse(localStorage.getItem('dsa_section_states') || '{}');
 
-  const el = (id) => document.getElementById(id);
-  if (el('cnt-easy')) el('cnt-easy').textContent = easy;
-  if (el('cnt-medium')) el('cnt-medium').textContent = medium;
-  if (el('cnt-hard')) el('cnt-hard').textContent = hard;
-}
+  sections.forEach(section => {
+    const sectionId = section.getAttribute('id');
+    const header = section.querySelector('.pattern-header');
+    
+    // Restore state from localStorage if available
+    if (sectionId && storedStates[sectionId] !== undefined) {
+      if (storedStates[sectionId]) {
+        section.classList.remove('is-collapsed');
+      } else {
+        section.classList.add('is-collapsed');
+      }
+    }
 
-// ============================================================
-// ACCORDION
-// ============================================================
-function initAccordions() {
-  document.querySelectorAll('.pattern-accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const acc = header.closest('.pattern-accordion');
-      acc.classList.toggle('open');
-      const id = acc.id;
-      const states = getLocalJSON('dsa_acc_states', {});
-      states[id] = acc.classList.contains('open');
-      setLocalJSON('dsa_acc_states', states);
-    });
-  });
-}
+    if (header) {
+      header.addEventListener('click', (e) => {
+        // Prevent toggle if clicking directly on a link or button inside header
+        if (e.target.closest('a')) return;
+        
+        section.classList.toggle('is-collapsed');
+        
+        // Save state
+        if (sectionId) {
+          const states = JSON.parse(localStorage.getItem('dsa_section_states') || '{}');
+          states[sectionId] = !section.classList.contains('is-collapsed');
+          localStorage.setItem('dsa_section_states', JSON.stringify(states));
+        }
 
-function restoreAccordionStates() {
-  const states = getLocalJSON('dsa_acc_states', {});
-  document.querySelectorAll('.pattern-accordion').forEach(acc => {
-    if (states[acc.id] === true) acc.classList.add('open');
-  });
-}
-
-// ============================================================
-// CHECKBOXES & PROGRESS
-// ============================================================
-function restoreCheckboxes() {
-  const completed = getLocalJSON('dsa_completed', {});
-  document.querySelectorAll('.q-checkbox').forEach(cb => {
-    const slug = cb.dataset.slug;
-    if (completed[slug]) {
-      cb.checked = true;
-      const row = cb.closest('.question-row');
-      if (row) row.classList.add('completed');
+        updateToggleBtnText(section);
+      });
+      updateToggleBtnText(section);
     }
   });
 
-  // Attach change listeners
-  document.querySelectorAll('.q-checkbox').forEach(cb => {
-    cb.addEventListener('change', onCheckboxChange);
-  });
-}
+  const expandAllBtn = document.getElementById('expand-all-btn');
+  const collapseAllBtn = document.getElementById('collapse-all-btn');
 
-function onCheckboxChange(e) {
-  const cb = e.currentTarget;
-  const slug = cb.dataset.slug;
-  const row = cb.closest('.question-row');
-  const completed = getLocalJSON('dsa_completed', {});
-
-  if (cb.checked) {
-    completed[slug] = true;
-    if (row) row.classList.add('completed');
-  } else {
-    delete completed[slug];
-    if (row) row.classList.remove('completed');
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener('click', () => {
+      document.querySelectorAll('.pattern-section-card').forEach(s => {
+        s.classList.remove('is-collapsed');
+        updateToggleBtnText(s);
+      });
+      saveAllSectionStates(true);
+    });
   }
 
-  setLocalJSON('dsa_completed', completed);
-  updateAllProgress();
-}
-
-function updateAllProgress() {
-  const completed = getLocalJSON('dsa_completed', {});
-  const allSlugs = [...document.querySelectorAll('.q-checkbox')].map(cb => cb.dataset.slug);
-  const totalAll = allSlugs.length;
-  const doneAll = allSlugs.filter(s => completed[s]).length;
-
-  // Sheet progress bar
-  const pct = totalAll > 0 ? Math.round((doneAll / totalAll) * 100) : 0;
-  setEl('sheet-done', doneAll);
-  setEl('sheet-pct', pct + '%');
-  setWidth('sheet-progress-fill', pct);
-
-  // Donut
-  const circumference = 175.93;
-  setEl('donut-pct', pct + '%');
-  setEl('donut-label', `${doneAll}/${totalAll}`);
-  const circle = document.getElementById('donut-circle');
-  if (circle) {
-    circle.style.strokeDashoffset = circumference - (pct / 100) * circumference;
+  if (collapseAllBtn) {
+    collapseAllBtn.addEventListener('click', () => {
+      document.querySelectorAll('.pattern-section-card').forEach(s => {
+        s.classList.add('is-collapsed');
+        updateToggleBtnText(s);
+      });
+      saveAllSectionStates(false);
+    });
   }
-
-  // Difficulty rows
-  ['easy', 'medium', 'hard'].forEach(diff => {
-    const diffRows = document.querySelectorAll(`.question-row[data-difficulty="${diff}"] .q-checkbox`);
-    const total = diffRows.length;
-    const done = [...diffRows].filter(cb => completed[cb.dataset.slug]).length;
-    const pctDiff = total > 0 ? Math.round((done / total) * 100) : 0;
-
-    const progEl = document.getElementById(`${diff}-progress`);
-    if (progEl) progEl.textContent = `${done}/${total} ${pctDiff}%`;
-    setWidth(`${diff}-fill`, pctDiff);
-  });
-
-  // Per-accordion progress pills
-  document.querySelectorAll('.pattern-accordion').forEach(acc => {
-    const pill = acc.querySelector('.pattern-progress-pill');
-    const checkboxes = acc.querySelectorAll('.q-checkbox');
-    const total = checkboxes.length;
-    const done = [...checkboxes].filter(cb => completed[cb.dataset.slug]).length;
-    if (pill) pill.textContent = `${done}/${total}`;
-  });
 }
 
-// ============================================================
-// NOTE MODAL
-// ============================================================
+function updateToggleBtnText(section) {
+  const btnText = section.querySelector('.toggle-section-btn .toggle-text');
+  if (btnText) {
+    btnText.textContent = section.classList.contains('is-collapsed') ? 'Open Section' : 'Close Section';
+  }
+}
+
+function saveAllSectionStates(isOpen) {
+  const states = {};
+  document.querySelectorAll('.pattern-section-card').forEach(s => {
+    const id = s.getAttribute('id');
+    if (id) states[id] = isOpen;
+  });
+  localStorage.setItem('dsa_section_states', JSON.stringify(states));
+}
+
+// --- Note Modal & LocalStorage ---
 let activeNoteSlug = null;
-let saveTimer = null;
+let saveTimeout = null;
 
-function initNoteModal() {
-  const modal = document.getElementById('note-modal');
-  const closeBtn = document.getElementById('modal-close');
-  const clearBtn = document.getElementById('modal-clear');
+function initNotesModal() {
+  const modalOverlay = document.getElementById('note-modal');
+  const closeBtn = document.getElementById('modal-close-btn');
   const textarea = document.getElementById('note-textarea');
+  const modalTitle = document.getElementById('modal-title');
+  const modalSubtitle = document.getElementById('modal-subtitle');
+  const clearBtn = document.getElementById('modal-clear-btn');
+  const saveStatus = document.getElementById('save-status');
 
-  // Open modal via event delegation
-  document.body.addEventListener('click', e => {
+  // Attach click handlers to all note buttons
+  document.body.addEventListener('click', (e) => {
     const btn = e.target.closest('.note-btn');
-    if (!btn) return;
-    const slug = btn.dataset.slug;
-    const title = btn.dataset.title || slug;
-    openModal(slug, title);
+    if (btn) {
+      const slug = btn.getAttribute('data-slug');
+      const title = btn.getAttribute('data-title') || 'Question Note';
+      openNoteModal(slug, title);
+    }
   });
 
-  function openModal(slug, title) {
+  function openNoteModal(slug, title) {
     activeNoteSlug = slug;
-    setEl('modal-title', title);
-    setEl('modal-slug', `dsa_note_${slug}`);
-    textarea.value = localStorage.getItem(`dsa_note_${slug}`) || '';
-    modal.classList.add('open');
-    setTimeout(() => textarea.focus(), 80);
+    modalTitle.textContent = `📝 Notes: ${title}`;
+    modalSubtitle.textContent = `Saved in Browser Memory (localStorage: dsa_note_${slug})`;
+    
+    // Load existing note
+    const existingNote = localStorage.getItem(`dsa_note_${slug}`) || '';
+    textarea.value = existingNote;
+    saveStatus.textContent = existingNote ? 'Loaded saved note' : 'Auto-saves as you type...';
+
+    modalOverlay.classList.add('is-active');
+    setTimeout(() => textarea.focus(), 100);
   }
 
-  function closeModal() {
-    modal.classList.remove('open');
+  function closeNoteModal() {
+    modalOverlay.classList.remove('is-active');
     activeNoteSlug = null;
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  if (closeBtn) closeBtn.addEventListener('click', closeNoteModal);
+  
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeNoteModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('is-active')) {
+      closeNoteModal();
+    }
   });
 
+  // Auto-save on textarea input
   textarea.addEventListener('input', () => {
-    clearTimeout(saveTimer);
-    saveTimer = setTimeout(() => {
-      if (!activeNoteSlug) return;
+    if (!activeNoteSlug) return;
+    saveStatus.textContent = 'Saving...';
+    clearTimeout(saveTimeout);
+    
+    saveTimeout = setTimeout(() => {
       const val = textarea.value.trim();
       if (val) {
         localStorage.setItem(`dsa_note_${activeNoteSlug}`, val);
+        saveStatus.textContent = '✓ Saved to browser memory';
       } else {
         localStorage.removeItem(`dsa_note_${activeNoteSlug}`);
+        saveStatus.textContent = 'Note cleared';
       }
-      updateNoteButton(activeNoteSlug);
-    }, 350);
+      updateNoteButtonState(activeNoteSlug);
+      updateStatsCounters();
+    }, 300);
   });
 
   if (clearBtn) {
@@ -191,109 +167,143 @@ function initNoteModal() {
       if (!activeNoteSlug) return;
       textarea.value = '';
       localStorage.removeItem(`dsa_note_${activeNoteSlug}`);
-      updateNoteButton(activeNoteSlug);
+      saveStatus.textContent = 'Note cleared';
+      updateNoteButtonState(activeNoteSlug);
+      updateStatsCounters();
     });
   }
+
+  // Initial update of all note buttons
+  updateAllNoteButtons();
 }
 
-function updateNoteButton(slug) {
-  const hasNote = !!(localStorage.getItem(`dsa_note_${slug}`) || '').trim();
+function updateNoteButtonState(slug) {
+  const note = localStorage.getItem(`dsa_note_${slug}`);
   document.querySelectorAll(`.note-btn[data-slug="${slug}"]`).forEach(btn => {
-    btn.classList.toggle('note-active', hasNote);
-    btn.title = hasNote ? 'View/Edit Note' : 'Add Note';
+    if (note && note.trim().length > 0) {
+      btn.classList.add('has-note');
+      btn.innerHTML = '📝 Note ✨';
+    } else {
+      btn.classList.remove('has-note');
+      btn.innerHTML = '📝 Note';
+    }
   });
 }
 
 function updateAllNoteButtons() {
   document.querySelectorAll('.note-btn').forEach(btn => {
-    updateNoteButton(btn.dataset.slug);
+    const slug = btn.getAttribute('data-slug');
+    if (slug) updateNoteButtonState(slug);
   });
 }
 
-// ============================================================
-// SEARCH
-// ============================================================
+// --- Checkboxes & Progress ---
+function initCheckboxes() {
+  const completed = JSON.parse(localStorage.getItem('dsa_completed_slugs') || '{}');
+
+  document.body.addEventListener('change', (e) => {
+    if (e.target.classList.contains('question-checkbox')) {
+      const slug = e.target.getAttribute('data-slug');
+      const isChecked = e.target.checked;
+      const item = e.target.closest('.question-item');
+
+      if (isChecked) {
+        completed[slug] = true;
+        if (item) item.classList.add('is-completed');
+      } else {
+        delete completed[slug];
+        if (item) item.classList.remove('is-completed');
+      }
+
+      localStorage.setItem('dsa_completed_slugs', JSON.stringify(completed));
+      updateProgress();
+    }
+  });
+
+  // Restore checkbox states
+  document.querySelectorAll('.question-checkbox').forEach(cb => {
+    const slug = cb.getAttribute('data-slug');
+    if (completed[slug]) {
+      cb.checked = true;
+      const item = cb.closest('.question-item');
+      if (item) item.classList.add('is-completed');
+    }
+  });
+}
+
+function initProgress() {
+  updateProgress();
+  updateStatsCounters();
+}
+
+function updateProgress() {
+  const completed = JSON.parse(localStorage.getItem('dsa_completed_slugs') || '{}');
+  const completedCount = Object.keys(completed).length;
+  const totalQuestions = document.querySelectorAll('.question-checkbox').length;
+
+  const countEl = document.getElementById('completed-count');
+  const totalEl = document.getElementById('total-count');
+  const fillEl = document.getElementById('progress-bar-fill');
+
+  if (countEl) countEl.textContent = completedCount;
+  if (totalEl) totalEl.textContent = totalQuestions;
+
+  if (fillEl && totalQuestions > 0) {
+    const pct = Math.round((completedCount / totalQuestions) * 100);
+    fillEl.style.width = `${pct}%`;
+  }
+}
+
+function updateStatsCounters() {
+  let notesCount = 0;
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key.startsWith('dsa_note_')) {
+      notesCount++;
+    }
+  }
+  const notesEl = document.getElementById('notes-saved-count');
+  if (notesEl) notesEl.textContent = notesCount;
+}
+
+// --- Realtime Search Filter ---
 function initSearch() {
-  const input = document.getElementById('search-input');
-  if (!input) return;
+  const searchInput = document.getElementById('search-input');
+  if (!searchInput) return;
 
-  input.addEventListener('input', applyFilters);
-}
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
 
-// ============================================================
-// DIFFICULTY FILTER
-// ============================================================
-let currentDiff = 'all';
+    document.querySelectorAll('.pattern-section-card').forEach(section => {
+      let hasMatch = false;
 
-function initDiffFilter() {
-  const filterBtn = document.getElementById('diff-filter-btn');
-  const dropdown = document.getElementById('diff-dropdown');
+      // Check section title
+      const titleEl = section.querySelector('.pattern-header h2, .pattern-header h3');
+      const titleText = titleEl ? titleEl.textContent.toLowerCase() : '';
 
-  if (filterBtn) {
-    filterBtn.addEventListener('click', e => {
-      e.stopPropagation();
-      dropdown.classList.toggle('open');
-    });
-  }
+      if (query === '' || titleText.includes(query)) {
+        hasMatch = true;
+      }
 
-  document.addEventListener('click', () => dropdown.classList.remove('open'));
-
-  if (dropdown) {
-    dropdown.querySelectorAll('.filter-option').forEach(opt => {
-      opt.addEventListener('click', () => {
-        currentDiff = opt.dataset.value;
-        dropdown.querySelectorAll('.filter-option').forEach(o => o.classList.remove('selected'));
-        opt.classList.add('selected');
-        filterBtn.classList.toggle('active', currentDiff !== 'all');
-        dropdown.classList.remove('open');
-        applyFilters();
+      // Check questions inside section
+      section.querySelectorAll('.question-item').forEach(item => {
+        const itemText = item.textContent.toLowerCase();
+        if (query === '' || itemText.includes(query)) {
+          item.style.display = 'flex';
+          hasMatch = true;
+        } else {
+          item.style.display = 'none';
+        }
       });
+
+      if (hasMatch) {
+        section.style.display = 'block';
+        if (query !== '') {
+          section.classList.remove('is-collapsed');
+        }
+      } else {
+        section.style.display = 'none';
+      }
     });
-  }
-}
-
-function applyFilters() {
-  const query = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
-
-  document.querySelectorAll('.pattern-accordion').forEach(acc => {
-    let accHasVisibleRow = false;
-
-    acc.querySelectorAll('.question-row').forEach(row => {
-      const titleEl = row.querySelector('.q-title');
-      const title = (titleEl ? titleEl.textContent : '').toLowerCase();
-      const diff = row.dataset.difficulty;
-
-      const matchesDiff = currentDiff === 'all' || diff === currentDiff;
-      const matchesQuery = !query || title.includes(query);
-
-      const visible = matchesDiff && matchesQuery;
-      row.classList.toggle('hidden', !visible);
-      if (visible) accHasVisibleRow = true;
-    });
-
-    acc.classList.toggle('hidden', !accHasVisibleRow);
-    if (query && accHasVisibleRow) acc.classList.add('open');
   });
-}
-
-// ============================================================
-// HELPERS
-// ============================================================
-function getLocalJSON(key, def) {
-  try { return JSON.parse(localStorage.getItem(key)) || def; }
-  catch { return def; }
-}
-
-function setLocalJSON(key, val) {
-  localStorage.setItem(key, JSON.stringify(val));
-}
-
-function setEl(id, val) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = val;
-}
-
-function setWidth(id, pct) {
-  const el = document.getElementById(id);
-  if (el) el.style.width = `${pct}%`;
 }
