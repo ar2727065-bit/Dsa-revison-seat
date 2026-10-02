@@ -165,7 +165,7 @@
 </blockquote>
 <p><strong>Total problems in this plan: 197</strong> (target was ~200; a well-selected 197 beats a padded 200 — see Part 5, Section 3 of your request). Distribution: <strong>51 Easy / 116 Medium / 30 Hard</strong> — close to your requested 50-60 / 110-125 / 20-30 split, skewed toward Medium because that is what actually gets asked.</p>
 <p><strong>A note on the research behind this list:</strong> There is no public, complete, real-time database of "exact interview frequency" — LeetCode does not publish this, and company-tag lists (Blind 75, NeetCode 150, Grind 75, company CSVs) are community-maintained and always somewhat dated. What follows blends three things: (1) <strong>documented evidence</strong> — problems that repeatedly show up across Blind 75 / NeetCode 150 / Grind 75 / LeetCode company-tag repositories and 2025-2026 interview-experience write-ups; (2) <strong>pattern-coverage synthesis</strong> — my own selection of the problem that <em>best teaches</em> a given pattern, chosen so the set has minimal redundancy; and (3) <strong>your specific constraint</strong> that this must generalize across companies, not target Barclays/Mastercard/ZS/Mu Sigma/Quantiphi/Capgemini or any single employer. Where a 🔥 rating is given, treat it as a qualitative synthesis, not a statistic.</p>
-<p><strong>Contents:</strong> <a href="#part-1--the-8-week-arc">Part 1 — 8-Week Overview</a> · <a href="#part-2--complete-dsa-pattern-list">Part 2 — Complete Pattern List (22 patterns)</a> · <a href="#part-3--day-1--day-56-schedule">Part 3 — Day 1→56 Schedule</a> · <a href="#part-4--weekly-tests-pattern-recognition-not-memorization">Part 4 — Weekly Tests</a> · <a href="#part-5--final-pattern-recognition-cheat-sheet">Part 5 — Cheat Sheet</a> · <a href="#part-6---top-100-high-roi-interview-problems">Part 6 — Top 100 ROI List</a> · <a href="#part-7--mistake--revision-strategy">Part 7 — Revision Strategy</a> · <a href="#part-8--final-interview-preparation-strategy">Part 8 — Final Prep Strategy</a></p>
+<p><strong>Contents:</strong> <a href="#part-1--the-8-week-arc" target="_blank">Part 1 — 8-Week Overview</a> · <a href="#part-2--complete-dsa-pattern-list" target="_blank">Part 2 — Complete Pattern List (22 patterns)</a> · <a href="#part-3--day-1--day-56-schedule" target="_blank">Part 3 — Day 1→56 Schedule</a> · <a href="#part-4--weekly-tests-pattern-recognition-not-memorization" target="_blank">Part 4 — Weekly Tests</a> · <a href="#part-5--final-pattern-recognition-cheat-sheet" target="_blank">Part 5 — Cheat Sheet</a> · <a href="#part-6---top-100-high-roi-interview-problems" target="_blank">Part 6 — Top 100 ROI List</a> · <a href="#part-7--mistake--revision-strategy" target="_blank">Part 7 — Revision Strategy</a> · <a href="#part-8--final-interview-preparation-strategy" target="_blank">Part 8 — Final Prep Strategy</a></p>
 <hr />
 <h2 id="why-these-patterns-and-why-this-weighting">Why These Patterns, and Why This Weighting</h2>
 <p>Research into 2025-2026 interview-prep resources (NeetCode 150, Blind 75, Grind 75, LeetCode company-tag repositories, and discussion-board "most repeated questions" round-ups) converges on the same short list of high-yield categories: <strong>Arrays/Hashing, Two Pointers, Sliding Window, Binary Search, Trees/Graphs (BFS/DFS/Union-Find/Topological Sort), Heaps, Backtracking, and Dynamic Programming</strong> are named as the backbone of general software-engineering interviews across Google, Meta, Amazon, Microsoft, and most mid-size/product companies, with Dynamic Programming and Graphs consistently flagged as the hardest and most differentiating for mid-to-senior loops. Segment Trees, Fenwick Trees, heavy graph theory (Dijkstra/MST at competitive-programming depth), and advanced string algorithms (KMP, Manacher, suffix arrays) are deliberately <strong>excluded</strong> — they show up occasionally but are not general-interview staples, and including them would dilute time better spent mastering the 22 patterns below.</p>
@@ -525,30 +525,30 @@ for (int i = 0; i &lt; n; i++) {
 <strong>C++ tools:</strong> <code>unordered_map</code>, <code>unordered_set</code>, <code>map</code> (when sorted keys needed), <code>vector</code>, <code>sort()</code>, string building with <code>string</code> + <code>to_string</code>.</p>
 <h4 id="easy">🟢 Easy</h4>
 <ul>
-<li><strong>Two Sum</strong> (<a href="https://leetcode.com/problems/two-sum/">#1</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Contains Duplicate</strong> (<a href="https://leetcode.com/problems/contains-duplicate/">#217</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Valid Anagram</strong> (<a href="https://leetcode.com/problems/valid-anagram/">#242</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Majority Element</strong> (<a href="https://leetcode.com/problems/majority-element/">#169</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Intersection of Two Arrays</strong> (<a href="https://leetcode.com/problems/intersection-of-two-arrays/">#349</a>) — 🔥 SHOULD DO</li>
-<li><strong>Merge Sorted Array</strong> (<a href="https://leetcode.com/problems/merge-sorted-array/">#88</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Missing Number</strong> (<a href="https://leetcode.com/problems/missing-number/">#268</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Word Pattern</strong> (<a href="https://leetcode.com/problems/word-pattern/">#290</a>) — 🔥 OPTIONAL</li>
+<li><strong>Two Sum</strong> (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Contains Duplicate</strong> (<a href="https://leetcode.com/problems/contains-duplicate/" target="_blank">#217</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Valid Anagram</strong> (<a href="https://leetcode.com/problems/valid-anagram/" target="_blank">#242</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Majority Element</strong> (<a href="https://leetcode.com/problems/majority-element/" target="_blank">#169</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Intersection of Two Arrays</strong> (<a href="https://leetcode.com/problems/intersection-of-two-arrays/" target="_blank">#349</a>) — 🔥 SHOULD DO</li>
+<li><strong>Merge Sorted Array</strong> (<a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">#88</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Missing Number</strong> (<a href="https://leetcode.com/problems/missing-number/" target="_blank">#268</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Word Pattern</strong> (<a href="https://leetcode.com/problems/word-pattern/" target="_blank">#290</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="medium">🟡 Medium</h4>
 <ul>
-<li><strong>Group Anagrams</strong> (<a href="https://leetcode.com/problems/group-anagrams/">#49</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Top K Frequent Elements</strong> (<a href="https://leetcode.com/problems/top-k-frequent-elements/">#347</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Product of Array Except Self</strong> (<a href="https://leetcode.com/problems/product-of-array-except-self/">#238</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Longest Consecutive Sequence</strong> (<a href="https://leetcode.com/problems/longest-consecutive-sequence/">#128</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Encode and Decode Strings</strong> (<a href="https://leetcode.com/problems/encode-and-decode-strings/">#271</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Sort Colors</strong> (<a href="https://leetcode.com/problems/sort-colors/">#75</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Set Matrix Zeroes</strong> (<a href="https://leetcode.com/problems/set-matrix-zeroes/">#73</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Rotate Array</strong> (<a href="https://leetcode.com/problems/rotate-array/">#189</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>4Sum II</strong> (<a href="https://leetcode.com/problems/4sum-ii/">#454</a>) — 🔥 OPTIONAL</li>
+<li><strong>Group Anagrams</strong> (<a href="https://leetcode.com/problems/group-anagrams/" target="_blank">#49</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Top K Frequent Elements</strong> (<a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">#347</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Product of Array Except Self</strong> (<a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank">#238</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Longest Consecutive Sequence</strong> (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Encode and Decode Strings</strong> (<a href="https://leetcode.com/problems/encode-and-decode-strings/" target="_blank">#271</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Sort Colors</strong> (<a href="https://leetcode.com/problems/sort-colors/" target="_blank">#75</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Set Matrix Zeroes</strong> (<a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">#73</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Rotate Array</strong> (<a href="https://leetcode.com/problems/rotate-array/" target="_blank">#189</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>4Sum II</strong> (<a href="https://leetcode.com/problems/4sum-ii/" target="_blank">#454</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard">🔴 Hard</h4>
 <ul>
-<li><strong>First Missing Positive</strong> (<a href="https://leetcode.com/problems/first-missing-positive/">#41</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>First Missing Positive</strong> (<a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">#41</a>) — 🔥🔥🔥 MUST DO</li>
 </ul>
 <hr />
 <h3 id="2-two-pointers">2. Two Pointers</h3>
@@ -570,23 +570,23 @@ while (l &lt; r) {
 <strong>C++ tools:</strong> <code>sort()</code>, <code>vector::erase</code>/index overwriting for in-place edits, <code>swap()</code>.</p>
 <h4 id="easy_1">🟢 Easy</h4>
 <ul>
-<li><strong>Valid Palindrome</strong> (<a href="https://leetcode.com/problems/valid-palindrome/">#125</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Move Zeroes</strong> (<a href="https://leetcode.com/problems/move-zeroes/">#283</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Is Subsequence</strong> (<a href="https://leetcode.com/problems/is-subsequence/">#392</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Squares of a Sorted Array</strong> (<a href="https://leetcode.com/problems/squares-of-a-sorted-array/">#977</a>) — 🔥 OPTIONAL</li>
+<li><strong>Valid Palindrome</strong> (<a href="https://leetcode.com/problems/valid-palindrome/" target="_blank">#125</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Move Zeroes</strong> (<a href="https://leetcode.com/problems/move-zeroes/" target="_blank">#283</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Is Subsequence</strong> (<a href="https://leetcode.com/problems/is-subsequence/" target="_blank">#392</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Squares of a Sorted Array</strong> (<a href="https://leetcode.com/problems/squares-of-a-sorted-array/" target="_blank">#977</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="medium_1">🟡 Medium</h4>
 <ul>
-<li><strong>3Sum</strong> (<a href="https://leetcode.com/problems/3sum/">#15</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Container With Most Water</strong> (<a href="https://leetcode.com/problems/container-with-most-water/">#11</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Two Sum II - Input Array Is Sorted</strong> (<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">#167</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>4Sum</strong> (<a href="https://leetcode.com/problems/4sum/">#18</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Remove Duplicates from Sorted Array II</strong> (<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/">#80</a>) — 🔥 SHOULD DO</li>
-<li><strong>Boats to Save People</strong> (<a href="https://leetcode.com/problems/boats-to-save-people/">#881</a>) — 🔥 OPTIONAL</li>
+<li><strong>3Sum</strong> (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Container With Most Water</strong> (<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">#11</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Two Sum II - Input Array Is Sorted</strong> (<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank">#167</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>4Sum</strong> (<a href="https://leetcode.com/problems/4sum/" target="_blank">#18</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Remove Duplicates from Sorted Array II</strong> (<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/" target="_blank">#80</a>) — 🔥 SHOULD DO</li>
+<li><strong>Boats to Save People</strong> (<a href="https://leetcode.com/problems/boats-to-save-people/" target="_blank">#881</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard_1">🔴 Hard</h4>
 <ul>
-<li><strong>Trapping Rain Water</strong> (<a href="https://leetcode.com/problems/trapping-rain-water/">#42</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Trapping Rain Water</strong> (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>) — 🔥🔥🔥 MUST DO</li>
 </ul>
 <hr />
 <h3 id="3-sliding-window">3. Sliding Window</h3>
@@ -610,24 +610,24 @@ for (int right = 0; right &lt; n; right++) {
 <strong>C++ tools:</strong> <code>unordered_map&lt;char,int&gt;</code>, <code>deque&lt;int&gt;</code> (for sliding window maximum), two-pointer indices, <code>min</code>/<code>max</code>.</p>
 <h4 id="easy_2">🟢 Easy</h4>
 <ul>
-<li><strong>Best Time to Buy and Sell Stock</strong> (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">#121</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Maximum Average Subarray I</strong> (<a href="https://leetcode.com/problems/maximum-average-subarray-i/">#643</a>) — 🔥 SHOULD DO</li>
+<li><strong>Best Time to Buy and Sell Stock</strong> (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">#121</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Maximum Average Subarray I</strong> (<a href="https://leetcode.com/problems/maximum-average-subarray-i/" target="_blank">#643</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_2">🟡 Medium</h4>
 <ul>
-<li><strong>Longest Substring Without Repeating Characters</strong> (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">#3</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Minimum Size Subarray Sum</strong> (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/">#209</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Longest Repeating Character Replacement</strong> (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/">#424</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Permutation in String</strong> (<a href="https://leetcode.com/problems/permutation-in-string/">#567</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Find All Anagrams in a String</strong> (<a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/">#438</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Fruit Into Baskets</strong> (<a href="https://leetcode.com/problems/fruit-into-baskets/">#904</a>) — 🔥 SHOULD DO</li>
-<li><strong>Max Consecutive Ones III</strong> (<a href="https://leetcode.com/problems/max-consecutive-ones-iii/">#1004</a>) — 🔥 SHOULD DO</li>
-<li><strong>Longest Substring with At Most K Distinct Characters</strong> (<a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/">#340</a>) — 🔥 OPTIONAL (Premium)</li>
+<li><strong>Longest Substring Without Repeating Characters</strong> (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">#3</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Minimum Size Subarray Sum</strong> (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/" target="_blank">#209</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Longest Repeating Character Replacement</strong> (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/" target="_blank">#424</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Permutation in String</strong> (<a href="https://leetcode.com/problems/permutation-in-string/" target="_blank">#567</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Find All Anagrams in a String</strong> (<a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/" target="_blank">#438</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Fruit Into Baskets</strong> (<a href="https://leetcode.com/problems/fruit-into-baskets/" target="_blank">#904</a>) — 🔥 SHOULD DO</li>
+<li><strong>Max Consecutive Ones III</strong> (<a href="https://leetcode.com/problems/max-consecutive-ones-iii/" target="_blank">#1004</a>) — 🔥 SHOULD DO</li>
+<li><strong>Longest Substring with At Most K Distinct Characters</strong> (<a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/" target="_blank">#340</a>) — 🔥 OPTIONAL (Premium)</li>
 </ul>
 <h4 id="hard_2">🔴 Hard</h4>
 <ul>
-<li><strong>Minimum Window Substring</strong> (<a href="https://leetcode.com/problems/minimum-window-substring/">#76</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Sliding Window Maximum</strong> (<a href="https://leetcode.com/problems/sliding-window-maximum/">#239</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Minimum Window Substring</strong> (<a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">#76</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Sliding Window Maximum</strong> (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>) — 🔥🔥🔥 MUST DO</li>
 </ul>
 <hr />
 <h3 id="4-prefix-sum">4. Prefix Sum</h3>
@@ -648,19 +648,19 @@ for (int x : nums) {
 <strong>C++ tools:</strong> <code>unordered_map&lt;long long,int&gt;</code> (use <code>long long</code> — sums overflow <code>int</code> easily), <code>vector&lt;vector&lt;int&gt;&gt;</code> prefix tables for 2D.</p>
 <h4 id="easy_3">🟢 Easy</h4>
 <ul>
-<li><strong>Running Sum of 1d Array</strong> (<a href="https://leetcode.com/problems/running-sum-of-1d-array/">#1480</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Find Pivot Index</strong> (<a href="https://leetcode.com/problems/find-pivot-index/">#724</a>) — 🔥 SHOULD DO</li>
+<li><strong>Running Sum of 1d Array</strong> (<a href="https://leetcode.com/problems/running-sum-of-1d-array/" target="_blank">#1480</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Find Pivot Index</strong> (<a href="https://leetcode.com/problems/find-pivot-index/" target="_blank">#724</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_3">🟡 Medium</h4>
 <ul>
-<li><strong>Subarray Sum Equals K</strong> (<a href="https://leetcode.com/problems/subarray-sum-equals-k/">#560</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Contiguous Array</strong> (<a href="https://leetcode.com/problems/contiguous-array/">#525</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Subarray Sums Divisible by K</strong> (<a href="https://leetcode.com/problems/subarray-sums-divisible-by-k/">#974</a>) — 🔥 SHOULD DO</li>
-<li><strong>Range Sum Query 2D - Immutable</strong> (<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/">#304</a>) — 🔥 SHOULD DO</li>
+<li><strong>Subarray Sum Equals K</strong> (<a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank">#560</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Contiguous Array</strong> (<a href="https://leetcode.com/problems/contiguous-array/" target="_blank">#525</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Subarray Sums Divisible by K</strong> (<a href="https://leetcode.com/problems/subarray-sums-divisible-by-k/" target="_blank">#974</a>) — 🔥 SHOULD DO</li>
+<li><strong>Range Sum Query 2D - Immutable</strong> (<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/" target="_blank">#304</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_3">🔴 Hard</h4>
 <ul>
-<li><strong>Count of Range Sum</strong> (<a href="https://leetcode.com/problems/count-of-range-sum/">#327</a>) — 🔥 OPTIONAL</li>
+<li><strong>Count of Range Sum</strong> (<a href="https://leetcode.com/problems/count-of-range-sum/" target="_blank">#327</a>) — 🔥 OPTIONAL</li>
 </ul>
 <hr />
 <h3 id="5-binary-search">5. Binary Search</h3>
@@ -690,23 +690,23 @@ while (lo &lt; hi) {
 <strong>C++ tools:</strong> <code>lower_bound()</code>, <code>upper_bound()</code>, <code>binary_search()</code>, <code>sort()</code> (a lot of binary search problems require a sorted precondition or come after sorting).</p>
 <h4 id="easy_4">🟢 Easy</h4>
 <ul>
-<li><strong>Binary Search</strong> (<a href="https://leetcode.com/problems/binary-search/">#704</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>First Bad Version</strong> (<a href="https://leetcode.com/problems/first-bad-version/">#278</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Search Insert Position</strong> (<a href="https://leetcode.com/problems/search-insert-position/">#35</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Binary Search</strong> (<a href="https://leetcode.com/problems/binary-search/" target="_blank">#704</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>First Bad Version</strong> (<a href="https://leetcode.com/problems/first-bad-version/" target="_blank">#278</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Search Insert Position</strong> (<a href="https://leetcode.com/problems/search-insert-position/" target="_blank">#35</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_4">🟡 Medium</h4>
 <ul>
-<li><strong>Search in Rotated Sorted Array</strong> (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">#33</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Find Minimum in Rotated Sorted Array</strong> (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">#153</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Koko Eating Bananas</strong> (<a href="https://leetcode.com/problems/koko-eating-bananas/">#875</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Find Peak Element</strong> (<a href="https://leetcode.com/problems/find-peak-element/">#162</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Search a 2D Matrix</strong> (<a href="https://leetcode.com/problems/search-a-2d-matrix/">#74</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Time Based Key-Value Store</strong> (<a href="https://leetcode.com/problems/time-based-key-value-store/">#981</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Search in Rotated Sorted Array</strong> (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">#33</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Find Minimum in Rotated Sorted Array</strong> (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank">#153</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Koko Eating Bananas</strong> (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Find Peak Element</strong> (<a href="https://leetcode.com/problems/find-peak-element/" target="_blank">#162</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Search a 2D Matrix</strong> (<a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">#74</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Time Based Key-Value Store</strong> (<a href="https://leetcode.com/problems/time-based-key-value-store/" target="_blank">#981</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_4">🔴 Hard</h4>
 <ul>
-<li><strong>Median of Two Sorted Arrays</strong> (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">#4</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Split Array Largest Sum</strong> (<a href="https://leetcode.com/problems/split-array-largest-sum/">#410</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Median of Two Sorted Arrays</strong> (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Split Array Largest Sum</strong> (<a href="https://leetcode.com/problems/split-array-largest-sum/" target="_blank">#410</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="6-linked-lists-fast-slow-pointers">6. Linked Lists (+ Fast &amp; Slow Pointers)</h3>
@@ -736,24 +736,24 @@ while (fast &amp;&amp; fast-&gt;next) {
 <strong>C++ tools:</strong> raw pointers/<code>ListNode*</code>, a dummy sentinel node pattern, <code>priority_queue</code> (for merging K lists).</p>
 <h4 id="easy_5">🟢 Easy</h4>
 <ul>
-<li><strong>Reverse Linked List</strong> (<a href="https://leetcode.com/problems/reverse-linked-list/">#206</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Merge Two Sorted Lists</strong> (<a href="https://leetcode.com/problems/merge-two-sorted-lists/">#21</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Linked List Cycle</strong> (<a href="https://leetcode.com/problems/linked-list-cycle/">#141</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Palindrome Linked List</strong> (<a href="https://leetcode.com/problems/palindrome-linked-list/">#234</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Reverse Linked List</strong> (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Merge Two Sorted Lists</strong> (<a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">#21</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Linked List Cycle</strong> (<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">#141</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Palindrome Linked List</strong> (<a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank">#234</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_5">🟡 Medium</h4>
 <ul>
-<li><strong>Add Two Numbers</strong> (<a href="https://leetcode.com/problems/add-two-numbers/">#2</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Remove Nth Node From End of List</strong> (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">#19</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Reorder List</strong> (<a href="https://leetcode.com/problems/reorder-list/">#143</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Copy List with Random Pointer</strong> (<a href="https://leetcode.com/problems/copy-list-with-random-pointer/">#138</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Find the Duplicate Number</strong> (<a href="https://leetcode.com/problems/find-the-duplicate-number/">#287</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Odd Even Linked List</strong> (<a href="https://leetcode.com/problems/odd-even-linked-list/">#328</a>) — 🔥 OPTIONAL</li>
+<li><strong>Add Two Numbers</strong> (<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">#2</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Remove Nth Node From End of List</strong> (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">#19</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Reorder List</strong> (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Copy List with Random Pointer</strong> (<a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank">#138</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Find the Duplicate Number</strong> (<a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank">#287</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Odd Even Linked List</strong> (<a href="https://leetcode.com/problems/odd-even-linked-list/" target="_blank">#328</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard_5">🔴 Hard</h4>
 <ul>
-<li><strong>Merge k Sorted Lists</strong> (<a href="https://leetcode.com/problems/merge-k-sorted-lists/">#23</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Reverse Nodes in k-Group</strong> (<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">#25</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Merge k Sorted Lists</strong> (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Reverse Nodes in k-Group</strong> (<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank">#25</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="7-stack-monotonic-stack-queuedeque">7. Stack &amp; Monotonic Stack (+ Queue/Deque)</h3>
@@ -776,23 +776,23 @@ for (int i = 0; i &lt; n; i++) {
 <strong>C++ tools:</strong> <code>stack&lt;int&gt;</code>, <code>vector</code> as an explicit stack (for indexed access), <code>deque&lt;int&gt;</code>.</p>
 <h4 id="easy_6">🟢 Easy</h4>
 <ul>
-<li><strong>Valid Parentheses</strong> (<a href="https://leetcode.com/problems/valid-parentheses/">#20</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Baseball Game</strong> (<a href="https://leetcode.com/problems/baseball-game/">#682</a>) — 🔥 OPTIONAL</li>
+<li><strong>Valid Parentheses</strong> (<a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">#20</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Baseball Game</strong> (<a href="https://leetcode.com/problems/baseball-game/" target="_blank">#682</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="medium_6">🟡 Medium</h4>
 <ul>
-<li><strong>Daily Temperatures</strong> (<a href="https://leetcode.com/problems/daily-temperatures/">#739</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Min Stack</strong> (<a href="https://leetcode.com/problems/min-stack/">#155</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Evaluate Reverse Polish Notation</strong> (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">#150</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Decode String</strong> (<a href="https://leetcode.com/problems/decode-string/">#394</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Asteroid Collision</strong> (<a href="https://leetcode.com/problems/asteroid-collision/">#735</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Next Greater Element II</strong> (<a href="https://leetcode.com/problems/next-greater-element-ii/">#503</a>) — 🔥 SHOULD DO</li>
-<li><strong>Online Stock Span</strong> (<a href="https://leetcode.com/problems/online-stock-span/">#901</a>) — 🔥 OPTIONAL</li>
+<li><strong>Daily Temperatures</strong> (<a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">#739</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Min Stack</strong> (<a href="https://leetcode.com/problems/min-stack/" target="_blank">#155</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Evaluate Reverse Polish Notation</strong> (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank">#150</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Decode String</strong> (<a href="https://leetcode.com/problems/decode-string/" target="_blank">#394</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Asteroid Collision</strong> (<a href="https://leetcode.com/problems/asteroid-collision/" target="_blank">#735</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Next Greater Element II</strong> (<a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank">#503</a>) — 🔥 SHOULD DO</li>
+<li><strong>Online Stock Span</strong> (<a href="https://leetcode.com/problems/online-stock-span/" target="_blank">#901</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard_6">🔴 Hard</h4>
 <ul>
-<li><strong>Largest Rectangle in Histogram</strong> (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">#84</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Maximal Rectangle</strong> (<a href="https://leetcode.com/problems/maximal-rectangle/">#85</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Largest Rectangle in Histogram</strong> (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Maximal Rectangle</strong> (<a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank">#85</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="8-heap-priority-queue">8. Heap / Priority Queue</h3>
@@ -812,22 +812,22 @@ for (int x : nums) {
 <strong>C++ tools:</strong> <code>priority_queue&lt;T, vector&lt;T&gt;, Comparator&gt;</code>, custom comparator structs or lambdas, <code>pair&lt;int,int&gt;</code> for value+index heaps.</p>
 <h4 id="easy_7">🟢 Easy</h4>
 <ul>
-<li><strong>Last Stone Weight</strong> (<a href="https://leetcode.com/problems/last-stone-weight/">#1046</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Kth Largest Element in a Stream</strong> (<a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/">#703</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Last Stone Weight</strong> (<a href="https://leetcode.com/problems/last-stone-weight/" target="_blank">#1046</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Kth Largest Element in a Stream</strong> (<a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/" target="_blank">#703</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_7">🟡 Medium</h4>
 <ul>
-<li><strong>Kth Largest Element in an Array</strong> (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">#215</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Top K Frequent Elements</strong> (<a href="https://leetcode.com/problems/top-k-frequent-elements/">#347</a>) <em>(cross-listed with Arrays &amp; Hashing — practice via the heap approach here)</em> — 🔥🔥🔥 MUST DO</li>
-<li><strong>Task Scheduler</strong> (<a href="https://leetcode.com/problems/task-scheduler/">#621</a>) — 🔥🔥 MUST DO</li>
-<li><strong>K Closest Points to Origin</strong> (<a href="https://leetcode.com/problems/k-closest-points-to-origin/">#973</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Meeting Rooms II</strong> (<a href="https://leetcode.com/problems/meeting-rooms-ii/">#253</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Reorganize String</strong> (<a href="https://leetcode.com/problems/reorganize-string/">#767</a>) — 🔥 OPTIONAL</li>
+<li><strong>Kth Largest Element in an Array</strong> (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">#215</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Top K Frequent Elements</strong> (<a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">#347</a>) <em>(cross-listed with Arrays &amp; Hashing — practice via the heap approach here)</em> — 🔥🔥🔥 MUST DO</li>
+<li><strong>Task Scheduler</strong> (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>) — 🔥🔥 MUST DO</li>
+<li><strong>K Closest Points to Origin</strong> (<a href="https://leetcode.com/problems/k-closest-points-to-origin/" target="_blank">#973</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Meeting Rooms II</strong> (<a href="https://leetcode.com/problems/meeting-rooms-ii/" target="_blank">#253</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Reorganize String</strong> (<a href="https://leetcode.com/problems/reorganize-string/" target="_blank">#767</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard_7">🔴 Hard</h4>
 <ul>
-<li><strong>Find Median from Data Stream</strong> (<a href="https://leetcode.com/problems/find-median-from-data-stream/">#295</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>IPO</strong> (<a href="https://leetcode.com/problems/ipo/">#502</a>) — 🔥 SHOULD DO</li>
+<li><strong>Find Median from Data Stream</strong> (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>IPO</strong> (<a href="https://leetcode.com/problems/ipo/" target="_blank">#502</a>) — 🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="9-intervals">9. Intervals</h3>
@@ -849,18 +849,18 @@ for (auto&amp; iv : intervals) {
 <strong>C++ tools:</strong> <code>sort()</code> with a custom comparator or lambda, <code>priority_queue</code> for the "minimum rooms" event-sweep variant.</p>
 <h4 id="easy_8">🟢 Easy</h4>
 <ul>
-<li><strong>Meeting Rooms</strong> (<a href="https://leetcode.com/problems/meeting-rooms/">#252</a>) — 🔥🔥 MUST DO (Premium)</li>
+<li><strong>Meeting Rooms</strong> (<a href="https://leetcode.com/problems/meeting-rooms/" target="_blank">#252</a>) — 🔥🔥 MUST DO (Premium)</li>
 </ul>
 <h4 id="medium_8">🟡 Medium</h4>
 <ul>
-<li><strong>Merge Intervals</strong> (<a href="https://leetcode.com/problems/merge-intervals/">#56</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Insert Interval</strong> (<a href="https://leetcode.com/problems/insert-interval/">#57</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Non-overlapping Intervals</strong> (<a href="https://leetcode.com/problems/non-overlapping-intervals/">#435</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Minimum Number of Arrows to Burst Balloons</strong> (<a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/">#452</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Merge Intervals</strong> (<a href="https://leetcode.com/problems/merge-intervals/" target="_blank">#56</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Insert Interval</strong> (<a href="https://leetcode.com/problems/insert-interval/" target="_blank">#57</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Non-overlapping Intervals</strong> (<a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank">#435</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Minimum Number of Arrows to Burst Balloons</strong> (<a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank">#452</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_8">🔴 Hard</h4>
 <ul>
-<li><strong>Employee Free Time</strong> (<a href="https://leetcode.com/problems/employee-free-time/">#759</a>) — 🔥 OPTIONAL (Premium)</li>
+<li><strong>Employee Free Time</strong> (<a href="https://leetcode.com/problems/employee-free-time/" target="_blank">#759</a>) — 🔥 OPTIONAL (Premium)</li>
 </ul>
 <hr />
 <h3 id="10-trees-binary-tree-core">10. Trees (Binary Tree Core)</h3>
@@ -892,27 +892,27 @@ while (!q.empty()) {
 <strong>C++ tools:</strong> <code>TreeNode*</code> recursion, <code>queue&lt;TreeNode*&gt;</code> for BFS, <code>stack&lt;TreeNode*&gt;</code> for iterative DFS.</p>
 <h4 id="easy_9">🟢 Easy</h4>
 <ul>
-<li><strong>Invert Binary Tree</strong> (<a href="https://leetcode.com/problems/invert-binary-tree/">#226</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Maximum Depth of Binary Tree</strong> (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">#104</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Same Tree</strong> (<a href="https://leetcode.com/problems/same-tree/">#100</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Symmetric Tree</strong> (<a href="https://leetcode.com/problems/symmetric-tree/">#101</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Diameter of Binary Tree</strong> (<a href="https://leetcode.com/problems/diameter-of-binary-tree/">#543</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Balanced Binary Tree</strong> (<a href="https://leetcode.com/problems/balanced-binary-tree/">#110</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Merge Two Binary Trees</strong> (<a href="https://leetcode.com/problems/merge-two-binary-trees/">#617</a>) — 🔥 OPTIONAL</li>
+<li><strong>Invert Binary Tree</strong> (<a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">#226</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Maximum Depth of Binary Tree</strong> (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">#104</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Same Tree</strong> (<a href="https://leetcode.com/problems/same-tree/" target="_blank">#100</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Symmetric Tree</strong> (<a href="https://leetcode.com/problems/symmetric-tree/" target="_blank">#101</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Diameter of Binary Tree</strong> (<a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">#543</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Balanced Binary Tree</strong> (<a href="https://leetcode.com/problems/balanced-binary-tree/" target="_blank">#110</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Merge Two Binary Trees</strong> (<a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank">#617</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="medium_9">🟡 Medium</h4>
 <ul>
-<li><strong>Binary Tree Level Order Traversal</strong> (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">#102</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Binary Tree Right Side View</strong> (<a href="https://leetcode.com/problems/binary-tree-right-side-view/">#199</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Construct Binary Tree from Preorder and Inorder Traversal</strong> (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">#105</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Count Good Nodes in Binary Tree</strong> (<a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/">#1448</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Binary Tree Zigzag Level Order Traversal</strong> (<a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/">#103</a>) — 🔥 SHOULD DO</li>
-<li><strong>Path Sum II</strong> (<a href="https://leetcode.com/problems/path-sum-ii/">#113</a>) — 🔥 SHOULD DO</li>
+<li><strong>Binary Tree Level Order Traversal</strong> (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">#102</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Binary Tree Right Side View</strong> (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Construct Binary Tree from Preorder and Inorder Traversal</strong> (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" target="_blank">#105</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Count Good Nodes in Binary Tree</strong> (<a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/" target="_blank">#1448</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Binary Tree Zigzag Level Order Traversal</strong> (<a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank">#103</a>) — 🔥 SHOULD DO</li>
+<li><strong>Path Sum II</strong> (<a href="https://leetcode.com/problems/path-sum-ii/" target="_blank">#113</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_9">🔴 Hard</h4>
 <ul>
-<li><strong>Binary Tree Maximum Path Sum</strong> (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">#124</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Serialize and Deserialize Binary Tree</strong> (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">#297</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Binary Tree Maximum Path Sum</strong> (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Serialize and Deserialize Binary Tree</strong> (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/" target="_blank">#297</a>) — 🔥🔥🔥 MUST DO</li>
 </ul>
 <hr />
 <h3 id="11-binary-search-trees">11. Binary Search Trees</h3>
@@ -931,16 +931,16 @@ while (!q.empty()) {
 <strong>C++ tools:</strong> recursive bound-passing, <code>stack&lt;TreeNode*&gt;</code> for iterative in-order (BST iterator problems), <code>long</code>/<code>long long</code> for bound sentinels.</p>
 <h4 id="easy_10">🟢 Easy</h4>
 <ul>
-<li><strong>Search in a Binary Search Tree</strong> (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/">#700</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Convert Sorted Array to Binary Search Tree</strong> (<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">#108</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Search in a Binary Search Tree</strong> (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" target="_blank">#700</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Convert Sorted Array to Binary Search Tree</strong> (<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank">#108</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_10">🟡 Medium</h4>
 <ul>
-<li><strong>Validate Binary Search Tree</strong> (<a href="https://leetcode.com/problems/validate-binary-search-tree/">#98</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Lowest Common Ancestor of a Binary Search Tree</strong> (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/">#235</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Kth Smallest Element in a BST</strong> (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/">#230</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Delete Node in a BST</strong> (<a href="https://leetcode.com/problems/delete-node-in-a-bst/">#450</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Binary Search Tree Iterator</strong> (<a href="https://leetcode.com/problems/binary-search-tree-iterator/">#173</a>) — 🔥 SHOULD DO</li>
+<li><strong>Validate Binary Search Tree</strong> (<a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">#98</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Lowest Common Ancestor of a Binary Search Tree</strong> (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank">#235</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Kth Smallest Element in a BST</strong> (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank">#230</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Delete Node in a BST</strong> (<a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank">#450</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Binary Search Tree Iterator</strong> (<a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank">#173</a>) — 🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="12-tries-prefix-trees">12. Tries (Prefix Trees)</h3>
@@ -967,13 +967,13 @@ void insert(TrieNode* root, const string&amp; word) {
 <strong>C++ tools:</strong> custom <code>struct TrieNode</code>, <code>array&lt;TrieNode*, 26&gt;</code> or <code>unordered_map&lt;char, TrieNode*&gt;</code>, recursion/backtracking for wildcard search.</p>
 <h4 id="medium_11">🟡 Medium</h4>
 <ul>
-<li><strong>Implement Trie (Prefix Tree)</strong> (<a href="https://leetcode.com/problems/implement-trie-prefix-tree/">#208</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Design Add and Search Words Data Structure</strong> (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/">#211</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Longest Word in Dictionary</strong> (<a href="https://leetcode.com/problems/longest-word-in-dictionary/">#720</a>) — 🔥 OPTIONAL</li>
+<li><strong>Implement Trie (Prefix Tree)</strong> (<a href="https://leetcode.com/problems/implement-trie-prefix-tree/" target="_blank">#208</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Design Add and Search Words Data Structure</strong> (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/" target="_blank">#211</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Longest Word in Dictionary</strong> (<a href="https://leetcode.com/problems/longest-word-in-dictionary/" target="_blank">#720</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard_10">🔴 Hard</h4>
 <ul>
-<li><strong>Word Search II</strong> (<a href="https://leetcode.com/problems/word-search-ii/">#212</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Word Search II</strong> (<a href="https://leetcode.com/problems/word-search-ii/" target="_blank">#212</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="13-graphs-bfs-dfs">13. Graphs — BFS &amp; DFS</h3>
@@ -999,22 +999,22 @@ while (!q.empty()) {
 <strong>C++ tools:</strong> <code>queue</code>, <code>unordered_map&lt;Node*, Node*&gt;</code> for cloning, <code>vector&lt;vector&lt;bool&gt;&gt;</code> visited grids, <code>unordered_set</code> for visited nodes in general graphs.</p>
 <h4 id="easy_11">🟢 Easy</h4>
 <ul>
-<li><strong>Flood Fill</strong> (<a href="https://leetcode.com/problems/flood-fill/">#733</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Find if Path Exists in Graph</strong> (<a href="https://leetcode.com/problems/find-if-path-exists-in-graph/">#1971</a>) — 🔥 SHOULD DO</li>
+<li><strong>Flood Fill</strong> (<a href="https://leetcode.com/problems/flood-fill/" target="_blank">#733</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Find if Path Exists in Graph</strong> (<a href="https://leetcode.com/problems/find-if-path-exists-in-graph/" target="_blank">#1971</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_12">🟡 Medium</h4>
 <ul>
-<li><strong>Number of Islands</strong> (<a href="https://leetcode.com/problems/number-of-islands/">#200</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Clone Graph</strong> (<a href="https://leetcode.com/problems/clone-graph/">#133</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Rotting Oranges</strong> (<a href="https://leetcode.com/problems/rotting-oranges/">#994</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Pacific Atlantic Water Flow</strong> (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/">#417</a>) — 🔥🔥 MUST DO</li>
-<li><strong>01 Matrix</strong> (<a href="https://leetcode.com/problems/01-matrix/">#542</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Surrounded Regions</strong> (<a href="https://leetcode.com/problems/surrounded-regions/">#130</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Number of Islands</strong> (<a href="https://leetcode.com/problems/number-of-islands/" target="_blank">#200</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Clone Graph</strong> (<a href="https://leetcode.com/problems/clone-graph/" target="_blank">#133</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Rotting Oranges</strong> (<a href="https://leetcode.com/problems/rotting-oranges/" target="_blank">#994</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Pacific Atlantic Water Flow</strong> (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>) — 🔥🔥 MUST DO</li>
+<li><strong>01 Matrix</strong> (<a href="https://leetcode.com/problems/01-matrix/" target="_blank">#542</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Surrounded Regions</strong> (<a href="https://leetcode.com/problems/surrounded-regions/" target="_blank">#130</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_11">🔴 Hard</h4>
 <ul>
-<li><strong>Word Ladder</strong> (<a href="https://leetcode.com/problems/word-ladder/">#127</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Word Ladder II</strong> (<a href="https://leetcode.com/problems/word-ladder-ii/">#126</a>) — 🔥 OPTIONAL</li>
+<li><strong>Word Ladder</strong> (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Word Ladder II</strong> (<a href="https://leetcode.com/problems/word-ladder-ii/" target="_blank">#126</a>) — 🔥 OPTIONAL</li>
 </ul>
 <hr />
 <h3 id="14-topological-sort">14. Topological Sort</h3>
@@ -1039,12 +1039,12 @@ while (!q.empty()) {
 <strong>C++ tools:</strong> <code>queue&lt;int&gt;</code>, <code>vector&lt;vector&lt;int&gt;&gt; adj</code> adjacency list, <code>vector&lt;int&gt; indegree</code>, <code>priority_queue</code> for lexicographic variants.</p>
 <h4 id="medium_13">🟡 Medium</h4>
 <ul>
-<li><strong>Course Schedule</strong> (<a href="https://leetcode.com/problems/course-schedule/">#207</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Course Schedule II</strong> (<a href="https://leetcode.com/problems/course-schedule-ii/">#210</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Course Schedule</strong> (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Course Schedule II</strong> (<a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank">#210</a>) — 🔥🔥 MUST DO</li>
 </ul>
 <h4 id="hard_12">🔴 Hard</h4>
 <ul>
-<li><strong>Alien Dictionary</strong> (<a href="https://leetcode.com/problems/alien-dictionary/">#269</a>) — 🔥🔥 SHOULD DO (Premium)</li>
+<li><strong>Alien Dictionary</strong> (<a href="https://leetcode.com/problems/alien-dictionary/" target="_blank">#269</a>) — 🔥🔥 SHOULD DO (Premium)</li>
 </ul>
 <hr />
 <h3 id="15-union-find-disjoint-set-union">15. Union-Find (Disjoint Set Union)</h3>
@@ -1068,15 +1068,15 @@ bool unite(int a, int b) {
 <strong>C++ tools:</strong> <code>vector&lt;int&gt; parent, rank_</code>, path-compressed recursive <code>find</code>, <code>unordered_map&lt;string,int&gt;</code> for mapping non-integer keys to DSU indices.</p>
 <h4 id="medium_14">🟡 Medium</h4>
 <ul>
-<li><strong>Number of Provinces</strong> (<a href="https://leetcode.com/problems/number-of-provinces/">#547</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Redundant Connection</strong> (<a href="https://leetcode.com/problems/redundant-connection/">#684</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Accounts Merge</strong> (<a href="https://leetcode.com/problems/accounts-merge/">#721</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Evaluate Division</strong> (<a href="https://leetcode.com/problems/evaluate-division/">#399</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Graph Valid Tree</strong> (<a href="https://leetcode.com/problems/graph-valid-tree/">#261</a>) — 🔥 SHOULD DO (Premium)</li>
+<li><strong>Number of Provinces</strong> (<a href="https://leetcode.com/problems/number-of-provinces/" target="_blank">#547</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Redundant Connection</strong> (<a href="https://leetcode.com/problems/redundant-connection/" target="_blank">#684</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Accounts Merge</strong> (<a href="https://leetcode.com/problems/accounts-merge/" target="_blank">#721</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Evaluate Division</strong> (<a href="https://leetcode.com/problems/evaluate-division/" target="_blank">#399</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Graph Valid Tree</strong> (<a href="https://leetcode.com/problems/graph-valid-tree/" target="_blank">#261</a>) — 🔥 SHOULD DO (Premium)</li>
 </ul>
 <h4 id="hard_13">🔴 Hard</h4>
 <ul>
-<li><strong>Number of Islands II</strong> (<a href="https://leetcode.com/problems/number-of-islands-ii/">#305</a>) — 🔥 OPTIONAL (Premium)</li>
+<li><strong>Number of Islands II</strong> (<a href="https://leetcode.com/problems/number-of-islands-ii/" target="_blank">#305</a>) — 🔥 OPTIONAL (Premium)</li>
 </ul>
 <hr />
 <h3 id="16-greedy">16. Greedy</h3>
@@ -1096,19 +1096,19 @@ return true;
 <strong>C++ tools:</strong> <code>sort()</code> with custom comparators, running max/min trackers, no fancy data structure usually needed — the skill is the argument, not the code.</p>
 <h4 id="easy_12">🟢 Easy</h4>
 <ul>
-<li><strong>Assign Cookies</strong> (<a href="https://leetcode.com/problems/assign-cookies/">#455</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Lemonade Change</strong> (<a href="https://leetcode.com/problems/lemonade-change/">#860</a>) — 🔥 SHOULD DO</li>
+<li><strong>Assign Cookies</strong> (<a href="https://leetcode.com/problems/assign-cookies/" target="_blank">#455</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Lemonade Change</strong> (<a href="https://leetcode.com/problems/lemonade-change/" target="_blank">#860</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_15">🟡 Medium</h4>
 <ul>
-<li><strong>Jump Game</strong> (<a href="https://leetcode.com/problems/jump-game/">#55</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Gas Station</strong> (<a href="https://leetcode.com/problems/gas-station/">#134</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Jump Game II</strong> (<a href="https://leetcode.com/problems/jump-game-ii/">#45</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Partition Labels</strong> (<a href="https://leetcode.com/problems/partition-labels/">#763</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Jump Game</strong> (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Gas Station</strong> (<a href="https://leetcode.com/problems/gas-station/" target="_blank">#134</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Jump Game II</strong> (<a href="https://leetcode.com/problems/jump-game-ii/" target="_blank">#45</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Partition Labels</strong> (<a href="https://leetcode.com/problems/partition-labels/" target="_blank">#763</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_14">🔴 Hard</h4>
 <ul>
-<li><strong>Candy</strong> (<a href="https://leetcode.com/problems/candy/">#135</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Candy</strong> (<a href="https://leetcode.com/problems/candy/" target="_blank">#135</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="17-backtracking">17. Backtracking</h3>
@@ -1130,18 +1130,18 @@ return true;
 <strong>C++ tools:</strong> recursion with a mutable <code>path</code> vector passed by reference, <code>vector&lt;bool&gt; used</code>, sorting before backtracking to enable duplicate-skipping.</p>
 <h4 id="medium_16">🟡 Medium</h4>
 <ul>
-<li><strong>Subsets</strong> (<a href="https://leetcode.com/problems/subsets/">#78</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Permutations</strong> (<a href="https://leetcode.com/problems/permutations/">#46</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Combination Sum</strong> (<a href="https://leetcode.com/problems/combination-sum/">#39</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Word Search</strong> (<a href="https://leetcode.com/problems/word-search/">#79</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Palindrome Partitioning</strong> (<a href="https://leetcode.com/problems/palindrome-partitioning/">#131</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Letter Combinations of a Phone Number</strong> (<a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">#17</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Combinations</strong> (<a href="https://leetcode.com/problems/combinations/">#77</a>) — 🔥 SHOULD DO</li>
-<li><strong>Combination Sum II</strong> (<a href="https://leetcode.com/problems/combination-sum-ii/">#40</a>) — 🔥 SHOULD DO</li>
+<li><strong>Subsets</strong> (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Permutations</strong> (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Combination Sum</strong> (<a href="https://leetcode.com/problems/combination-sum/" target="_blank">#39</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Word Search</strong> (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Palindrome Partitioning</strong> (<a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank">#131</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Letter Combinations of a Phone Number</strong> (<a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">#17</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Combinations</strong> (<a href="https://leetcode.com/problems/combinations/" target="_blank">#77</a>) — 🔥 SHOULD DO</li>
+<li><strong>Combination Sum II</strong> (<a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank">#40</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_15">🔴 Hard</h4>
 <ul>
-<li><strong>N-Queens</strong> (<a href="https://leetcode.com/problems/n-queens/">#51</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>N-Queens</strong> (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="18-bit-manipulation">18. Bit Manipulation</h3>
@@ -1158,18 +1158,18 @@ for (int x : nums) result ^= x;
 <strong>C++ tools:</strong> <code>^</code>, <code>&amp;</code>, <code>|</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>__builtin_popcount()</code> (handy but mention the manual approach too, since interviewers sometimes ask you to implement it), <code>bitset</code>.</p>
 <h4 id="easy_13">🟢 Easy</h4>
 <ul>
-<li><strong>Single Number</strong> (<a href="https://leetcode.com/problems/single-number/">#136</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Number of 1 Bits</strong> (<a href="https://leetcode.com/problems/number-of-1-bits/">#191</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Counting Bits</strong> (<a href="https://leetcode.com/problems/counting-bits/">#338</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Single Number</strong> (<a href="https://leetcode.com/problems/single-number/" target="_blank">#136</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Number of 1 Bits</strong> (<a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank">#191</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Counting Bits</strong> (<a href="https://leetcode.com/problems/counting-bits/" target="_blank">#338</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <h4 id="medium_17">🟡 Medium</h4>
 <ul>
-<li><strong>Sum of Two Integers</strong> (<a href="https://leetcode.com/problems/sum-of-two-integers/">#371</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Reverse Bits</strong> (<a href="https://leetcode.com/problems/reverse-bits/">#190</a>) — 🔥 SHOULD DO</li>
+<li><strong>Sum of Two Integers</strong> (<a href="https://leetcode.com/problems/sum-of-two-integers/" target="_blank">#371</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Reverse Bits</strong> (<a href="https://leetcode.com/problems/reverse-bits/" target="_blank">#190</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_16">🔴 Hard</h4>
 <ul>
-<li><strong>Maximum XOR of Two Numbers in an Array</strong> (<a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/">#421</a>) — 🔥 OPTIONAL</li>
+<li><strong>Maximum XOR of Two Numbers in an Array</strong> (<a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank">#421</a>) — 🔥 OPTIONAL</li>
 </ul>
 <hr />
 <h3 id="19-math-number-theory">19. Math / Number Theory</h3>
@@ -1187,18 +1187,18 @@ int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
 <strong>C++ tools:</strong> <code>std::gcd</code>, <code>std::lcm</code> (<code>&lt;numeric&gt;</code>), <code>long long</code> for overflow safety, careful string parsing loops.</p>
 <h4 id="easy_14">🟢 Easy</h4>
 <ul>
-<li><strong>Happy Number</strong> (<a href="https://leetcode.com/problems/happy-number/">#202</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Palindrome Number</strong> (<a href="https://leetcode.com/problems/palindrome-number/">#9</a>) — 🔥 SHOULD DO</li>
-<li><strong>Sqrt(x)</strong> (<a href="https://leetcode.com/problems/sqrtx/">#69</a>) — 🔥 OPTIONAL</li>
+<li><strong>Happy Number</strong> (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Palindrome Number</strong> (<a href="https://leetcode.com/problems/palindrome-number/" target="_blank">#9</a>) — 🔥 SHOULD DO</li>
+<li><strong>Sqrt(x)</strong> (<a href="https://leetcode.com/problems/sqrtx/" target="_blank">#69</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="medium_18">🟡 Medium</h4>
 <ul>
-<li><strong>Pow(x, n)</strong> (<a href="https://leetcode.com/problems/powx-n/">#50</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Fraction to Recurring Decimal</strong> (<a href="https://leetcode.com/problems/fraction-to-recurring-decimal/">#166</a>) — 🔥 OPTIONAL</li>
+<li><strong>Pow(x, n)</strong> (<a href="https://leetcode.com/problems/powx-n/" target="_blank">#50</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Fraction to Recurring Decimal</strong> (<a href="https://leetcode.com/problems/fraction-to-recurring-decimal/" target="_blank">#166</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard_17">🔴 Hard</h4>
 <ul>
-<li><strong>Basic Calculator</strong> (<a href="https://leetcode.com/problems/basic-calculator/">#224</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Basic Calculator</strong> (<a href="https://leetcode.com/problems/basic-calculator/" target="_blank">#224</a>) — 🔥🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="20-1-d-dynamic-programming">20. 1-D Dynamic Programming</h3>
@@ -1225,23 +1225,23 @@ int solve(int i) {
 <strong>C++ tools:</strong> <code>vector&lt;int&gt;</code> / <code>vector&lt;long long&gt;</code> for dp arrays, <code>unordered_map&lt;int,int&gt;</code> for memoization when indices are sparse or multi-dimensional-but-small, careful <code>long long</code> casting to avoid overflow in "count the ways" problems.</p>
 <h4 id="easy_15">🟢 Easy</h4>
 <ul>
-<li><strong>Climbing Stairs</strong> (<a href="https://leetcode.com/problems/climbing-stairs/">#70</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>House Robber</strong> (<a href="https://leetcode.com/problems/house-robber/">#198</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Fibonacci Number</strong> (<a href="https://leetcode.com/problems/fibonacci-number/">#509</a>) — 🔥 SHOULD DO (as the <em>first</em> DP problem you ever do — establishes the recurrence-then-memoize habit)</li>
+<li><strong>Climbing Stairs</strong> (<a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">#70</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>House Robber</strong> (<a href="https://leetcode.com/problems/house-robber/" target="_blank">#198</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Fibonacci Number</strong> (<a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">#509</a>) — 🔥 SHOULD DO (as the <em>first</em> DP problem you ever do — establishes the recurrence-then-memoize habit)</li>
 </ul>
 <h4 id="medium_19">🟡 Medium</h4>
 <ul>
-<li><strong>Coin Change</strong> (<a href="https://leetcode.com/problems/coin-change/">#322</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Word Break</strong> (<a href="https://leetcode.com/problems/word-break/">#139</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>House Robber II</strong> (<a href="https://leetcode.com/problems/house-robber-ii/">#213</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Maximum Subarray (Kadane's Algorithm)</strong> (<a href="https://leetcode.com/problems/maximum-subarray/">#53</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Decode Ways</strong> (<a href="https://leetcode.com/problems/decode-ways/">#91</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Maximum Product Subarray</strong> (<a href="https://leetcode.com/problems/maximum-product-subarray/">#152</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Delete and Earn</strong> (<a href="https://leetcode.com/problems/delete-and-earn/">#740</a>) — 🔥 OPTIONAL</li>
+<li><strong>Coin Change</strong> (<a href="https://leetcode.com/problems/coin-change/" target="_blank">#322</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Word Break</strong> (<a href="https://leetcode.com/problems/word-break/" target="_blank">#139</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>House Robber II</strong> (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Maximum Subarray (Kadane's Algorithm)</strong> (<a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">#53</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Decode Ways</strong> (<a href="https://leetcode.com/problems/decode-ways/" target="_blank">#91</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Maximum Product Subarray</strong> (<a href="https://leetcode.com/problems/maximum-product-subarray/" target="_blank">#152</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Delete and Earn</strong> (<a href="https://leetcode.com/problems/delete-and-earn/" target="_blank">#740</a>) — 🔥 OPTIONAL</li>
 </ul>
 <h4 id="hard_18">🔴 Hard</h4>
 <ul>
-<li><strong>Palindrome Partitioning II</strong> (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/">#132</a>) — 🔥 SHOULD DO</li>
+<li><strong>Palindrome Partitioning II</strong> (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">#132</a>) — 🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h3 id="21-2-d-dp-knapsack-style">21. 2-D DP / Knapsack-Style</h3>
@@ -1267,21 +1267,21 @@ for (int item : items)
 <strong>C++ tools:</strong> <code>vector&lt;vector&lt;int&gt;&gt;</code> 2-D dp tables, 1-D space-optimized rolling arrays, careful loop-direction reasoning (this pattern is where loop order actually changes correctness, not just style).</p>
 <h4 id="easy_16">🟢 Easy</h4>
 <ul>
-<li><strong>Min Cost Climbing Stairs</strong> (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/">#746</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Min Cost Climbing Stairs</strong> (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/" target="_blank">#746</a>) — 🔥🔥 MUST DO</li>
 </ul>
 <h4 id="medium_20">🟡 Medium</h4>
 <ul>
-<li><strong>Unique Paths</strong> (<a href="https://leetcode.com/problems/unique-paths/">#62</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Minimum Path Sum</strong> (<a href="https://leetcode.com/problems/minimum-path-sum/">#64</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Partition Equal Subset Sum</strong> (<a href="https://leetcode.com/problems/partition-equal-subset-sum/">#416</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Coin Change II</strong> (<a href="https://leetcode.com/problems/coin-change-ii/">#518</a>) — 🔥🔥 MUST DO</li>
-<li><strong>Target Sum</strong> (<a href="https://leetcode.com/problems/target-sum/">#494</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Triangle</strong> (<a href="https://leetcode.com/problems/triangle/">#120</a>) — 🔥 SHOULD DO</li>
+<li><strong>Unique Paths</strong> (<a href="https://leetcode.com/problems/unique-paths/" target="_blank">#62</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Minimum Path Sum</strong> (<a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank">#64</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Partition Equal Subset Sum</strong> (<a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank">#416</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Coin Change II</strong> (<a href="https://leetcode.com/problems/coin-change-ii/" target="_blank">#518</a>) — 🔥🔥 MUST DO</li>
+<li><strong>Target Sum</strong> (<a href="https://leetcode.com/problems/target-sum/" target="_blank">#494</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Triangle</strong> (<a href="https://leetcode.com/problems/triangle/" target="_blank">#120</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_19">🔴 Hard</h4>
 <ul>
-<li><strong>Maximal Square</strong> (<a href="https://leetcode.com/problems/maximal-square/">#221</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Dungeon Game</strong> (<a href="https://leetcode.com/problems/dungeon-game/">#174</a>) — 🔥 OPTIONAL</li>
+<li><strong>Maximal Square</strong> (<a href="https://leetcode.com/problems/maximal-square/" target="_blank">#221</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Dungeon Game</strong> (<a href="https://leetcode.com/problems/dungeon-game/" target="_blank">#174</a>) — 🔥 OPTIONAL</li>
 </ul>
 <hr />
 <h3 id="22-subsequence-string-dp-lcs-lis-families">22. Subsequence / String DP (LCS &amp; LIS Families)</h3>
@@ -1309,16 +1309,16 @@ return tails.size();
 <strong>C++ tools:</strong> <code>vector&lt;vector&lt;int&gt;&gt;</code> 2-D tables with a "+1" offset for empty-prefix base cases, <code>lower_bound()</code> for the O(n log n) LIS trick, careful indexing discipline.</p>
 <h4 id="medium_21">🟡 Medium</h4>
 <ul>
-<li><strong>Longest Common Subsequence</strong> (<a href="https://leetcode.com/problems/longest-common-subsequence/">#1143</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Longest Increasing Subsequence</strong> (<a href="https://leetcode.com/problems/longest-increasing-subsequence/">#300</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Longest Palindromic Substring</strong> (<a href="https://leetcode.com/problems/longest-palindromic-substring/">#5</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Palindromic Substrings</strong> (<a href="https://leetcode.com/problems/palindromic-substrings/">#647</a>) — 🔥🔥 SHOULD DO</li>
-<li><strong>Delete Operation for Two Strings</strong> (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/">#583</a>) — 🔥 SHOULD DO</li>
+<li><strong>Longest Common Subsequence</strong> (<a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">#1143</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Longest Increasing Subsequence</strong> (<a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">#300</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Longest Palindromic Substring</strong> (<a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">#5</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Palindromic Substrings</strong> (<a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank">#647</a>) — 🔥🔥 SHOULD DO</li>
+<li><strong>Delete Operation for Two Strings</strong> (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/" target="_blank">#583</a>) — 🔥 SHOULD DO</li>
 </ul>
 <h4 id="hard_20">🔴 Hard</h4>
 <ul>
-<li><strong>Edit Distance</strong> (<a href="https://leetcode.com/problems/edit-distance/">#72</a>) — 🔥🔥🔥 MUST DO</li>
-<li><strong>Distinct Subsequences</strong> (<a href="https://leetcode.com/problems/distinct-subsequences/">#115</a>) — 🔥 SHOULD DO</li>
+<li><strong>Edit Distance</strong> (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>) — 🔥🔥🔥 MUST DO</li>
+<li><strong>Distinct Subsequences</strong> (<a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank">#115</a>) — 🔥 SHOULD DO</li>
 </ul>
 <hr />
 <h2 id="part-3-day-1-day-56-schedule">Part 3 — Day 1 → Day 56 Schedule</h2>
@@ -1338,42 +1338,42 @@ return tails.size();
 <tr>
 <td>1</td>
 <td>Arrays &amp; Hashing (intro)</td>
-<td>Learn the pattern + review <code>vector</code>/<code>unordered_map</code>/<code>unordered_set</code>. Solve: Two Sum (<a href="https://leetcode.com/problems/two-sum/">#1</a>), Contains Duplicate (<a href="https://leetcode.com/problems/contains-duplicate/">#217</a>), Valid Anagram (<a href="https://leetcode.com/problems/valid-anagram/">#242</a>)</td>
+<td>Learn the pattern + review <code>vector</code>/<code>unordered_map</code>/<code>unordered_set</code>. Solve: Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>), Contains Duplicate (<a href="https://leetcode.com/problems/contains-duplicate/" target="_blank">#217</a>), Valid Anagram (<a href="https://leetcode.com/problems/valid-anagram/" target="_blank">#242</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Same-day: rewrite the Two Sum (<a href="https://leetcode.com/problems/two-sum/">#1</a>) template from memory, no looking</td>
+<td>Same-day: rewrite the Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>) template from memory, no looking</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Arrays &amp; Hashing</td>
-<td>Majority Element (<a href="https://leetcode.com/problems/majority-element/">#169</a>), Intersection of Two Arrays (<a href="https://leetcode.com/problems/intersection-of-two-arrays/">#349</a>), Merge Sorted Array (<a href="https://leetcode.com/problems/merge-sorted-array/">#88</a>), Missing Number (<a href="https://leetcode.com/problems/missing-number/">#268</a>), Word Pattern (<a href="https://leetcode.com/problems/word-pattern/">#290</a>)</td>
+<td>Majority Element (<a href="https://leetcode.com/problems/majority-element/" target="_blank">#169</a>), Intersection of Two Arrays (<a href="https://leetcode.com/problems/intersection-of-two-arrays/" target="_blank">#349</a>), Merge Sorted Array (<a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">#88</a>), Missing Number (<a href="https://leetcode.com/problems/missing-number/" target="_blank">#268</a>), Word Pattern (<a href="https://leetcode.com/problems/word-pattern/" target="_blank">#290</a>)</td>
 <td style="text-align: right;">5</td>
 <td>Next-day: redo yesterday's hardest problem cold</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Arrays &amp; Hashing</td>
-<td>Group Anagrams (<a href="https://leetcode.com/problems/group-anagrams/">#49</a>), Top K Frequent Elements (<a href="https://leetcode.com/problems/top-k-frequent-elements/">#347</a>), Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/">#238</a>)</td>
+<td>Group Anagrams (<a href="https://leetcode.com/problems/group-anagrams/" target="_blank">#49</a>), Top K Frequent Elements (<a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">#347</a>), Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank">#238</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: write out why each needed a hash map, in one sentence each</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Arrays &amp; Hashing</td>
-<td>Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/">#128</a>), Encode and Decode Strings (<a href="https://leetcode.com/problems/encode-and-decode-strings/">#271</a>), Sort Colors (<a href="https://leetcode.com/problems/sort-colors/">#75</a>)</td>
+<td>Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>), Encode and Decode Strings (<a href="https://leetcode.com/problems/encode-and-decode-strings/" target="_blank">#271</a>), Sort Colors (<a href="https://leetcode.com/problems/sort-colors/" target="_blank">#75</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: revisit Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/">#128</a>) — it's the trickiest so far</td>
+<td>Next-day: revisit Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>) — it's the trickiest so far</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Arrays &amp; Hashing (finish)</td>
-<td>Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/">#73</a>), Rotate Array (<a href="https://leetcode.com/problems/rotate-array/">#189</a>), 4Sum II (<a href="https://leetcode.com/problems/4sum-ii/">#454</a>), First Missing Positive (<a href="https://leetcode.com/problems/first-missing-positive/">#41</a>)</td>
+<td>Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">#73</a>), Rotate Array (<a href="https://leetcode.com/problems/rotate-array/" target="_blank">#189</a>), 4Sum II (<a href="https://leetcode.com/problems/4sum-ii/" target="_blank">#454</a>), First Missing Positive (<a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">#41</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: note the in-place trick used in Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/">#73</a>) for your mistake list if it wasn't obvious</td>
+<td>Same-day: note the in-place trick used in Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">#73</a>) for your mistake list if it wasn't obvious</td>
 </tr>
 <tr>
 <td>6</td>
 <td>Prefix Sum (heavy day — pattern is fast to apply once learned)</td>
-<td>Running Sum of 1d Array (<a href="https://leetcode.com/problems/running-sum-of-1d-array/">#1480</a>), Find Pivot Index (<a href="https://leetcode.com/problems/find-pivot-index/">#724</a>), Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/">#560</a>), Contiguous Array (<a href="https://leetcode.com/problems/contiguous-array/">#525</a>), Subarray Sums Divisible by K (<a href="https://leetcode.com/problems/subarray-sums-divisible-by-k/">#974</a>), Range Sum Query 2D - Immutable (<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/">#304</a>), Count of Range Sum (<a href="https://leetcode.com/problems/count-of-range-sum/">#327</a>)</td>
+<td>Running Sum of 1d Array (<a href="https://leetcode.com/problems/running-sum-of-1d-array/" target="_blank">#1480</a>), Find Pivot Index (<a href="https://leetcode.com/problems/find-pivot-index/" target="_blank">#724</a>), Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank">#560</a>), Contiguous Array (<a href="https://leetcode.com/problems/contiguous-array/" target="_blank">#525</a>), Subarray Sums Divisible by K (<a href="https://leetcode.com/problems/subarray-sums-divisible-by-k/" target="_blank">#974</a>), Range Sum Query 2D - Immutable (<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/" target="_blank">#304</a>), Count of Range Sum (<a href="https://leetcode.com/problems/count-of-range-sum/" target="_blank">#327</a>)</td>
 <td style="text-align: right;">7</td>
 <td>Same-day: confirm you understand <em>why</em> prefix sum needs <code>{0:1}</code> seeded in the map</td>
 </tr>
@@ -1401,49 +1401,49 @@ return tails.size();
 <tr>
 <td>8</td>
 <td>Two Pointers (intro)</td>
-<td>Learn the pattern. Valid Palindrome (<a href="https://leetcode.com/problems/valid-palindrome/">#125</a>), Move Zeroes (<a href="https://leetcode.com/problems/move-zeroes/">#283</a>), Is Subsequence (<a href="https://leetcode.com/problems/is-subsequence/">#392</a>), Squares of a Sorted Array (<a href="https://leetcode.com/problems/squares-of-a-sorted-array/">#977</a>)</td>
+<td>Learn the pattern. Valid Palindrome (<a href="https://leetcode.com/problems/valid-palindrome/" target="_blank">#125</a>), Move Zeroes (<a href="https://leetcode.com/problems/move-zeroes/" target="_blank">#283</a>), Is Subsequence (<a href="https://leetcode.com/problems/is-subsequence/" target="_blank">#392</a>), Squares of a Sorted Array (<a href="https://leetcode.com/problems/squares-of-a-sorted-array/" target="_blank">#977</a>)</td>
 <td style="text-align: right;">4</td>
 <td>Same-day: state in one line why sorting first matters here</td>
 </tr>
 <tr>
 <td>9</td>
 <td>Two Pointers</td>
-<td>Two Sum II - Input Array Is Sorted (<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">#167</a>), 3Sum (<a href="https://leetcode.com/problems/3sum/">#15</a>), Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/">#11</a>)</td>
+<td>Two Sum II - Input Array Is Sorted (<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank">#167</a>), 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>), Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">#11</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo 3Sum (<a href="https://leetcode.com/problems/3sum/">#15</a>)'s duplicate-skipping logic from memory</td>
+<td>Next-day: redo 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)'s duplicate-skipping logic from memory</td>
 </tr>
 <tr>
 <td>10</td>
 <td>Two Pointers (finish)</td>
-<td>Boats to Save People (<a href="https://leetcode.com/problems/boats-to-save-people/">#881</a>), Remove Duplicates from Sorted Array II (<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/">#80</a>), 4Sum (<a href="https://leetcode.com/problems/4sum/">#18</a>), Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/">#42</a>)</td>
+<td>Boats to Save People (<a href="https://leetcode.com/problems/boats-to-save-people/" target="_blank">#881</a>), Remove Duplicates from Sorted Array II (<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/" target="_blank">#80</a>), 4Sum (<a href="https://leetcode.com/problems/4sum/" target="_blank">#18</a>), Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: compare your Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/">#42</a>) approach to the two-pointer <em>and</em> the monotonic-stack approach (stack pattern comes later)</td>
+<td>Same-day: compare your Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>) approach to the two-pointer <em>and</em> the monotonic-stack approach (stack pattern comes later)</td>
 </tr>
 <tr>
 <td>11</td>
 <td>Sliding Window (intro)</td>
-<td>Learn the pattern. Best Time to Buy and Sell Stock (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">#121</a>), Maximum Average Subarray I (<a href="https://leetcode.com/problems/maximum-average-subarray-i/">#643</a>), Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">#3</a>)</td>
+<td>Learn the pattern. Best Time to Buy and Sell Stock (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">#121</a>), Maximum Average Subarray I (<a href="https://leetcode.com/problems/maximum-average-subarray-i/" target="_blank">#643</a>), Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">#3</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: draw the window on paper for one example before coding</td>
 </tr>
 <tr>
 <td>12</td>
 <td>Sliding Window</td>
-<td>Longest Repeating Character Replacement (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/">#424</a>), Permutation in String (<a href="https://leetcode.com/problems/permutation-in-string/">#567</a>), Fruit Into Baskets (<a href="https://leetcode.com/problems/fruit-into-baskets/">#904</a>), Max Consecutive Ones III (<a href="https://leetcode.com/problems/max-consecutive-ones-iii/">#1004</a>)</td>
+<td>Longest Repeating Character Replacement (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/" target="_blank">#424</a>), Permutation in String (<a href="https://leetcode.com/problems/permutation-in-string/" target="_blank">#567</a>), Fruit Into Baskets (<a href="https://leetcode.com/problems/fruit-into-baskets/" target="_blank">#904</a>), Max Consecutive Ones III (<a href="https://leetcode.com/problems/max-consecutive-ones-iii/" target="_blank">#1004</a>)</td>
 <td style="text-align: right;">4</td>
 <td>Next-day: revisit whichever of these felt hardest</td>
 </tr>
 <tr>
 <td>13</td>
 <td>Sliding Window (finish)</td>
-<td>Find All Anagrams in a String (<a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/">#438</a>), Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/">#209</a>), Longest Substring with At Most K Distinct Characters (<a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/">#340</a>), Minimum Window Substring (<a href="https://leetcode.com/problems/minimum-window-substring/">#76</a>), Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/">#239</a>)</td>
+<td>Find All Anagrams in a String (<a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/" target="_blank">#438</a>), Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/" target="_blank">#209</a>), Longest Substring with At Most K Distinct Characters (<a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/" target="_blank">#340</a>), Minimum Window Substring (<a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">#76</a>), Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>)</td>
 <td style="text-align: right;">5</td>
-<td>Same-day: Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/">#239</a>) uses a monotonic deque — note this connects to Week 4's Stack pattern</td>
+<td>Same-day: Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>) uses a monotonic deque — note this connects to Week 4's Stack pattern</td>
 </tr>
 <tr>
 <td>14</td>
 <td><strong>Weekly Test</strong> + Binary Search (start)</td>
-<td>Test (Part 4, Test 2) + Binary Search (<a href="https://leetcode.com/problems/binary-search/">#704</a>), First Bad Version (<a href="https://leetcode.com/problems/first-bad-version/">#278</a>)</td>
+<td>Test (Part 4, Test 2) + Binary Search (<a href="https://leetcode.com/problems/binary-search/" target="_blank">#704</a>), First Bad Version (<a href="https://leetcode.com/problems/first-bad-version/" target="_blank">#278</a>)</td>
 <td style="text-align: right;">2</td>
 <td>Biweekly cumulative revision: rapid-fire 8 random problems from Weeks 1-2, timed 20 min</td>
 </tr>
@@ -1464,49 +1464,49 @@ return tails.size();
 <tr>
 <td>15</td>
 <td>Binary Search</td>
-<td>Search Insert Position (<a href="https://leetcode.com/problems/search-insert-position/">#35</a>), Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">#33</a>), Find Minimum in Rotated Sorted Array (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">#153</a>)</td>
+<td>Search Insert Position (<a href="https://leetcode.com/problems/search-insert-position/" target="_blank">#35</a>), Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">#33</a>), Find Minimum in Rotated Sorted Array (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank">#153</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: write both the "classic" and "on the answer" templates side by side</td>
 </tr>
 <tr>
 <td>16</td>
 <td>Binary Search</td>
-<td>Find Peak Element (<a href="https://leetcode.com/problems/find-peak-element/">#162</a>), Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/">#875</a>), Search a 2D Matrix (<a href="https://leetcode.com/problems/search-a-2d-matrix/">#74</a>)</td>
+<td>Find Peak Element (<a href="https://leetcode.com/problems/find-peak-element/" target="_blank">#162</a>), Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>), Search a 2D Matrix (<a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">#74</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/">#875</a>) — it's the cleanest "binary search on the answer" example</td>
+<td>Next-day: redo Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>) — it's the cleanest "binary search on the answer" example</td>
 </tr>
 <tr>
 <td>17</td>
 <td>Binary Search (finish)</td>
-<td>Time Based Key-Value Store (<a href="https://leetcode.com/problems/time-based-key-value-store/">#981</a>), Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">#4</a>), Split Array Largest Sum (<a href="https://leetcode.com/problems/split-array-largest-sum/">#410</a>)</td>
+<td>Time Based Key-Value Store (<a href="https://leetcode.com/problems/time-based-key-value-store/" target="_blank">#981</a>), Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>), Split Array Largest Sum (<a href="https://leetcode.com/problems/split-array-largest-sum/" target="_blank">#410</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Same-day: Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">#4</a>) is genuinely hard — re-derive the partition logic out loud</td>
+<td>Same-day: Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>) is genuinely hard — re-derive the partition logic out loud</td>
 </tr>
 <tr>
 <td>18</td>
 <td>Linked Lists (intro)</td>
-<td>Learn the pattern + dummy-node trick. Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/">#206</a>), Merge Two Sorted Lists (<a href="https://leetcode.com/problems/merge-two-sorted-lists/">#21</a>), Linked List Cycle (<a href="https://leetcode.com/problems/linked-list-cycle/">#141</a>), Palindrome Linked List (<a href="https://leetcode.com/problems/palindrome-linked-list/">#234</a>)</td>
+<td>Learn the pattern + dummy-node trick. Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>), Merge Two Sorted Lists (<a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">#21</a>), Linked List Cycle (<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">#141</a>), Palindrome Linked List (<a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank">#234</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: draw pointer rewiring on paper for Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/">#206</a>)</td>
+<td>Same-day: draw pointer rewiring on paper for Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>)</td>
 </tr>
 <tr>
 <td>19</td>
 <td>Linked Lists</td>
-<td>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/">#2</a>), Remove Nth Node From End of List (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">#19</a>), Reorder List (<a href="https://leetcode.com/problems/reorder-list/">#143</a>)</td>
+<td>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">#2</a>), Remove Nth Node From End of List (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">#19</a>), Reorder List (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Reorder List (<a href="https://leetcode.com/problems/reorder-list/">#143</a>) — it combines 3 earlier patterns (find middle, reverse, merge)</td>
+<td>Next-day: redo Reorder List (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>) — it combines 3 earlier patterns (find middle, reverse, merge)</td>
 </tr>
 <tr>
 <td>20</td>
 <td>Linked Lists</td>
-<td>Copy List with Random Pointer (<a href="https://leetcode.com/problems/copy-list-with-random-pointer/">#138</a>), Odd Even Linked List (<a href="https://leetcode.com/problems/odd-even-linked-list/">#328</a>), Find the Duplicate Number (<a href="https://leetcode.com/problems/find-the-duplicate-number/">#287</a>), Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/">#23</a>)</td>
+<td>Copy List with Random Pointer (<a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank">#138</a>), Odd Even Linked List (<a href="https://leetcode.com/problems/odd-even-linked-list/" target="_blank">#328</a>), Find the Duplicate Number (<a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank">#287</a>), Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: note how Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/">#23</a>) reuses the Heap pattern (coming in Week 4)</td>
+<td>Same-day: note how Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>) reuses the Heap pattern (coming in Week 4)</td>
 </tr>
 <tr>
 <td>21</td>
 <td><strong>Weekly Test</strong> + Linked Lists (finish) + Stack (start)</td>
-<td>Test (Part 4, Test 3) + Reverse Nodes in k-Group (<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">#25</a>) + Valid Parentheses (<a href="https://leetcode.com/problems/valid-parentheses/">#20</a>), Baseball Game (<a href="https://leetcode.com/problems/baseball-game/">#682</a>), Min Stack (<a href="https://leetcode.com/problems/min-stack/">#155</a>), Evaluate Reverse Polish Notation (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">#150</a>)</td>
+<td>Test (Part 4, Test 3) + Reverse Nodes in k-Group (<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank">#25</a>) + Valid Parentheses (<a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">#20</a>), Baseball Game (<a href="https://leetcode.com/problems/baseball-game/" target="_blank">#682</a>), Min Stack (<a href="https://leetcode.com/problems/min-stack/" target="_blank">#155</a>), Evaluate Reverse Polish Notation (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank">#150</a>)</td>
 <td style="text-align: right;">5</td>
 <td>Log misses; biweekly revision not due until Day 28</td>
 </tr>
@@ -1527,49 +1527,49 @@ return tails.size();
 <tr>
 <td>22</td>
 <td>Stack &amp; Monotonic Stack</td>
-<td>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/">#739</a>), Next Greater Element II (<a href="https://leetcode.com/problems/next-greater-element-ii/">#503</a>), Online Stock Span (<a href="https://leetcode.com/problems/online-stock-span/">#901</a>)</td>
+<td>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">#739</a>), Next Greater Element II (<a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank">#503</a>), Online Stock Span (<a href="https://leetcode.com/problems/online-stock-span/" target="_blank">#901</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: rewrite the monotonic-stack template from memory, indices not values</td>
 </tr>
 <tr>
 <td>23</td>
 <td>Stack &amp; Monotonic Stack (finish medium)</td>
-<td>Asteroid Collision (<a href="https://leetcode.com/problems/asteroid-collision/">#735</a>), Decode String (<a href="https://leetcode.com/problems/decode-string/">#394</a>)</td>
+<td>Asteroid Collision (<a href="https://leetcode.com/problems/asteroid-collision/" target="_blank">#735</a>), Decode String (<a href="https://leetcode.com/problems/decode-string/" target="_blank">#394</a>)</td>
 <td style="text-align: right;">2</td>
 <td>Next-day: redo whichever felt more like simulation than "the template"</td>
 </tr>
 <tr>
 <td>24</td>
 <td>Stack (finish) + Heap (intro)</td>
-<td>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">#84</a>), Maximal Rectangle (<a href="https://leetcode.com/problems/maximal-rectangle/">#85</a>) + Kth Largest Element in a Stream (<a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/">#703</a>), Last Stone Weight (<a href="https://leetcode.com/problems/last-stone-weight/">#1046</a>)</td>
+<td>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>), Maximal Rectangle (<a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank">#85</a>) + Kth Largest Element in a Stream (<a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/" target="_blank">#703</a>), Last Stone Weight (<a href="https://leetcode.com/problems/last-stone-weight/" target="_blank">#1046</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">#84</a>) is a top interview-hard — make sure you can explain <em>why</em> the stack stays monotonic</td>
+<td>Same-day: Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>) is a top interview-hard — make sure you can explain <em>why</em> the stack stays monotonic</td>
 </tr>
 <tr>
 <td>25</td>
 <td>Heap</td>
-<td>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">#215</a>), K Closest Points to Origin (<a href="https://leetcode.com/problems/k-closest-points-to-origin/">#973</a>), Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/">#621</a>)</td>
+<td>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">#215</a>), K Closest Points to Origin (<a href="https://leetcode.com/problems/k-closest-points-to-origin/" target="_blank">#973</a>), Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/">#621</a>) — the greedy + heap combination is a common trip-up</td>
+<td>Next-day: redo Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>) — the greedy + heap combination is a common trip-up</td>
 </tr>
 <tr>
 <td>26</td>
 <td>Heap (finish)</td>
-<td>Meeting Rooms II (<a href="https://leetcode.com/problems/meeting-rooms-ii/">#253</a>), Reorganize String (<a href="https://leetcode.com/problems/reorganize-string/">#767</a>), Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/">#295</a>), IPO (<a href="https://leetcode.com/problems/ipo/">#502</a>)</td>
+<td>Meeting Rooms II (<a href="https://leetcode.com/problems/meeting-rooms-ii/" target="_blank">#253</a>), Reorganize String (<a href="https://leetcode.com/problems/reorganize-string/" target="_blank">#767</a>), Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>), IPO (<a href="https://leetcode.com/problems/ipo/" target="_blank">#502</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/">#295</a>) — confirm you know the "two heaps" trick cold</td>
+<td>Same-day: Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>) — confirm you know the "two heaps" trick cold</td>
 </tr>
 <tr>
 <td>27</td>
 <td>Intervals (intro)</td>
-<td>Learn the pattern. Meeting Rooms (<a href="https://leetcode.com/problems/meeting-rooms/">#252</a>), Insert Interval (<a href="https://leetcode.com/problems/insert-interval/">#57</a>), Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/">#56</a>), Non-overlapping Intervals (<a href="https://leetcode.com/problems/non-overlapping-intervals/">#435</a>)</td>
+<td>Learn the pattern. Meeting Rooms (<a href="https://leetcode.com/problems/meeting-rooms/" target="_blank">#252</a>), Insert Interval (<a href="https://leetcode.com/problems/insert-interval/" target="_blank">#57</a>), Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/" target="_blank">#56</a>), Non-overlapping Intervals (<a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank">#435</a>)</td>
 <td style="text-align: right;">4</td>
 <td>Same-day: state whether each new interval problem sorts by start or end, and why</td>
 </tr>
 <tr>
 <td>28</td>
 <td><strong>Weekly Test</strong> + Intervals (finish) + Trees (start)</td>
-<td>Test (Part 4, Test 4) + Minimum Number of Arrows to Burst Balloons (<a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/">#452</a>), Employee Free Time (<a href="https://leetcode.com/problems/employee-free-time/">#759</a>) + Invert Binary Tree (<a href="https://leetcode.com/problems/invert-binary-tree/">#226</a>), Maximum Depth of Binary Tree (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">#104</a>), Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/">#543</a>)</td>
+<td>Test (Part 4, Test 4) + Minimum Number of Arrows to Burst Balloons (<a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank">#452</a>), Employee Free Time (<a href="https://leetcode.com/problems/employee-free-time/" target="_blank">#759</a>) + Invert Binary Tree (<a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">#226</a>), Maximum Depth of Binary Tree (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">#104</a>), Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">#543</a>)</td>
 <td style="text-align: right;">5</td>
 <td>Biweekly cumulative revision: 10 random problems from Weeks 3-4, timed 25 min</td>
 </tr>
@@ -1590,49 +1590,49 @@ return tails.size();
 <tr>
 <td>29</td>
 <td>Trees</td>
-<td>Balanced Binary Tree (<a href="https://leetcode.com/problems/balanced-binary-tree/">#110</a>), Same Tree (<a href="https://leetcode.com/problems/same-tree/">#100</a>), Symmetric Tree (<a href="https://leetcode.com/problems/symmetric-tree/">#101</a>), Merge Two Binary Trees (<a href="https://leetcode.com/problems/merge-two-binary-trees/">#617</a>)</td>
+<td>Balanced Binary Tree (<a href="https://leetcode.com/problems/balanced-binary-tree/" target="_blank">#110</a>), Same Tree (<a href="https://leetcode.com/problems/same-tree/" target="_blank">#100</a>), Symmetric Tree (<a href="https://leetcode.com/problems/symmetric-tree/" target="_blank">#101</a>), Merge Two Binary Trees (<a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank">#617</a>)</td>
 <td style="text-align: right;">4</td>
 <td>Same-day: for each, state the base case and the combine step separately</td>
 </tr>
 <tr>
 <td>30</td>
 <td>Trees (BFS)</td>
-<td>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">#102</a>), Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/">#199</a>), Count Good Nodes in Binary Tree (<a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/">#1448</a>)</td>
+<td>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">#102</a>), Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>), Count Good Nodes in Binary Tree (<a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/" target="_blank">#1448</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/">#199</a>) — a common variant twist on level order</td>
+<td>Next-day: redo Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>) — a common variant twist on level order</td>
 </tr>
 <tr>
 <td>31</td>
 <td>Trees</td>
-<td>Binary Tree Zigzag Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/">#103</a>), Construct Binary Tree from Preorder and Inorder Traversal (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">#105</a>), Path Sum II (<a href="https://leetcode.com/problems/path-sum-ii/">#113</a>)</td>
+<td>Binary Tree Zigzag Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank">#103</a>), Construct Binary Tree from Preorder and Inorder Traversal (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" target="_blank">#105</a>), Path Sum II (<a href="https://leetcode.com/problems/path-sum-ii/" target="_blank">#113</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: Construct Binary Tree — explain why you always find the root in preorder first</td>
 </tr>
 <tr>
 <td>32</td>
 <td>Trees (finish) + BST (intro)</td>
-<td>Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">#124</a>), Serialize and Deserialize Binary Tree (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">#297</a>) + Search in a Binary Search Tree (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/">#700</a>), Convert Sorted Array to Binary Search Tree (<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/">#108</a>)</td>
+<td>Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>), Serialize and Deserialize Binary Tree (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/" target="_blank">#297</a>) + Search in a Binary Search Tree (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" target="_blank">#700</a>), Convert Sorted Array to Binary Search Tree (<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank">#108</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">#124</a>) — be explicit about "best path through node" vs "best path starting at node"</td>
+<td>Same-day: Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>) — be explicit about "best path through node" vs "best path starting at node"</td>
 </tr>
 <tr>
 <td>33</td>
 <td>Binary Search Trees</td>
-<td>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/">#98</a>), Kth Smallest Element in a BST (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/">#230</a>), Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/">#235</a>)</td>
+<td>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">#98</a>), Kth Smallest Element in a BST (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank">#230</a>), Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank">#235</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Next-day: redo Validate BST using the bounds-passing technique, not just in-order-then-check</td>
 </tr>
 <tr>
 <td>34</td>
 <td>BST (finish) + Tries (start)</td>
-<td>Delete Node in a BST (<a href="https://leetcode.com/problems/delete-node-in-a-bst/">#450</a>), Binary Search Tree Iterator (<a href="https://leetcode.com/problems/binary-search-tree-iterator/">#173</a>) + Implement Trie (Prefix Tree), Design Add and Search Words Data Structure (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/">#211</a>)</td>
+<td>Delete Node in a BST (<a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank">#450</a>), Binary Search Tree Iterator (<a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank">#173</a>) + Implement Trie (Prefix Tree), Design Add and Search Words Data Structure (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/" target="_blank">#211</a>)</td>
 <td style="text-align: right;">4</td>
 <td>Same-day: write the TrieNode struct from memory</td>
 </tr>
 <tr>
 <td>35</td>
 <td><strong>Weekly Test</strong> + Tries (finish) + Graphs (start)</td>
-<td>Test (Part 4, Test 5) + Longest Word in Dictionary (<a href="https://leetcode.com/problems/longest-word-in-dictionary/">#720</a>), Word Search II (<a href="https://leetcode.com/problems/word-search-ii/">#212</a>) + Flood Fill (<a href="https://leetcode.com/problems/flood-fill/">#733</a>), Find if Path Exists in Graph (<a href="https://leetcode.com/problems/find-if-path-exists-in-graph/">#1971</a>)</td>
+<td>Test (Part 4, Test 5) + Longest Word in Dictionary (<a href="https://leetcode.com/problems/longest-word-in-dictionary/" target="_blank">#720</a>), Word Search II (<a href="https://leetcode.com/problems/word-search-ii/" target="_blank">#212</a>) + Flood Fill (<a href="https://leetcode.com/problems/flood-fill/" target="_blank">#733</a>), Find if Path Exists in Graph (<a href="https://leetcode.com/problems/find-if-path-exists-in-graph/" target="_blank">#1971</a>)</td>
 <td style="text-align: right;">4</td>
 <td>Log misses; biweekly revision not due until Day 42</td>
 </tr>
@@ -1653,49 +1653,49 @@ return tails.size();
 <tr>
 <td>36</td>
 <td>Graphs (BFS/DFS)</td>
-<td>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/">#200</a>), Clone Graph (<a href="https://leetcode.com/problems/clone-graph/">#133</a>), 01 Matrix (<a href="https://leetcode.com/problems/01-matrix/">#542</a>)</td>
+<td>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/" target="_blank">#200</a>), Clone Graph (<a href="https://leetcode.com/problems/clone-graph/" target="_blank">#133</a>), 01 Matrix (<a href="https://leetcode.com/problems/01-matrix/" target="_blank">#542</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: rewrite the grid-BFS template, marking visited on enqueue not dequeue</td>
 </tr>
 <tr>
 <td>37</td>
 <td>Graphs (finish medium)</td>
-<td>Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/">#417</a>), Rotting Oranges (<a href="https://leetcode.com/problems/rotting-oranges/">#994</a>), Surrounded Regions (<a href="https://leetcode.com/problems/surrounded-regions/">#130</a>)</td>
+<td>Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>), Rotting Oranges (<a href="https://leetcode.com/problems/rotting-oranges/" target="_blank">#994</a>), Surrounded Regions (<a href="https://leetcode.com/problems/surrounded-regions/" target="_blank">#130</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/">#417</a>) — the "search backward from both oceans" trick is the key insight</td>
+<td>Next-day: redo Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>) — the "search backward from both oceans" trick is the key insight</td>
 </tr>
 <tr>
 <td>38</td>
 <td>Graphs (finish) + Topological Sort (start)</td>
-<td>Word Ladder (<a href="https://leetcode.com/problems/word-ladder/">#127</a>), Word Ladder II (<a href="https://leetcode.com/problems/word-ladder-ii/">#126</a>) + Course Schedule (<a href="https://leetcode.com/problems/course-schedule/">#207</a>), Course Schedule II (<a href="https://leetcode.com/problems/course-schedule-ii/">#210</a>)</td>
+<td>Word Ladder (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>), Word Ladder II (<a href="https://leetcode.com/problems/word-ladder-ii/" target="_blank">#126</a>) + Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>), Course Schedule II (<a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank">#210</a>)</td>
 <td style="text-align: right;">4</td>
-<td>Same-day: state why Word Ladder (<a href="https://leetcode.com/problems/word-ladder/">#127</a>) is BFS (shortest path) not DFS</td>
+<td>Same-day: state why Word Ladder (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>) is BFS (shortest path) not DFS</td>
 </tr>
 <tr>
 <td>39</td>
 <td>Topological Sort (finish) + Union-Find (start)</td>
-<td>Alien Dictionary (<a href="https://leetcode.com/problems/alien-dictionary/">#269</a>) + Number of Provinces (<a href="https://leetcode.com/problems/number-of-provinces/">#547</a>), Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/">#684</a>)</td>
+<td>Alien Dictionary (<a href="https://leetcode.com/problems/alien-dictionary/" target="_blank">#269</a>) + Number of Provinces (<a href="https://leetcode.com/problems/number-of-provinces/" target="_blank">#547</a>), Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/" target="_blank">#684</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Course Schedule (<a href="https://leetcode.com/problems/course-schedule/">#207</a>) using Kahn's algorithm from memory</td>
+<td>Next-day: redo Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>) using Kahn's algorithm from memory</td>
 </tr>
 <tr>
 <td>40</td>
 <td>Union-Find</td>
-<td>Accounts Merge (<a href="https://leetcode.com/problems/accounts-merge/">#721</a>), Graph Valid Tree (<a href="https://leetcode.com/problems/graph-valid-tree/">#261</a>), Evaluate Division (<a href="https://leetcode.com/problems/evaluate-division/">#399</a>)</td>
+<td>Accounts Merge (<a href="https://leetcode.com/problems/accounts-merge/" target="_blank">#721</a>), Graph Valid Tree (<a href="https://leetcode.com/problems/graph-valid-tree/" target="_blank">#261</a>), Evaluate Division (<a href="https://leetcode.com/problems/evaluate-division/" target="_blank">#399</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: write the path-compressed <code>find()</code> function from memory</td>
 </tr>
 <tr>
 <td>41</td>
 <td>Union-Find (finish) + Greedy (intro)</td>
-<td>Number of Islands II (<a href="https://leetcode.com/problems/number-of-islands-ii/">#305</a>) + Assign Cookies (<a href="https://leetcode.com/problems/assign-cookies/">#455</a>), Lemonade Change (<a href="https://leetcode.com/problems/lemonade-change/">#860</a>), Jump Game (<a href="https://leetcode.com/problems/jump-game/">#55</a>), Jump Game II (<a href="https://leetcode.com/problems/jump-game-ii/">#45</a>)</td>
+<td>Number of Islands II (<a href="https://leetcode.com/problems/number-of-islands-ii/" target="_blank">#305</a>) + Assign Cookies (<a href="https://leetcode.com/problems/assign-cookies/" target="_blank">#455</a>), Lemonade Change (<a href="https://leetcode.com/problems/lemonade-change/" target="_blank">#860</a>), Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>), Jump Game II (<a href="https://leetcode.com/problems/jump-game-ii/" target="_blank">#45</a>)</td>
 <td style="text-align: right;">5</td>
-<td>Same-day: for Jump Game (<a href="https://leetcode.com/problems/jump-game/">#55</a>), state the greedy invariant ("farthest reachable so far") in one sentence</td>
+<td>Same-day: for Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>), state the greedy invariant ("farthest reachable so far") in one sentence</td>
 </tr>
 <tr>
 <td>42</td>
 <td><strong>Weekly Test</strong> + Greedy (finish) + Backtracking (start)</td>
-<td>Test (Part 4, Test 6) + Gas Station (<a href="https://leetcode.com/problems/gas-station/">#134</a>), Partition Labels (<a href="https://leetcode.com/problems/partition-labels/">#763</a>), Candy (<a href="https://leetcode.com/problems/candy/">#135</a>) + Subsets (<a href="https://leetcode.com/problems/subsets/">#78</a>)</td>
+<td>Test (Part 4, Test 6) + Gas Station (<a href="https://leetcode.com/problems/gas-station/" target="_blank">#134</a>), Partition Labels (<a href="https://leetcode.com/problems/partition-labels/" target="_blank">#763</a>), Candy (<a href="https://leetcode.com/problems/candy/" target="_blank">#135</a>) + Subsets (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>)</td>
 <td style="text-align: right;">4</td>
 <td>Biweekly cumulative revision: 10 random problems from Weeks 5-6, timed 25 min</td>
 </tr>
@@ -1717,44 +1717,44 @@ return tails.size();
 <tr>
 <td>43</td>
 <td>Backtracking</td>
-<td>Permutations (<a href="https://leetcode.com/problems/permutations/">#46</a>), Combination Sum (<a href="https://leetcode.com/problems/combination-sum/">#39</a>), Combinations (<a href="https://leetcode.com/problems/combinations/">#77</a>)</td>
+<td>Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>), Combination Sum (<a href="https://leetcode.com/problems/combination-sum/" target="_blank">#39</a>), Combinations (<a href="https://leetcode.com/problems/combinations/" target="_blank">#77</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Same-day: state the one-line difference between Subsets (<a href="https://leetcode.com/problems/subsets/">#78</a>)/Combinations (<a href="https://leetcode.com/problems/combinations/">#77</a>) (start index) and Permutations (<a href="https://leetcode.com/problems/permutations/">#46</a>) (used array)</td>
+<td>Same-day: state the one-line difference between Subsets (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>)/Combinations (<a href="https://leetcode.com/problems/combinations/" target="_blank">#77</a>) (start index) and Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>) (used array)</td>
 </tr>
 <tr>
 <td>44</td>
 <td>Backtracking</td>
-<td>Palindrome Partitioning (<a href="https://leetcode.com/problems/palindrome-partitioning/">#131</a>), Letter Combinations of a Phone Number (<a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">#17</a>), Word Search (<a href="https://leetcode.com/problems/word-search/">#79</a>)</td>
+<td>Palindrome Partitioning (<a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank">#131</a>), Letter Combinations of a Phone Number (<a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">#17</a>), Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Word Search (<a href="https://leetcode.com/problems/word-search/">#79</a>) — grid backtracking + visited-marking combines Weeks 6 and 7</td>
+<td>Next-day: redo Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>) — grid backtracking + visited-marking combines Weeks 6 and 7</td>
 </tr>
 <tr>
 <td>45</td>
 <td>Backtracking (finish) + Bit Manipulation (intro)</td>
-<td>Combination Sum II (<a href="https://leetcode.com/problems/combination-sum-ii/">#40</a>), N-Queens (<a href="https://leetcode.com/problems/n-queens/">#51</a>) + Single Number (<a href="https://leetcode.com/problems/single-number/">#136</a>), Number of 1 Bits (<a href="https://leetcode.com/problems/number-of-1-bits/">#191</a>), Counting Bits (<a href="https://leetcode.com/problems/counting-bits/">#338</a>)</td>
+<td>Combination Sum II (<a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank">#40</a>), N-Queens (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) + Single Number (<a href="https://leetcode.com/problems/single-number/" target="_blank">#136</a>), Number of 1 Bits (<a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank">#191</a>), Counting Bits (<a href="https://leetcode.com/problems/counting-bits/" target="_blank">#338</a>)</td>
 <td style="text-align: right;">5</td>
-<td>Same-day: N-Queens (<a href="https://leetcode.com/problems/n-queens/">#51</a>) — explain your column/diagonal-attack tracking in one sentence</td>
+<td>Same-day: N-Queens (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) — explain your column/diagonal-attack tracking in one sentence</td>
 </tr>
 <tr>
 <td>46</td>
 <td>Bit Manipulation (finish) + Math (intro)</td>
-<td>Sum of Two Integers (<a href="https://leetcode.com/problems/sum-of-two-integers/">#371</a>), Reverse Bits (<a href="https://leetcode.com/problems/reverse-bits/">#190</a>), Maximum XOR of Two Numbers in an Array (<a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/">#421</a>) + Happy Number (<a href="https://leetcode.com/problems/happy-number/">#202</a>), Palindrome Number (<a href="https://leetcode.com/problems/palindrome-number/">#9</a>), Sqrt(x)</td>
+<td>Sum of Two Integers (<a href="https://leetcode.com/problems/sum-of-two-integers/" target="_blank">#371</a>), Reverse Bits (<a href="https://leetcode.com/problems/reverse-bits/" target="_blank">#190</a>), Maximum XOR of Two Numbers in an Array (<a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank">#421</a>) + Happy Number (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>), Palindrome Number (<a href="https://leetcode.com/problems/palindrome-number/" target="_blank">#9</a>), Sqrt(x)</td>
 <td style="text-align: right;">6</td>
-<td>Same-day: Happy Number (<a href="https://leetcode.com/problems/happy-number/">#202</a>) — confirm you see the cycle-detection connection to Week 3's fast/slow pointers</td>
+<td>Same-day: Happy Number (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>) — confirm you see the cycle-detection connection to Week 3's fast/slow pointers</td>
 </tr>
 <tr>
 <td>47</td>
 <td>Math (finish) + 1-D DP (intro — timed 25 min/problem from here on)</td>
-<td>Pow(x, n), Fraction to Recurring Decimal (<a href="https://leetcode.com/problems/fraction-to-recurring-decimal/">#166</a>), Basic Calculator (<a href="https://leetcode.com/problems/basic-calculator/">#224</a>) + Climbing Stairs (<a href="https://leetcode.com/problems/climbing-stairs/">#70</a>), House Robber (<a href="https://leetcode.com/problems/house-robber/">#198</a>), Fibonacci Number (<a href="https://leetcode.com/problems/fibonacci-number/">#509</a>)</td>
+<td>Pow(x, n), Fraction to Recurring Decimal (<a href="https://leetcode.com/problems/fraction-to-recurring-decimal/" target="_blank">#166</a>), Basic Calculator (<a href="https://leetcode.com/problems/basic-calculator/" target="_blank">#224</a>) + Climbing Stairs (<a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">#70</a>), House Robber (<a href="https://leetcode.com/problems/house-robber/" target="_blank">#198</a>), Fibonacci Number (<a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">#509</a>)</td>
 <td style="text-align: right;">6</td>
 <td>Same-day: for every DP problem this week, write the brute-force recursion <strong>before</strong> the dp array</td>
 </tr>
 <tr>
 <td>48</td>
 <td>1-D DP</td>
-<td>House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/">#213</a>), Decode Ways (<a href="https://leetcode.com/problems/decode-ways/">#91</a>)</td>
+<td>House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>), Decode Ways (<a href="https://leetcode.com/problems/decode-ways/" target="_blank">#91</a>)</td>
 <td style="text-align: right;">2</td>
-<td>Next-day: redo House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/">#213</a>) — explain why you run the linear version twice</td>
+<td>Next-day: redo House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>) — explain why you run the linear version twice</td>
 </tr>
 <tr>
 <td>49</td>
@@ -1781,44 +1781,44 @@ return tails.size();
 <tr>
 <td>50</td>
 <td>1-D DP</td>
-<td>Coin Change (<a href="https://leetcode.com/problems/coin-change/">#322</a>), Maximum Subarray (Kadane's), Word Break (<a href="https://leetcode.com/problems/word-break/">#139</a>)</td>
+<td>Coin Change (<a href="https://leetcode.com/problems/coin-change/" target="_blank">#322</a>), Maximum Subarray (Kadane's), Word Break (<a href="https://leetcode.com/problems/word-break/" target="_blank">#139</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: Maximum Subarray — state Kadane's one-line recurrence from memory</td>
 </tr>
 <tr>
 <td>51</td>
 <td>1-D DP (finish) + 2-D DP/Knapsack (intro)</td>
-<td>Maximum Product Subarray (<a href="https://leetcode.com/problems/maximum-product-subarray/">#152</a>), Delete and Earn (<a href="https://leetcode.com/problems/delete-and-earn/">#740</a>), Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/">#132</a>) + Min Cost Climbing Stairs (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/">#746</a>), Unique Paths (<a href="https://leetcode.com/problems/unique-paths/">#62</a>), Minimum Path Sum (<a href="https://leetcode.com/problems/minimum-path-sum/">#64</a>)</td>
+<td>Maximum Product Subarray (<a href="https://leetcode.com/problems/maximum-product-subarray/" target="_blank">#152</a>), Delete and Earn (<a href="https://leetcode.com/problems/delete-and-earn/" target="_blank">#740</a>), Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">#132</a>) + Min Cost Climbing Stairs (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/" target="_blank">#746</a>), Unique Paths (<a href="https://leetcode.com/problems/unique-paths/" target="_blank">#62</a>), Minimum Path Sum (<a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank">#64</a>)</td>
 <td style="text-align: right;">6</td>
-<td>Next-day: redo Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/">#132</a>) if it felt shaky — it's the hardest 1-D DP here</td>
+<td>Next-day: redo Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">#132</a>) if it felt shaky — it's the hardest 1-D DP here</td>
 </tr>
 <tr>
 <td>52</td>
 <td>2-D DP/Knapsack</td>
-<td>Partition Equal Subset Sum (<a href="https://leetcode.com/problems/partition-equal-subset-sum/">#416</a>), Target Sum (<a href="https://leetcode.com/problems/target-sum/">#494</a>), Coin Change II (<a href="https://leetcode.com/problems/coin-change-ii/">#518</a>)</td>
+<td>Partition Equal Subset Sum (<a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank">#416</a>), Target Sum (<a href="https://leetcode.com/problems/target-sum/" target="_blank">#494</a>), Coin Change II (<a href="https://leetcode.com/problems/coin-change-ii/" target="_blank">#518</a>)</td>
 <td style="text-align: right;">3</td>
 <td>Same-day: state out loud whether each is 0/1 or unbounded knapsack, and why the loop direction matters</td>
 </tr>
 <tr>
 <td>53</td>
 <td>2-D DP/Knapsack (finish) + Subsequence DP (intro)</td>
-<td>Triangle (<a href="https://leetcode.com/problems/triangle/">#120</a>), Maximal Square (<a href="https://leetcode.com/problems/maximal-square/">#221</a>), Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/">#174</a>) + Longest Increasing Subsequence (<a href="https://leetcode.com/problems/longest-increasing-subsequence/">#300</a>), Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/">#1143</a>)</td>
+<td>Triangle (<a href="https://leetcode.com/problems/triangle/" target="_blank">#120</a>), Maximal Square (<a href="https://leetcode.com/problems/maximal-square/" target="_blank">#221</a>), Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/" target="_blank">#174</a>) + Longest Increasing Subsequence (<a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">#300</a>), Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">#1143</a>)</td>
 <td style="text-align: right;">5</td>
-<td>Same-day: Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/">#174</a>) — explain why you must compute backward from the goal</td>
+<td>Same-day: Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/" target="_blank">#174</a>) — explain why you must compute backward from the goal</td>
 </tr>
 <tr>
 <td>54</td>
 <td>Subsequence / String DP</td>
-<td>Longest Palindromic Substring (<a href="https://leetcode.com/problems/longest-palindromic-substring/">#5</a>), Palindromic Substrings (<a href="https://leetcode.com/problems/palindromic-substrings/">#647</a>), Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/">#583</a>)</td>
+<td>Longest Palindromic Substring (<a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">#5</a>), Palindromic Substrings (<a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank">#647</a>), Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/" target="_blank">#583</a>)</td>
 <td style="text-align: right;">3</td>
-<td>Next-day: redo Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/">#583</a>) — confirm you see it's LCS in disguise</td>
+<td>Next-day: redo Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/" target="_blank">#583</a>) — confirm you see it's LCS in disguise</td>
 </tr>
 <tr>
 <td>55</td>
 <td>Subsequence / String DP (finish) — <strong>all 197 problems complete</strong></td>
-<td>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/">#72</a>), Distinct Subsequences (<a href="https://leetcode.com/problems/distinct-subsequences/">#115</a>)</td>
+<td>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>), Distinct Subsequences (<a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank">#115</a>)</td>
 <td style="text-align: right;">2</td>
-<td>Same-day: Edit Distance (<a href="https://leetcode.com/problems/edit-distance/">#72</a>) — this is one of the single most-repeated hard interview questions; be fully fluent</td>
+<td>Same-day: Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>) — this is one of the single most-repeated hard interview questions; be fully fluent</td>
 </tr>
 <tr>
 <td>56</td>
@@ -1835,77 +1835,77 @@ return tails.size();
 <p><strong>How to use these:</strong> attempt each list cold, in one sitting, with a timer. Do <strong>not</strong> read the problems in the order given below and assume they share a pattern with the day you learned them — they're deliberately shuffled. Cover the Answer Key with your hand/another window until you've attempted every problem. The goal isn't solving speed, it's: <em>can you correctly identify the pattern within the first 2 minutes of reading each problem?</em> If you misidentify the pattern, that's more valuable information than getting the code right — log it in your mistake list (Part 7).</p>
 <h3 id="test-1-end-of-week-1-10-minproblem">Test 1 — End of Week 1 (10 min/problem)</h3>
 <ol>
-<li>Two Sum (<a href="https://leetcode.com/problems/two-sum/">#1</a>)</li>
-<li>Valid Anagram (<a href="https://leetcode.com/problems/valid-anagram/">#242</a>)</li>
-<li>Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/">#238</a>)</li>
-<li>Sort Colors (<a href="https://leetcode.com/problems/sort-colors/">#75</a>)</li>
-<li>Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/">#560</a>)</li>
+<li>Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>)</li>
+<li>Valid Anagram (<a href="https://leetcode.com/problems/valid-anagram/" target="_blank">#242</a>)</li>
+<li>Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank">#238</a>)</li>
+<li>Sort Colors (<a href="https://leetcode.com/problems/sort-colors/" target="_blank">#75</a>)</li>
+<li>Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank">#560</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key (don't peek until you've attempted all 5):</strong> 1. Hashing (value→index map) · 2. Hashing (frequency count) · 3. Arrays/Hashing (prefix &amp; suffix products, no hash map needed) · 4. Two-pointer partition variant, taught here under Arrays &amp; Hashing · 5. Prefix Sum + HashMap</p>
 <h3 id="test-2-end-of-week-2-12-minproblem">Test 2 — End of Week 2 (12 min/problem)</h3>
 <ol>
-<li>3Sum (<a href="https://leetcode.com/problems/3sum/">#15</a>)</li>
-<li>Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/">#11</a>)</li>
-<li>Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">#3</a>)</li>
-<li>Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/">#209</a>)</li>
-<li>Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/">#42</a>)</li>
+<li>3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)</li>
+<li>Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">#11</a>)</li>
+<li>Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">#3</a>)</li>
+<li>Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/" target="_blank">#209</a>)</li>
+<li>Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key:</strong> 1. Two Pointers (sort + converge) · 2. Two Pointers (opposite ends) · 3. Sliding Window (variable size) · 4. Sliding Window (variable size, shrink-while-valid) · 5. Two Pointers (or monotonic stack — you'll see the stack approach in Week 4)</p>
 <h3 id="test-3-end-of-week-3-12-minproblem">Test 3 — End of Week 3 (12 min/problem)</h3>
 <ol>
-<li>Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">#33</a>)</li>
-<li>Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/">#875</a>)</li>
-<li>Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/">#206</a>)</li>
-<li>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/">#2</a>)</li>
-<li>Find the Duplicate Number (<a href="https://leetcode.com/problems/find-the-duplicate-number/">#287</a>)</li>
+<li>Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">#33</a>)</li>
+<li>Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>)</li>
+<li>Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>)</li>
+<li>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">#2</a>)</li>
+<li>Find the Duplicate Number (<a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank">#287</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key:</strong> 1. Binary Search (classic, modified for rotation) · 2. Binary Search on the answer · 3. Linked List pointer reversal · 4. Linked List simulation · 5. Fast &amp; Slow Pointers (Floyd's cycle detection on an array-as-linked-list)</p>
 <h3 id="test-4-end-of-week-4-15-minproblem">Test 4 — End of Week 4 (15 min/problem)</h3>
 <ol>
-<li>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/">#739</a>)</li>
-<li>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">#215</a>)</li>
-<li>Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/">#56</a>)</li>
-<li>Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/">#621</a>)</li>
-<li>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">#84</a>)</li>
+<li>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">#739</a>)</li>
+<li>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">#215</a>)</li>
+<li>Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/" target="_blank">#56</a>)</li>
+<li>Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>)</li>
+<li>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key:</strong> 1. Monotonic Stack · 2. Heap (min-heap of size K) · 3. Intervals (sort by start, sweep) · 4. Heap (greedy + max-heap of frequencies) · 5. Monotonic Stack</p>
 <h3 id="test-5-end-of-week-5-15-minproblem">Test 5 — End of Week 5 (15 min/problem)</h3>
 <ol>
-<li>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">#102</a>)</li>
-<li>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/">#98</a>)</li>
-<li>Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/">#543</a>)</li>
+<li>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">#102</a>)</li>
+<li>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">#98</a>)</li>
+<li>Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">#543</a>)</li>
 <li>Implement Trie (Prefix Tree)</li>
-<li>Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/">#235</a>)</li>
+<li>Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank">#235</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key:</strong> 1. Tree BFS · 2. BST (bounds-passing recursion) · 3. Tree DFS with a "combine at every node" trick · 4. Trie (26-way tree) · 5. BST ordering property</p>
 <h3 id="test-6-end-of-week-6-15-minproblem">Test 6 — End of Week 6 (15 min/problem)</h3>
 <ol>
-<li>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/">#200</a>)</li>
-<li>Course Schedule (<a href="https://leetcode.com/problems/course-schedule/">#207</a>)</li>
-<li>Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/">#684</a>)</li>
-<li>Jump Game (<a href="https://leetcode.com/problems/jump-game/">#55</a>)</li>
-<li>Gas Station (<a href="https://leetcode.com/problems/gas-station/">#134</a>)</li>
+<li>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/" target="_blank">#200</a>)</li>
+<li>Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>)</li>
+<li>Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/" target="_blank">#684</a>)</li>
+<li>Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>)</li>
+<li>Gas Station (<a href="https://leetcode.com/problems/gas-station/" target="_blank">#134</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key:</strong> 1. Graph BFS/DFS on a grid · 2. Topological Sort / cycle detection · 3. Union-Find · 4. Greedy (farthest-reachable tracking) · 5. Greedy (running deficit + restart point)</p>
 <h3 id="test-7-end-of-week-7-20-minproblem">Test 7 — End of Week 7 (20 min/problem)</h3>
 <ol>
-<li>Permutations (<a href="https://leetcode.com/problems/permutations/">#46</a>)</li>
-<li>Word Search (<a href="https://leetcode.com/problems/word-search/">#79</a>)</li>
-<li>Single Number (<a href="https://leetcode.com/problems/single-number/">#136</a>)</li>
-<li>Happy Number (<a href="https://leetcode.com/problems/happy-number/">#202</a>)</li>
-<li>House Robber (<a href="https://leetcode.com/problems/house-robber/">#198</a>)</li>
+<li>Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>)</li>
+<li>Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>)</li>
+<li>Single Number (<a href="https://leetcode.com/problems/single-number/" target="_blank">#136</a>)</li>
+<li>Happy Number (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>)</li>
+<li>House Robber (<a href="https://leetcode.com/problems/house-robber/" target="_blank">#198</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key:</strong> 1. Backtracking (used-array) · 2. Backtracking on a grid (+ visited marking) · 3. Bit Manipulation (XOR) · 4. Math / cycle detection (fast-slow pointer idea reused) · 5. 1-D DP</p>
 <h3 id="test-8-day-56-final-mock-interview-45-minutes-total-all-8-problems-simulating-a-real-loop">Test 8 — Day 56 Final Mock Interview (45 minutes total, all 8 problems, simulating a real loop)</h3>
 <ol>
-<li>Two Sum (<a href="https://leetcode.com/problems/two-sum/">#1</a>)</li>
-<li>3Sum (<a href="https://leetcode.com/problems/3sum/">#15</a>)</li>
-<li>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/">#200</a>)</li>
-<li>Course Schedule (<a href="https://leetcode.com/problems/course-schedule/">#207</a>)</li>
-<li>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">#215</a>)</li>
-<li>Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/">#56</a>)</li>
-<li>Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/">#1143</a>)</li>
-<li>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/">#72</a>)</li>
+<li>Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>)</li>
+<li>3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)</li>
+<li>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/" target="_blank">#200</a>)</li>
+<li>Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>)</li>
+<li>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">#215</a>)</li>
+<li>Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/" target="_blank">#56</a>)</li>
+<li>Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">#1143</a>)</li>
+<li>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>)</li>
 </ol>
 <p>🔒 <strong>Answer Key:</strong> 1. Hashing · 2. Two Pointers · 3. Graph BFS/DFS · 4. Topological Sort · 5. Heap · 6. Intervals · 7. Subsequence DP · 8. Subsequence DP (harder variant of #7 — notice both showed up in the same mock, which is realistic: interviewers sometimes ask a warm-up then a harder follow-up from the same family)</p>
 <hr />
@@ -2040,7 +2040,7 @@ return tails.size();
 </tr>
 <tr>
 <td>Minimum operations to transform string A into string B</td>
-<td>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/">#72</a>) DP</td>
+<td>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>) DP</td>
 </tr>
 </tbody>
 </table></div>
@@ -2050,112 +2050,112 @@ return tails.size();
 <p>Split: 25 Easy / 60 Medium / 15 Hard.</p>
 <h3 id="easy-25-ranked-by-importance">Easy (25) - ranked by importance</h3>
 <ol>
-<li>Two Sum (<a href="https://leetcode.com/problems/two-sum/">#1</a>) - Arrays and Hashing</li>
-<li>Valid Parentheses (<a href="https://leetcode.com/problems/valid-parentheses/">#20</a>) - Stack</li>
-<li>Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/">#206</a>) - Linked Lists</li>
-<li>Best Time to Buy and Sell Stock (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">#121</a>) - Sliding Window</li>
-<li>Merge Two Sorted Lists (<a href="https://leetcode.com/problems/merge-two-sorted-lists/">#21</a>) - Linked Lists</li>
-<li>Contains Duplicate (<a href="https://leetcode.com/problems/contains-duplicate/">#217</a>) - Arrays and Hashing</li>
-<li>Binary Search (<a href="https://leetcode.com/problems/binary-search/">#704</a>) - Binary Search</li>
-<li>Invert Binary Tree (<a href="https://leetcode.com/problems/invert-binary-tree/">#226</a>) - Trees</li>
-<li>Maximum Depth of Binary Tree (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">#104</a>) - Trees</li>
-<li>Linked List Cycle (<a href="https://leetcode.com/problems/linked-list-cycle/">#141</a>) - Linked Lists</li>
-<li>Valid Palindrome (<a href="https://leetcode.com/problems/valid-palindrome/">#125</a>) - Two Pointers</li>
-<li>Climbing Stairs (<a href="https://leetcode.com/problems/climbing-stairs/">#70</a>) - 1-D DP</li>
-<li>House Robber (<a href="https://leetcode.com/problems/house-robber/">#198</a>) - 1-D DP</li>
-<li>Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/">#543</a>) - Trees</li>
-<li>Single Number (<a href="https://leetcode.com/problems/single-number/">#136</a>) - Bit Manipulation</li>
-<li>Flood Fill (<a href="https://leetcode.com/problems/flood-fill/">#733</a>) - Graphs</li>
-<li>Running Sum of 1d Array (<a href="https://leetcode.com/problems/running-sum-of-1d-array/">#1480</a>) - Prefix Sum</li>
-<li>First Bad Version (<a href="https://leetcode.com/problems/first-bad-version/">#278</a>) - Binary Search</li>
-<li>Merge Sorted Array (<a href="https://leetcode.com/problems/merge-sorted-array/">#88</a>) - Arrays and Hashing</li>
-<li>Majority Element (<a href="https://leetcode.com/problems/majority-element/">#169</a>) - Arrays and Hashing</li>
-<li>Meeting Rooms (<a href="https://leetcode.com/problems/meeting-rooms/">#252</a>) - Intervals (Premium)</li>
-<li>Search in a Binary Search Tree (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/">#700</a>) - BST</li>
-<li>Assign Cookies (<a href="https://leetcode.com/problems/assign-cookies/">#455</a>) - Greedy</li>
-<li>Last Stone Weight (<a href="https://leetcode.com/problems/last-stone-weight/">#1046</a>) - Heap</li>
-<li>Min Cost Climbing Stairs (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/">#746</a>) - 2-D DP</li>
+<li>Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>) - Arrays and Hashing</li>
+<li>Valid Parentheses (<a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">#20</a>) - Stack</li>
+<li>Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>) - Linked Lists</li>
+<li>Best Time to Buy and Sell Stock (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">#121</a>) - Sliding Window</li>
+<li>Merge Two Sorted Lists (<a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">#21</a>) - Linked Lists</li>
+<li>Contains Duplicate (<a href="https://leetcode.com/problems/contains-duplicate/" target="_blank">#217</a>) - Arrays and Hashing</li>
+<li>Binary Search (<a href="https://leetcode.com/problems/binary-search/" target="_blank">#704</a>) - Binary Search</li>
+<li>Invert Binary Tree (<a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">#226</a>) - Trees</li>
+<li>Maximum Depth of Binary Tree (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">#104</a>) - Trees</li>
+<li>Linked List Cycle (<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">#141</a>) - Linked Lists</li>
+<li>Valid Palindrome (<a href="https://leetcode.com/problems/valid-palindrome/" target="_blank">#125</a>) - Two Pointers</li>
+<li>Climbing Stairs (<a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">#70</a>) - 1-D DP</li>
+<li>House Robber (<a href="https://leetcode.com/problems/house-robber/" target="_blank">#198</a>) - 1-D DP</li>
+<li>Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">#543</a>) - Trees</li>
+<li>Single Number (<a href="https://leetcode.com/problems/single-number/" target="_blank">#136</a>) - Bit Manipulation</li>
+<li>Flood Fill (<a href="https://leetcode.com/problems/flood-fill/" target="_blank">#733</a>) - Graphs</li>
+<li>Running Sum of 1d Array (<a href="https://leetcode.com/problems/running-sum-of-1d-array/" target="_blank">#1480</a>) - Prefix Sum</li>
+<li>First Bad Version (<a href="https://leetcode.com/problems/first-bad-version/" target="_blank">#278</a>) - Binary Search</li>
+<li>Merge Sorted Array (<a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">#88</a>) - Arrays and Hashing</li>
+<li>Majority Element (<a href="https://leetcode.com/problems/majority-element/" target="_blank">#169</a>) - Arrays and Hashing</li>
+<li>Meeting Rooms (<a href="https://leetcode.com/problems/meeting-rooms/" target="_blank">#252</a>) - Intervals (Premium)</li>
+<li>Search in a Binary Search Tree (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" target="_blank">#700</a>) - BST</li>
+<li>Assign Cookies (<a href="https://leetcode.com/problems/assign-cookies/" target="_blank">#455</a>) - Greedy</li>
+<li>Last Stone Weight (<a href="https://leetcode.com/problems/last-stone-weight/" target="_blank">#1046</a>) - Heap</li>
+<li>Min Cost Climbing Stairs (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/" target="_blank">#746</a>) - 2-D DP</li>
 </ol>
 <h3 id="medium-60-ranked-by-importance">Medium (60) - ranked by importance</h3>
 <ol>
-<li>Group Anagrams (<a href="https://leetcode.com/problems/group-anagrams/">#49</a>) - Arrays and Hashing</li>
-<li>Top K Frequent Elements (<a href="https://leetcode.com/problems/top-k-frequent-elements/">#347</a>) - Arrays and Hashing / Heap</li>
-<li>Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/">#238</a>) - Arrays and Hashing</li>
-<li>Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/">#128</a>) - Arrays and Hashing</li>
-<li>3Sum (<a href="https://leetcode.com/problems/3sum/">#15</a>) - Two Pointers</li>
-<li>Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/">#11</a>) - Two Pointers</li>
-<li>Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">#3</a>) - Sliding Window</li>
-<li>Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/">#209</a>) - Sliding Window</li>
-<li>Longest Repeating Character Replacement (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/">#424</a>) - Sliding Window</li>
-<li>Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/">#560</a>) - Prefix Sum</li>
-<li>Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">#33</a>) - Binary Search</li>
-<li>Find Minimum in Rotated Sorted Array (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">#153</a>) - Binary Search</li>
-<li>Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/">#875</a>) - Binary Search</li>
-<li>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/">#2</a>) - Linked Lists</li>
-<li>Remove Nth Node From End of List (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">#19</a>) - Linked Lists</li>
-<li>Reorder List (<a href="https://leetcode.com/problems/reorder-list/">#143</a>) - Linked Lists</li>
-<li>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/">#739</a>) - Monotonic Stack</li>
-<li>Min Stack (<a href="https://leetcode.com/problems/min-stack/">#155</a>) - Stack</li>
-<li>Evaluate Reverse Polish Notation (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">#150</a>) - Stack</li>
-<li>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">#215</a>) - Heap</li>
-<li>Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/">#621</a>) - Heap</li>
-<li>Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/">#56</a>) - Intervals</li>
-<li>Insert Interval (<a href="https://leetcode.com/problems/insert-interval/">#57</a>) - Intervals</li>
-<li>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">#102</a>) - Trees</li>
-<li>Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/">#199</a>) - Trees</li>
-<li>Construct Binary Tree from Preorder and Inorder Traversal (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">#105</a>) - Trees</li>
-<li>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/">#98</a>) - BST</li>
-<li>Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/">#235</a>) - BST</li>
-<li>Kth Smallest Element in a BST (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/">#230</a>) - BST</li>
+<li>Group Anagrams (<a href="https://leetcode.com/problems/group-anagrams/" target="_blank">#49</a>) - Arrays and Hashing</li>
+<li>Top K Frequent Elements (<a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">#347</a>) - Arrays and Hashing / Heap</li>
+<li>Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank">#238</a>) - Arrays and Hashing</li>
+<li>Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>) - Arrays and Hashing</li>
+<li>3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>) - Two Pointers</li>
+<li>Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">#11</a>) - Two Pointers</li>
+<li>Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">#3</a>) - Sliding Window</li>
+<li>Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/" target="_blank">#209</a>) - Sliding Window</li>
+<li>Longest Repeating Character Replacement (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/" target="_blank">#424</a>) - Sliding Window</li>
+<li>Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank">#560</a>) - Prefix Sum</li>
+<li>Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">#33</a>) - Binary Search</li>
+<li>Find Minimum in Rotated Sorted Array (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank">#153</a>) - Binary Search</li>
+<li>Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>) - Binary Search</li>
+<li>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">#2</a>) - Linked Lists</li>
+<li>Remove Nth Node From End of List (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">#19</a>) - Linked Lists</li>
+<li>Reorder List (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>) - Linked Lists</li>
+<li>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">#739</a>) - Monotonic Stack</li>
+<li>Min Stack (<a href="https://leetcode.com/problems/min-stack/" target="_blank">#155</a>) - Stack</li>
+<li>Evaluate Reverse Polish Notation (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank">#150</a>) - Stack</li>
+<li>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">#215</a>) - Heap</li>
+<li>Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>) - Heap</li>
+<li>Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/" target="_blank">#56</a>) - Intervals</li>
+<li>Insert Interval (<a href="https://leetcode.com/problems/insert-interval/" target="_blank">#57</a>) - Intervals</li>
+<li>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">#102</a>) - Trees</li>
+<li>Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>) - Trees</li>
+<li>Construct Binary Tree from Preorder and Inorder Traversal (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" target="_blank">#105</a>) - Trees</li>
+<li>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">#98</a>) - BST</li>
+<li>Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank">#235</a>) - BST</li>
+<li>Kth Smallest Element in a BST (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank">#230</a>) - BST</li>
 <li>Implement Trie (Prefix Tree) - Tries</li>
-<li>Design Add and Search Words Data Structure (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/">#211</a>) - Tries</li>
-<li>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/">#200</a>) - Graphs</li>
-<li>Clone Graph (<a href="https://leetcode.com/problems/clone-graph/">#133</a>) - Graphs</li>
-<li>Rotting Oranges (<a href="https://leetcode.com/problems/rotting-oranges/">#994</a>) - Graphs</li>
-<li>Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/">#417</a>) - Graphs</li>
-<li>Course Schedule (<a href="https://leetcode.com/problems/course-schedule/">#207</a>) - Topological Sort</li>
-<li>Course Schedule II (<a href="https://leetcode.com/problems/course-schedule-ii/">#210</a>) - Topological Sort</li>
-<li>Number of Provinces (<a href="https://leetcode.com/problems/number-of-provinces/">#547</a>) - Union-Find</li>
-<li>Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/">#684</a>) - Union-Find</li>
-<li>Accounts Merge (<a href="https://leetcode.com/problems/accounts-merge/">#721</a>) - Union-Find</li>
-<li>Jump Game (<a href="https://leetcode.com/problems/jump-game/">#55</a>) - Greedy</li>
-<li>Gas Station (<a href="https://leetcode.com/problems/gas-station/">#134</a>) - Greedy</li>
-<li>Jump Game II (<a href="https://leetcode.com/problems/jump-game-ii/">#45</a>) - Greedy</li>
-<li>Subsets (<a href="https://leetcode.com/problems/subsets/">#78</a>) - Backtracking</li>
-<li>Permutations (<a href="https://leetcode.com/problems/permutations/">#46</a>) - Backtracking</li>
-<li>Combination Sum (<a href="https://leetcode.com/problems/combination-sum/">#39</a>) - Backtracking</li>
-<li>Word Search (<a href="https://leetcode.com/problems/word-search/">#79</a>) - Backtracking</li>
-<li>Palindrome Partitioning (<a href="https://leetcode.com/problems/palindrome-partitioning/">#131</a>) - Backtracking</li>
-<li>Coin Change (<a href="https://leetcode.com/problems/coin-change/">#322</a>) - 1-D DP</li>
-<li>Word Break (<a href="https://leetcode.com/problems/word-break/">#139</a>) - 1-D DP</li>
-<li>House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/">#213</a>) - 1-D DP</li>
+<li>Design Add and Search Words Data Structure (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/" target="_blank">#211</a>) - Tries</li>
+<li>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/" target="_blank">#200</a>) - Graphs</li>
+<li>Clone Graph (<a href="https://leetcode.com/problems/clone-graph/" target="_blank">#133</a>) - Graphs</li>
+<li>Rotting Oranges (<a href="https://leetcode.com/problems/rotting-oranges/" target="_blank">#994</a>) - Graphs</li>
+<li>Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>) - Graphs</li>
+<li>Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>) - Topological Sort</li>
+<li>Course Schedule II (<a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank">#210</a>) - Topological Sort</li>
+<li>Number of Provinces (<a href="https://leetcode.com/problems/number-of-provinces/" target="_blank">#547</a>) - Union-Find</li>
+<li>Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/" target="_blank">#684</a>) - Union-Find</li>
+<li>Accounts Merge (<a href="https://leetcode.com/problems/accounts-merge/" target="_blank">#721</a>) - Union-Find</li>
+<li>Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>) - Greedy</li>
+<li>Gas Station (<a href="https://leetcode.com/problems/gas-station/" target="_blank">#134</a>) - Greedy</li>
+<li>Jump Game II (<a href="https://leetcode.com/problems/jump-game-ii/" target="_blank">#45</a>) - Greedy</li>
+<li>Subsets (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>) - Backtracking</li>
+<li>Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>) - Backtracking</li>
+<li>Combination Sum (<a href="https://leetcode.com/problems/combination-sum/" target="_blank">#39</a>) - Backtracking</li>
+<li>Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>) - Backtracking</li>
+<li>Palindrome Partitioning (<a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank">#131</a>) - Backtracking</li>
+<li>Coin Change (<a href="https://leetcode.com/problems/coin-change/" target="_blank">#322</a>) - 1-D DP</li>
+<li>Word Break (<a href="https://leetcode.com/problems/word-break/" target="_blank">#139</a>) - 1-D DP</li>
+<li>House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>) - 1-D DP</li>
 <li>Maximum Subarray (Kadane's) - 1-D DP</li>
-<li>Decode Ways (<a href="https://leetcode.com/problems/decode-ways/">#91</a>) - 1-D DP</li>
-<li>Unique Paths (<a href="https://leetcode.com/problems/unique-paths/">#62</a>) - 2-D DP</li>
-<li>Minimum Path Sum (<a href="https://leetcode.com/problems/minimum-path-sum/">#64</a>) - 2-D DP</li>
-<li>Partition Equal Subset Sum (<a href="https://leetcode.com/problems/partition-equal-subset-sum/">#416</a>) - 2-D DP / Knapsack</li>
-<li>Coin Change II (<a href="https://leetcode.com/problems/coin-change-ii/">#518</a>) - 2-D DP / Knapsack</li>
-<li>Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/">#1143</a>) - Subsequence DP</li>
-<li>Longest Increasing Subsequence (<a href="https://leetcode.com/problems/longest-increasing-subsequence/">#300</a>) - Subsequence DP</li>
-<li>Longest Palindromic Substring (<a href="https://leetcode.com/problems/longest-palindromic-substring/">#5</a>) - Subsequence DP</li>
+<li>Decode Ways (<a href="https://leetcode.com/problems/decode-ways/" target="_blank">#91</a>) - 1-D DP</li>
+<li>Unique Paths (<a href="https://leetcode.com/problems/unique-paths/" target="_blank">#62</a>) - 2-D DP</li>
+<li>Minimum Path Sum (<a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank">#64</a>) - 2-D DP</li>
+<li>Partition Equal Subset Sum (<a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank">#416</a>) - 2-D DP / Knapsack</li>
+<li>Coin Change II (<a href="https://leetcode.com/problems/coin-change-ii/" target="_blank">#518</a>) - 2-D DP / Knapsack</li>
+<li>Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">#1143</a>) - Subsequence DP</li>
+<li>Longest Increasing Subsequence (<a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">#300</a>) - Subsequence DP</li>
+<li>Longest Palindromic Substring (<a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">#5</a>) - Subsequence DP</li>
 </ol>
 <h3 id="hard-15-ranked-by-importance">Hard (15) - ranked by importance</h3>
 <ol>
-<li>Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/">#42</a>) - Two Pointers</li>
-<li>Minimum Window Substring (<a href="https://leetcode.com/problems/minimum-window-substring/">#76</a>) - Sliding Window</li>
-<li>Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">#4</a>) - Binary Search</li>
-<li>Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/">#23</a>) - Linked Lists</li>
-<li>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">#84</a>) - Monotonic Stack</li>
-<li>Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/">#295</a>) - Heap</li>
-<li>Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">#124</a>) - Trees</li>
-<li>Serialize and Deserialize Binary Tree (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">#297</a>) - Trees</li>
-<li>Word Ladder (<a href="https://leetcode.com/problems/word-ladder/">#127</a>) - Graphs</li>
-<li>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/">#72</a>) - Subsequence DP</li>
-<li>Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/">#239</a>) - Sliding Window</li>
-<li>First Missing Positive (<a href="https://leetcode.com/problems/first-missing-positive/">#41</a>) - Arrays and Hashing</li>
-<li>N-Queens (<a href="https://leetcode.com/problems/n-queens/">#51</a>) - Backtracking</li>
-<li>Alien Dictionary (<a href="https://leetcode.com/problems/alien-dictionary/">#269</a>) - Topological Sort (Premium)</li>
-<li>Maximal Square (<a href="https://leetcode.com/problems/maximal-square/">#221</a>) - 2-D DP</li>
+<li>Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>) - Two Pointers</li>
+<li>Minimum Window Substring (<a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">#76</a>) - Sliding Window</li>
+<li>Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>) - Binary Search</li>
+<li>Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>) - Linked Lists</li>
+<li>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>) - Monotonic Stack</li>
+<li>Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>) - Heap</li>
+<li>Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>) - Trees</li>
+<li>Serialize and Deserialize Binary Tree (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/" target="_blank">#297</a>) - Trees</li>
+<li>Word Ladder (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>) - Graphs</li>
+<li>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>) - Subsequence DP</li>
+<li>Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>) - Sliding Window</li>
+<li>First Missing Positive (<a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">#41</a>) - Arrays and Hashing</li>
+<li>N-Queens (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) - Backtracking</li>
+<li>Alien Dictionary (<a href="https://leetcode.com/problems/alien-dictionary/" target="_blank">#269</a>) - Topological Sort (Premium)</li>
+<li>Maximal Square (<a href="https://leetcode.com/problems/maximal-square/" target="_blank">#221</a>) - 2-D DP</li>
 </ol>
 <hr />
 <h2 id="part-7-mistake-revision-strategy">Part 7 — Mistake &amp; Revision Strategy</h2>
@@ -2207,7 +2207,7 @@ return tails.size();
 </thead>
 <tbody>
 <tr>
-<td><em>(example)</em> 3Sum (<a href="https://leetcode.com/problems/3sum/">#15</a>)</td>
+<td><em>(example)</em> 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)</td>
 <td>Two Pointers</td>
 <td>Didn't skip duplicate values after a match, got duplicate triplets</td>
 <td>After finding a match, <code>while (l&lt;r &amp;&amp; nums[l]==nums[l-1]) l++;</code></td>
