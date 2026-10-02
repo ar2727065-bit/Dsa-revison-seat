@@ -65,13 +65,20 @@ a:hover { text-decoration: underline; }
 .app-header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(17, 24, 39, 0.85);
+  z-index: 1000;
+  background: rgba(17, 24, 39, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
-  padding: 1rem 0;
+  padding: 0.85rem 0;
   box-shadow: var(--shadow-md);
+  width: 100%;
+}
+
+.app-header .container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 2rem;
 }
 
 .header-content {
@@ -84,7 +91,8 @@ a:hover { text-decoration: underline; }
   .header-content {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 2rem;
   }
 }
 

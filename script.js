@@ -205,17 +205,33 @@ function initCheckboxes() {
     if (e.target.classList.contains('question-checkbox')) {
       const slug = e.target.getAttribute('data-slug');
       const isChecked = e.target.checked;
-      const item = e.target.closest('.question-item');
 
-      if (isChecked) {
-        completed[slug] = true;
-        if (item) item.classList.add('is-completed');
+      if (slug) {
+        if (isChecked) {
+          completed[slug] = true;
+        } else {
+          delete completed[slug];
+        }
+
+        // Sync all checkboxes with the same data-slug across the page
+        document.querySelectorAll(`.question-checkbox[data-slug="${slug}"]`).forEach(cb => {
+          cb.checked = isChecked;
+          const item = cb.closest('.question-item');
+          if (item) {
+            if (isChecked) item.classList.add('is-completed');
+            else item.classList.remove('is-completed');
+          }
+        });
+
+        localStorage.setItem('dsa_completed_slugs', JSON.stringify(completed));
       } else {
-        delete completed[slug];
-        if (item) item.classList.remove('is-completed');
+        const item = e.target.closest('.question-item');
+        if (item) {
+          if (isChecked) item.classList.add('is-completed');
+          else item.classList.remove('is-completed');
+        }
       }
 
-      localStorage.setItem('dsa_completed_slugs', JSON.stringify(completed));
       updateProgress();
     }
   });
@@ -223,7 +239,7 @@ function initCheckboxes() {
   // Restore checkbox states
   document.querySelectorAll('.question-checkbox').forEach(cb => {
     const slug = cb.getAttribute('data-slug');
-    if (completed[slug]) {
+    if (slug && completed[slug]) {
       cb.checked = true;
       const item = cb.closest('.question-item');
       if (item) item.classList.add('is-completed');
@@ -239,7 +255,14 @@ function initProgress() {
 function updateProgress() {
   const completed = JSON.parse(localStorage.getItem('dsa_completed_slugs') || '{}');
   const completedCount = Object.keys(completed).length;
-  const totalQuestions = document.querySelectorAll('.question-checkbox').length;
+  
+  // Count unique problem slugs to get true total questions count (197)
+  const uniqueSlugs = new Set();
+  document.querySelectorAll('.question-checkbox[data-slug]').forEach(cb => {
+    const slug = cb.getAttribute('data-slug');
+    if (slug) uniqueSlugs.add(slug);
+  });
+  const totalQuestions = uniqueSlugs.size > 0 ? uniqueSlugs.size : 197;
 
   const countEl = document.getElementById('completed-count');
   const totalEl = document.getElementById('total-count');
