@@ -71,10 +71,7 @@ function initSections() {
 }
 
 function updateToggleBtnText(section) {
-  const btnText = section.querySelector('.toggle-section-btn .toggle-text');
-  if (btnText) {
-    btnText.textContent = section.classList.contains('is-collapsed') ? 'Open Section' : 'Close Section';
-  }
+  // No text added, keep button clean with chevron icon only
 }
 
 function saveAllSectionStates(isOpen) {

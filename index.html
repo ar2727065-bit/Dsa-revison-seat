@@ -9,46 +9,28 @@
 </head>
 <body>
 
-<header class="app-header">
-  <div class="container">
-    <div class="header-content">
-      <div class="header-title-group">
-        <h1>🚀 DSA Pattern Revision & Tracking</h1>
-        <div class="header-stats">
-          <div class="stat-pill">Progress: <strong id="completed-count">0</strong>/<span id="total-count">0</span></div>
-          <div class="stat-pill">Notes: <strong id="notes-saved-count">0</strong></div>
-        </div>
-      </div>
-      <div class="toolbar-controls">
-        <div class="search-wrapper">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="search-input" placeholder="Search patterns or problems...">
-        </div>
-        <button id="expand-all-btn" class="btn btn-sm">📂 Expand All</button>
-        <button id="collapse-all-btn" class="btn btn-sm">📁 Collapse All</button>
-      </div>
-    </div>
-    <div class="progress-bar-container">
-      <div id="progress-bar-fill" class="progress-bar-fill"></div>
-    </div>
-  </div>
-</header>
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Theme">☀️ / 🌙 Theme</button>
 
 <main class="container">
 
-<button id="theme-toggle" onclick="toggleTheme()">&#9728; / &#9789;</button>
-<div class="container">
-<h1 id="the-8-week-56-day-pattern-based-dsa-roadmap-c">The 8-Week / 56-Day Pattern-Based DSA Roadmap (C++)</h1>
+<header class="hero-section">
+  <h1 id="the-8-week-56-day-pattern-based-dsa-roadmap-c">The 8-Week / 56-Day Pattern-Based DSA Roadmap (C++)</h1>
+  <div class="intro-stats-bar">
+    <div class="stat-pill">Progress: <strong id="completed-count">0</strong>/<span id="total-count">197</span></div>
+    <div class="stat-pill">Notes: <strong id="notes-saved-count">0</strong></div>
+    <div class="progress-bar-container inline-progress"><div id="progress-bar-fill" class="progress-bar-fill"></div></div>
+  </div>
+</header>
+
+<!-- PART 1: INTRODUCTION -->
+<div class="layout-part" id="part-introduction">
+  <h2 class="section-divider-title">📌 Introduction & Schedule Overview</h2>
 <section class="pattern-section-card" id="200-leetcode-problems-organized-by-interview-pattern-not-by-topic">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>~200 LeetCode Problems, Organized by Interview Pattern, Not by Topic</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <blockquote>
 <p><strong>Philosophy:</strong> You are not trying to "collect" 200 solved problems. You are trying to build a mental library of ~20 reusable patterns, so that when you see problem #201 in a real interview — one you've never seen before — you recognize <em>which tool</em> to reach for within the first 60 seconds. Every part of this plan is built around that goal.</p>
@@ -60,357 +42,597 @@
 
   </div>
 </section>
-<h2 id="why-these-patterns-and-why-this-weighting">Why These Patterns, and Why This Weighting</h2>
-<p>Research into 2025-2026 interview-prep resources (NeetCode 150, Blind 75, Grind 75, LeetCode company-tag repositories, and discussion-board "most repeated questions" round-ups) converges on the same short list of high-yield categories: <strong>Arrays/Hashing, Two Pointers, Sliding Window, Binary Search, Trees/Graphs (BFS/DFS/Union-Find/Topological Sort), Heaps, Backtracking, and Dynamic Programming</strong> are named as the backbone of general software-engineering interviews across Google, Meta, Amazon, Microsoft, and most mid-size/product companies, with Dynamic Programming and Graphs consistently flagged as the hardest and most differentiating for mid-to-senior loops. Segment Trees, Fenwick Trees, heavy graph theory (Dijkstra/MST at competitive-programming depth), and advanced string algorithms (KMP, Manacher, suffix arrays) are deliberately <strong>excluded</strong> — they show up occasionally but are not general-interview staples, and including them would dilute time better spent mastering the 22 patterns below.</p>
-<p>Patterns were <strong>not</strong> weighted equally. Arrays &amp; Hashing, Sliding Window, Trees, and Graphs get the most problems because they appear in the largest share of real interview loops and because they compose with almost every other pattern (a graph problem is usually BFS + hashing + queue). Tries, Topological Sort, and Union-Find get few problems because they are narrower — high value when they show up, but they show up less often, and once you've internalized the template, extra repetition has low marginal return.</p>
-<hr />
-<h2 id="difficulty-distribution-actual">Difficulty Distribution (Actual)</h2>
+<section class="pattern-section-card" id="week-1-arrays-hashing-prefix-sum-25-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 1 — Arrays &amp; Hashing, Prefix Sum (25 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>Difficulty</th>
-<th style="text-align: right;">Count</th>
-<th style="text-align: right;">% of Total</th>
-<th>Your Target</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>🟢 Easy</td>
-<td style="text-align: right;">51</td>
-<td style="text-align: right;">26%</td>
-<td>50–60</td>
-</tr>
-<tr>
-<td>🟡 Medium</td>
-<td style="text-align: right;">116</td>
-<td style="text-align: right;">59%</td>
-<td>110–125</td>
-</tr>
-<tr>
-<td>🔴 Hard</td>
-<td style="text-align: right;">30</td>
-<td style="text-align: right;">15%</td>
-<td>20–30</td>
-</tr>
-<tr>
-<td><strong>Total</strong></td>
-<td style="text-align: right;"><strong>197</strong></td>
-<td style="text-align: right;"><strong>100%</strong></td>
-<td>180–220 (~200 ideal)</td>
-</tr>
-</tbody>
-</table></div>
-<hr />
-<h2 id="pattern-coverage-summary">Pattern Coverage Summary</h2>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>#</th>
-<th>Pattern</th>
-<th>Importance</th>
-<th style="text-align: right;">Problems</th>
-<th style="text-align: right;">🟢E</th>
-<th style="text-align: right;">🟡M</th>
-<th style="text-align: right;">🔴H</th>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Arrays &amp; Hashing</td>
-<td>Very High</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">1</td>
+<td>Arrays &amp; Hashing (intro)</td>
+<td>Learn the pattern + review <code>vector</code>/<code>unordered_map</code>/<code>unordered_set</code>. Solve: Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>), Contains Duplicate (<a href="https://leetcode.com/problems/contains-duplicate/" target="_blank">#217</a>), Valid Anagram (<a href="https://leetcode.com/problems/valid-anagram/" target="_blank">#242</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: rewrite the Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>) template from memory, no looking</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Two Pointers</td>
-<td>Very High</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">1</td>
+<td>Arrays &amp; Hashing</td>
+<td>Majority Element (<a href="https://leetcode.com/problems/majority-element/" target="_blank">#169</a>), Intersection of Two Arrays (<a href="https://leetcode.com/problems/intersection-of-two-arrays/" target="_blank">#349</a>), Merge Sorted Array (<a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">#88</a>), Missing Number (<a href="https://leetcode.com/problems/missing-number/" target="_blank">#268</a>), Word Pattern (<a href="https://leetcode.com/problems/word-pattern/" target="_blank">#290</a>)</td>
+<td style="text-align: right;">5</td>
+<td>Next-day: redo yesterday's hardest problem cold</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Sliding Window</td>
-<td>Very High</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">2</td>
+<td>Arrays &amp; Hashing</td>
+<td>Group Anagrams (<a href="https://leetcode.com/problems/group-anagrams/" target="_blank">#49</a>), Top K Frequent Elements (<a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">#347</a>), Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank">#238</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: write out why each needed a hash map, in one sentence each</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Prefix Sum</td>
-<td>High</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
+<td>Arrays &amp; Hashing</td>
+<td>Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>), Encode and Decode Strings (<a href="https://leetcode.com/problems/encode-and-decode-strings/" target="_blank">#271</a>), Sort Colors (<a href="https://leetcode.com/problems/sort-colors/" target="_blank">#75</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: revisit Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>) — it's the trickiest so far</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Binary Search (incl. "on answer")</td>
-<td>Very High</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">2</td>
+<td>Arrays &amp; Hashing (finish)</td>
+<td>Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">#73</a>), Rotate Array (<a href="https://leetcode.com/problems/rotate-array/" target="_blank">#189</a>), 4Sum II (<a href="https://leetcode.com/problems/4sum-ii/" target="_blank">#454</a>), First Missing Positive (<a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">#41</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: note the in-place trick used in Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">#73</a>) for your mistake list if it wasn't obvious</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Linked Lists (+ Fast/Slow Pointers)</td>
-<td>High</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">2</td>
+<td>Prefix Sum (heavy day — pattern is fast to apply once learned)</td>
+<td>Running Sum of 1d Array (<a href="https://leetcode.com/problems/running-sum-of-1d-array/" target="_blank">#1480</a>), Find Pivot Index (<a href="https://leetcode.com/problems/find-pivot-index/" target="_blank">#724</a>), Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank">#560</a>), Contiguous Array (<a href="https://leetcode.com/problems/contiguous-array/" target="_blank">#525</a>), Subarray Sums Divisible by K (<a href="https://leetcode.com/problems/subarray-sums-divisible-by-k/" target="_blank">#974</a>), Range Sum Query 2D - Immutable (<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/" target="_blank">#304</a>), Count of Range Sum (<a href="https://leetcode.com/problems/count-of-range-sum/" target="_blank">#327</a>)</td>
+<td style="text-align: right;">7</td>
+<td>Same-day: confirm you understand <em>why</em> prefix sum needs <code>{0:1}</code> seeded in the map</td>
 </tr>
 <tr>
 <td>7</td>
-<td>Stack &amp; Monotonic Stack</td>
-<td>High</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">2</td>
+<td><strong>Weekly Test</strong></td>
+<td>Mixed, unlabeled retest (see Part 4, Test 1)</td>
+<td style="text-align: right;">0</td>
+<td>Log every miss to your mistake list before looking at answers</td>
 </tr>
+</tbody>
+</table></div>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="week-2-two-pointers-sliding-window-start-binary-search-25-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 2 — Two Pointers, Sliding Window, start Binary Search (25 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>8</td>
-<td>Heap / Priority Queue</td>
-<td>High</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">2</td>
+<td>Two Pointers (intro)</td>
+<td>Learn the pattern. Valid Palindrome (<a href="https://leetcode.com/problems/valid-palindrome/" target="_blank">#125</a>), Move Zeroes (<a href="https://leetcode.com/problems/move-zeroes/" target="_blank">#283</a>), Is Subsequence (<a href="https://leetcode.com/problems/is-subsequence/" target="_blank">#392</a>), Squares of a Sorted Array (<a href="https://leetcode.com/problems/squares-of-a-sorted-array/" target="_blank">#977</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: state in one line why sorting first matters here</td>
 </tr>
 <tr>
 <td>9</td>
-<td>Intervals</td>
-<td>Medium-High</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
+<td>Two Pointers</td>
+<td>Two Sum II - Input Array Is Sorted (<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank">#167</a>), 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>), Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">#11</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)'s duplicate-skipping logic from memory</td>
 </tr>
 <tr>
 <td>10</td>
-<td>Trees (Binary Tree core)</td>
-<td>Very High</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">2</td>
+<td>Two Pointers (finish)</td>
+<td>Boats to Save People (<a href="https://leetcode.com/problems/boats-to-save-people/" target="_blank">#881</a>), Remove Duplicates from Sorted Array II (<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/" target="_blank">#80</a>), 4Sum (<a href="https://leetcode.com/problems/4sum/" target="_blank">#18</a>), Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: compare your Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>) approach to the two-pointer <em>and</em> the monotonic-stack approach (stack pattern comes later)</td>
 </tr>
 <tr>
 <td>11</td>
-<td>Binary Search Trees</td>
-<td>Medium</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0</td>
+<td>Sliding Window (intro)</td>
+<td>Learn the pattern. Best Time to Buy and Sell Stock (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">#121</a>), Maximum Average Subarray I (<a href="https://leetcode.com/problems/maximum-average-subarray-i/" target="_blank">#643</a>), Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">#3</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: draw the window on paper for one example before coding</td>
 </tr>
 <tr>
 <td>12</td>
-<td>Tries</td>
-<td>Medium (niche but distinctive)</td>
+<td>Sliding Window</td>
+<td>Longest Repeating Character Replacement (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/" target="_blank">#424</a>), Permutation in String (<a href="https://leetcode.com/problems/permutation-in-string/" target="_blank">#567</a>), Fruit Into Baskets (<a href="https://leetcode.com/problems/fruit-into-baskets/" target="_blank">#904</a>), Max Consecutive Ones III (<a href="https://leetcode.com/problems/max-consecutive-ones-iii/" target="_blank">#1004</a>)</td>
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">1</td>
+<td>Next-day: revisit whichever of these felt hardest</td>
 </tr>
 <tr>
 <td>13</td>
-<td>Graphs — BFS/DFS</td>
-<td>Very High</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">2</td>
+<td>Sliding Window (finish)</td>
+<td>Find All Anagrams in a String (<a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/" target="_blank">#438</a>), Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/" target="_blank">#209</a>), Longest Substring with At Most K Distinct Characters (<a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/" target="_blank">#340</a>), Minimum Window Substring (<a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">#76</a>), Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>)</td>
+<td style="text-align: right;">5</td>
+<td>Same-day: Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>) uses a monotonic deque — note this connects to Week 4's Stack pattern</td>
 </tr>
 <tr>
 <td>14</td>
-<td>Topological Sort</td>
-<td>Medium</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">0</td>
+<td><strong>Weekly Test</strong> + Binary Search (start)</td>
+<td>Test (Part 4, Test 2) + Binary Search (<a href="https://leetcode.com/problems/binary-search/" target="_blank">#704</a>), First Bad Version (<a href="https://leetcode.com/problems/first-bad-version/" target="_blank">#278</a>)</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>15</td>
-<td>Union-Find (DSU)</td>
-<td>Medium</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Greedy</td>
-<td>High</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>17</td>
-<td>Backtracking</td>
-<td>High</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>18</td>
-<td>Bit Manipulation</td>
-<td>Medium</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>19</td>
-<td>Math / Number Theory</td>
-<td>Medium (light)</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>20</td>
-<td>1-D Dynamic Programming</td>
-<td>Very High</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr>
-<td>21</td>
-<td>2-D DP / Knapsack-style</td>
-<td>Very High</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Subsequence / String DP</td>
-<td>High</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>TOTAL</strong></td>
-<td></td>
-<td style="text-align: right;"><strong>197</strong></td>
-<td style="text-align: right;"><strong>51</strong></td>
-<td style="text-align: right;"><strong>116</strong></td>
-<td style="text-align: right;"><strong>30</strong></td>
+<td>Biweekly cumulative revision: rapid-fire 8 random problems from Weeks 1-2, timed 20 min</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>Why Trees (15) and Graphs+Topo+UnionFind (19 combined) are so large:</strong> together they're nearly 20% of the plan because "explore a structure and track visited state" is arguably the single most reused shape in interviews — it appears disguised as grid problems, dependency problems, connectivity problems, and cloning problems. <strong>Why DP is split into three sub-patterns (27 problems combined)</strong> rather than one bucket: 1-D DP, grid/knapsack DP, and subsequence/string DP each have a genuinely different recognition signature and mental template, and conflating them is the #1 reason people say "I understand DP problems individually but can't recognize a new one."</p>
-<hr />
-<h2 id="the-8-week-arc">The 8-Week Arc</h2>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="week-3-finish-binary-search-linked-lists-start-stack-25-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 3 — Finish Binary Search, Linked Lists, start Stack (25 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>Week</th>
-<th>Days</th>
-<th>Focus</th>
-<th style="text-align: right;">New Problems</th>
-<th>You Should Leave This Week Able To...</th>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>1–7</td>
-<td>Arrays &amp; Hashing, Prefix Sum</td>
-<td style="text-align: right;">25</td>
-<td>Reach for a hash map in under 10 seconds for any "have I seen this / count this" problem</td>
+<td>15</td>
+<td>Binary Search</td>
+<td>Search Insert Position (<a href="https://leetcode.com/problems/search-insert-position/" target="_blank">#35</a>), Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">#33</a>), Find Minimum in Rotated Sorted Array (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank">#153</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: write both the "classic" and "on the answer" templates side by side</td>
 </tr>
 <tr>
-<td>2</td>
-<td>8–14</td>
-<td>Two Pointers, Sliding Window, start Binary Search</td>
-<td style="text-align: right;">25</td>
-<td>Convert an O(n²) brute force on a sorted array or contiguous substring into O(n)</td>
+<td>16</td>
+<td>Binary Search</td>
+<td>Find Peak Element (<a href="https://leetcode.com/problems/find-peak-element/" target="_blank">#162</a>), Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>), Search a 2D Matrix (<a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">#74</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>) — it's the cleanest "binary search on the answer" example</td>
 </tr>
 <tr>
-<td>3</td>
-<td>15–21</td>
-<td>Finish Binary Search, Linked Lists, start Stack</td>
-<td style="text-align: right;">25</td>
-<td>Binary-search on both indices and "the answer itself"; manipulate linked lists with dummy nodes and fast/slow pointers</td>
+<td>17</td>
+<td>Binary Search (finish)</td>
+<td>Time Based Key-Value Store (<a href="https://leetcode.com/problems/time-based-key-value-store/" target="_blank">#981</a>), Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>), Split Array Largest Sum (<a href="https://leetcode.com/problems/split-array-largest-sum/" target="_blank">#410</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>) is genuinely hard — re-derive the partition logic out loud</td>
 </tr>
 <tr>
-<td>4</td>
-<td>22–28</td>
-<td>Finish Stack, Heap, Intervals, start Trees</td>
-<td style="text-align: right;">25</td>
-<td>Use a monotonic stack for "next greater" problems; use a heap for "top-K / K-th" problems; sort-and-sweep intervals</td>
+<td>18</td>
+<td>Linked Lists (intro)</td>
+<td>Learn the pattern + dummy-node trick. Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>), Merge Two Sorted Lists (<a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">#21</a>), Linked List Cycle (<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">#141</a>), Palindrome Linked List (<a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank">#234</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: draw pointer rewiring on paper for Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>)</td>
 </tr>
 <tr>
-<td>5</td>
-<td>29–35</td>
-<td>Finish Trees, BST, Tries, start Graphs</td>
-<td style="text-align: right;">25</td>
-<td>Write any tree traversal (recursive + iterative) from memory; know when BST ordering helps; start BFS/DFS on grids and graphs</td>
+<td>19</td>
+<td>Linked Lists</td>
+<td>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">#2</a>), Remove Nth Node From End of List (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">#19</a>), Reorder List (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Reorder List (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>) — it combines 3 earlier patterns (find middle, reverse, merge)</td>
 </tr>
 <tr>
-<td>6</td>
-<td>36–42</td>
-<td>Finish Graphs, Topological Sort, Union-Find, Greedy, start Backtracking</td>
-<td style="text-align: right;">25</td>
-<td>Detect cycles, order dependencies, and know when a greedy exchange argument is safe vs. when it's a DP trap</td>
+<td>20</td>
+<td>Linked Lists</td>
+<td>Copy List with Random Pointer (<a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank">#138</a>), Odd Even Linked List (<a href="https://leetcode.com/problems/odd-even-linked-list/" target="_blank">#328</a>), Find the Duplicate Number (<a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank">#287</a>), Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: note how Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>) reuses the Heap pattern (coming in Week 4)</td>
 </tr>
 <tr>
-<td>7</td>
-<td>43–49</td>
-<td>Finish Backtracking, Bit Manipulation, Math, start 1-D DP</td>
-<td style="text-align: right;">25</td>
-<td>Generate combinations/permutations with pruning; recognize and set up a 1-D DP recurrence from a brute-force recursion</td>
-</tr>
-<tr>
-<td>8</td>
-<td>50–56</td>
-<td>Finish DP (2-D/Knapsack + Subsequence), mixed timed practice, mock interviews</td>
-<td style="text-align: right;">22</td>
-<td>Recognize <em>which</em> DP shape a new problem is (1-D vs. grid vs. knapsack vs. LCS-family) inside 2 minutes, under time pressure</td>
+<td>21</td>
+<td><strong>Weekly Test</strong> + Linked Lists (finish) + Stack (start)</td>
+<td>Test (Part 4, Test 3) + Reverse Nodes in k-Group (<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank">#25</a>) + Valid Parentheses (<a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">#20</a>), Baseball Game (<a href="https://leetcode.com/problems/baseball-game/" target="_blank">#682</a>), Min Stack (<a href="https://leetcode.com/problems/min-stack/" target="_blank">#155</a>), Evaluate Reverse Polish Notation (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank">#150</a>)</td>
+<td style="text-align: right;">5</td>
+<td>Log misses; biweekly revision not due until Day 28</td>
 </tr>
 </tbody>
 </table></div>
-<p>Full daily breakdown is in <strong>Part 3</strong>.</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="week-4-finish-stack-heap-intervals-start-trees-25-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 4 — Finish Stack, Heap, Intervals, start Trees (25 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22</td>
+<td>Stack &amp; Monotonic Stack</td>
+<td>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">#739</a>), Next Greater Element II (<a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank">#503</a>), Online Stock Span (<a href="https://leetcode.com/problems/online-stock-span/" target="_blank">#901</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: rewrite the monotonic-stack template from memory, indices not values</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Stack &amp; Monotonic Stack (finish medium)</td>
+<td>Asteroid Collision (<a href="https://leetcode.com/problems/asteroid-collision/" target="_blank">#735</a>), Decode String (<a href="https://leetcode.com/problems/decode-string/" target="_blank">#394</a>)</td>
+<td style="text-align: right;">2</td>
+<td>Next-day: redo whichever felt more like simulation than "the template"</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Stack (finish) + Heap (intro)</td>
+<td>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>), Maximal Rectangle (<a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank">#85</a>) + Kth Largest Element in a Stream (<a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/" target="_blank">#703</a>), Last Stone Weight (<a href="https://leetcode.com/problems/last-stone-weight/" target="_blank">#1046</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>) is a top interview-hard — make sure you can explain <em>why</em> the stack stays monotonic</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Heap</td>
+<td>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">#215</a>), K Closest Points to Origin (<a href="https://leetcode.com/problems/k-closest-points-to-origin/" target="_blank">#973</a>), Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>) — the greedy + heap combination is a common trip-up</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Heap (finish)</td>
+<td>Meeting Rooms II (<a href="https://leetcode.com/problems/meeting-rooms-ii/" target="_blank">#253</a>), Reorganize String (<a href="https://leetcode.com/problems/reorganize-string/" target="_blank">#767</a>), Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>), IPO (<a href="https://leetcode.com/problems/ipo/" target="_blank">#502</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>) — confirm you know the "two heaps" trick cold</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Intervals (intro)</td>
+<td>Learn the pattern. Meeting Rooms (<a href="https://leetcode.com/problems/meeting-rooms/" target="_blank">#252</a>), Insert Interval (<a href="https://leetcode.com/problems/insert-interval/" target="_blank">#57</a>), Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/" target="_blank">#56</a>), Non-overlapping Intervals (<a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank">#435</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: state whether each new interval problem sorts by start or end, and why</td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>Weekly Test</strong> + Intervals (finish) + Trees (start)</td>
+<td>Test (Part 4, Test 4) + Minimum Number of Arrows to Burst Balloons (<a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank">#452</a>), Employee Free Time (<a href="https://leetcode.com/problems/employee-free-time/" target="_blank">#759</a>) + Invert Binary Tree (<a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">#226</a>), Maximum Depth of Binary Tree (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">#104</a>), Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">#543</a>)</td>
+<td style="text-align: right;">5</td>
+<td>Biweekly cumulative revision: 10 random problems from Weeks 3-4, timed 25 min</td>
+</tr>
+</tbody>
+</table></div>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="week-5-finish-trees-bst-tries-start-graphs-25-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 5 — Finish Trees, BST, Tries, start Graphs (25 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>29</td>
+<td>Trees</td>
+<td>Balanced Binary Tree (<a href="https://leetcode.com/problems/balanced-binary-tree/" target="_blank">#110</a>), Same Tree (<a href="https://leetcode.com/problems/same-tree/" target="_blank">#100</a>), Symmetric Tree (<a href="https://leetcode.com/problems/symmetric-tree/" target="_blank">#101</a>), Merge Two Binary Trees (<a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank">#617</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: for each, state the base case and the combine step separately</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Trees (BFS)</td>
+<td>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">#102</a>), Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>), Count Good Nodes in Binary Tree (<a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/" target="_blank">#1448</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>) — a common variant twist on level order</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Trees</td>
+<td>Binary Tree Zigzag Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank">#103</a>), Construct Binary Tree from Preorder and Inorder Traversal (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" target="_blank">#105</a>), Path Sum II (<a href="https://leetcode.com/problems/path-sum-ii/" target="_blank">#113</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: Construct Binary Tree — explain why you always find the root in preorder first</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Trees (finish) + BST (intro)</td>
+<td>Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>), Serialize and Deserialize Binary Tree (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/" target="_blank">#297</a>) + Search in a Binary Search Tree (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" target="_blank">#700</a>), Convert Sorted Array to Binary Search Tree (<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank">#108</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>) — be explicit about "best path through node" vs "best path starting at node"</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Binary Search Trees</td>
+<td>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">#98</a>), Kth Smallest Element in a BST (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank">#230</a>), Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank">#235</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Validate BST using the bounds-passing technique, not just in-order-then-check</td>
+</tr>
+<tr>
+<td>34</td>
+<td>BST (finish) + Tries (start)</td>
+<td>Delete Node in a BST (<a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank">#450</a>), Binary Search Tree Iterator (<a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank">#173</a>) + Implement Trie (Prefix Tree), Design Add and Search Words Data Structure (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/" target="_blank">#211</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: write the TrieNode struct from memory</td>
+</tr>
+<tr>
+<td>35</td>
+<td><strong>Weekly Test</strong> + Tries (finish) + Graphs (start)</td>
+<td>Test (Part 4, Test 5) + Longest Word in Dictionary (<a href="https://leetcode.com/problems/longest-word-in-dictionary/" target="_blank">#720</a>), Word Search II (<a href="https://leetcode.com/problems/word-search-ii/" target="_blank">#212</a>) + Flood Fill (<a href="https://leetcode.com/problems/flood-fill/" target="_blank">#733</a>), Find if Path Exists in Graph (<a href="https://leetcode.com/problems/find-if-path-exists-in-graph/" target="_blank">#1971</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Log misses; biweekly revision not due until Day 42</td>
+</tr>
+</tbody>
+</table></div>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="week-6-finish-graphs-topological-sort-union-find-greedy-start-backtracking-25-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 6 — Finish Graphs, Topological Sort, Union-Find, Greedy, start Backtracking (25 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>36</td>
+<td>Graphs (BFS/DFS)</td>
+<td>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/" target="_blank">#200</a>), Clone Graph (<a href="https://leetcode.com/problems/clone-graph/" target="_blank">#133</a>), 01 Matrix (<a href="https://leetcode.com/problems/01-matrix/" target="_blank">#542</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: rewrite the grid-BFS template, marking visited on enqueue not dequeue</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Graphs (finish medium)</td>
+<td>Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>), Rotting Oranges (<a href="https://leetcode.com/problems/rotting-oranges/" target="_blank">#994</a>), Surrounded Regions (<a href="https://leetcode.com/problems/surrounded-regions/" target="_blank">#130</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>) — the "search backward from both oceans" trick is the key insight</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Graphs (finish) + Topological Sort (start)</td>
+<td>Word Ladder (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>), Word Ladder II (<a href="https://leetcode.com/problems/word-ladder-ii/" target="_blank">#126</a>) + Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>), Course Schedule II (<a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank">#210</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Same-day: state why Word Ladder (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>) is BFS (shortest path) not DFS</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Topological Sort (finish) + Union-Find (start)</td>
+<td>Alien Dictionary (<a href="https://leetcode.com/problems/alien-dictionary/" target="_blank">#269</a>) + Number of Provinces (<a href="https://leetcode.com/problems/number-of-provinces/" target="_blank">#547</a>), Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/" target="_blank">#684</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>) using Kahn's algorithm from memory</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Union-Find</td>
+<td>Accounts Merge (<a href="https://leetcode.com/problems/accounts-merge/" target="_blank">#721</a>), Graph Valid Tree (<a href="https://leetcode.com/problems/graph-valid-tree/" target="_blank">#261</a>), Evaluate Division (<a href="https://leetcode.com/problems/evaluate-division/" target="_blank">#399</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: write the path-compressed <code>find()</code> function from memory</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Union-Find (finish) + Greedy (intro)</td>
+<td>Number of Islands II (<a href="https://leetcode.com/problems/number-of-islands-ii/" target="_blank">#305</a>) + Assign Cookies (<a href="https://leetcode.com/problems/assign-cookies/" target="_blank">#455</a>), Lemonade Change (<a href="https://leetcode.com/problems/lemonade-change/" target="_blank">#860</a>), Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>), Jump Game II (<a href="https://leetcode.com/problems/jump-game-ii/" target="_blank">#45</a>)</td>
+<td style="text-align: right;">5</td>
+<td>Same-day: for Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>), state the greedy invariant ("farthest reachable so far") in one sentence</td>
+</tr>
+<tr>
+<td>42</td>
+<td><strong>Weekly Test</strong> + Greedy (finish) + Backtracking (start)</td>
+<td>Test (Part 4, Test 6) + Gas Station (<a href="https://leetcode.com/problems/gas-station/" target="_blank">#134</a>), Partition Labels (<a href="https://leetcode.com/problems/partition-labels/" target="_blank">#763</a>), Candy (<a href="https://leetcode.com/problems/candy/" target="_blank">#135</a>) + Subsets (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>)</td>
+<td style="text-align: right;">4</td>
+<td>Biweekly cumulative revision: 10 random problems from Weeks 5-6, timed 25 min</td>
+</tr>
+</tbody>
+</table></div>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="week-7-finish-backtracking-bit-manipulation-math-start-1-d-dp-25-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 7 — Finish Backtracking, Bit Manipulation, Math, start 1-D DP (25 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p><em>(Interview-mode transition begins: from here on, treat each solve as a 25-30 minute timed attempt before checking any hint.)</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>43</td>
+<td>Backtracking</td>
+<td>Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>), Combination Sum (<a href="https://leetcode.com/problems/combination-sum/" target="_blank">#39</a>), Combinations (<a href="https://leetcode.com/problems/combinations/" target="_blank">#77</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: state the one-line difference between Subsets (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>)/Combinations (<a href="https://leetcode.com/problems/combinations/" target="_blank">#77</a>) (start index) and Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>) (used array)</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Backtracking</td>
+<td>Palindrome Partitioning (<a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank">#131</a>), Letter Combinations of a Phone Number (<a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">#17</a>), Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>) — grid backtracking + visited-marking combines Weeks 6 and 7</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Backtracking (finish) + Bit Manipulation (intro)</td>
+<td>Combination Sum II (<a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank">#40</a>), N-Queens (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) + Single Number (<a href="https://leetcode.com/problems/single-number/" target="_blank">#136</a>), Number of 1 Bits (<a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank">#191</a>), Counting Bits (<a href="https://leetcode.com/problems/counting-bits/" target="_blank">#338</a>)</td>
+<td style="text-align: right;">5</td>
+<td>Same-day: N-Queens (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) — explain your column/diagonal-attack tracking in one sentence</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Bit Manipulation (finish) + Math (intro)</td>
+<td>Sum of Two Integers (<a href="https://leetcode.com/problems/sum-of-two-integers/" target="_blank">#371</a>), Reverse Bits (<a href="https://leetcode.com/problems/reverse-bits/" target="_blank">#190</a>), Maximum XOR of Two Numbers in an Array (<a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank">#421</a>) + Happy Number (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>), Palindrome Number (<a href="https://leetcode.com/problems/palindrome-number/" target="_blank">#9</a>), Sqrt(x)</td>
+<td style="text-align: right;">6</td>
+<td>Same-day: Happy Number (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>) — confirm you see the cycle-detection connection to Week 3's fast/slow pointers</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Math (finish) + 1-D DP (intro — timed 25 min/problem from here on)</td>
+<td>Pow(x, n), Fraction to Recurring Decimal (<a href="https://leetcode.com/problems/fraction-to-recurring-decimal/" target="_blank">#166</a>), Basic Calculator (<a href="https://leetcode.com/problems/basic-calculator/" target="_blank">#224</a>) + Climbing Stairs (<a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">#70</a>), House Robber (<a href="https://leetcode.com/problems/house-robber/" target="_blank">#198</a>), Fibonacci Number (<a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">#509</a>)</td>
+<td style="text-align: right;">6</td>
+<td>Same-day: for every DP problem this week, write the brute-force recursion <strong>before</strong> the dp array</td>
+</tr>
+<tr>
+<td>48</td>
+<td>1-D DP</td>
+<td>House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>), Decode Ways (<a href="https://leetcode.com/problems/decode-ways/" target="_blank">#91</a>)</td>
+<td style="text-align: right;">2</td>
+<td>Next-day: redo House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>) — explain why you run the linear version twice</td>
+</tr>
+<tr>
+<td>49</td>
+<td><strong>Weekly Test</strong></td>
+<td>Test (Part 4, Test 7) — pure mixed retest, no new problems</td>
+<td style="text-align: right;">0</td>
+<td>Log misses; biweekly revision not due until Day 56</td>
+</tr>
+</tbody>
+</table></div>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="week-8-finish-dp-mixed-practice-mock-interviews-22-problems">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Week 8 — Finish DP, Mixed Practice, Mock Interviews (22 problems)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p><em>(Full interview mode: every problem timed at 30-35 minutes; treat unfamiliar problems on Days 50-55 as mock-interview questions — talk through your approach out loud before coding.)</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Pattern / Topic</th>
+<th>Problems</th>
+<th style="text-align: right;">#</th>
+<th>Revision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>1-D DP</td>
+<td>Coin Change (<a href="https://leetcode.com/problems/coin-change/" target="_blank">#322</a>), Maximum Subarray (Kadane's), Word Break (<a href="https://leetcode.com/problems/word-break/" target="_blank">#139</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: Maximum Subarray — state Kadane's one-line recurrence from memory</td>
+</tr>
+<tr>
+<td>51</td>
+<td>1-D DP (finish) + 2-D DP/Knapsack (intro)</td>
+<td>Maximum Product Subarray (<a href="https://leetcode.com/problems/maximum-product-subarray/" target="_blank">#152</a>), Delete and Earn (<a href="https://leetcode.com/problems/delete-and-earn/" target="_blank">#740</a>), Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">#132</a>) + Min Cost Climbing Stairs (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/" target="_blank">#746</a>), Unique Paths (<a href="https://leetcode.com/problems/unique-paths/" target="_blank">#62</a>), Minimum Path Sum (<a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank">#64</a>)</td>
+<td style="text-align: right;">6</td>
+<td>Next-day: redo Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">#132</a>) if it felt shaky — it's the hardest 1-D DP here</td>
+</tr>
+<tr>
+<td>52</td>
+<td>2-D DP/Knapsack</td>
+<td>Partition Equal Subset Sum (<a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank">#416</a>), Target Sum (<a href="https://leetcode.com/problems/target-sum/" target="_blank">#494</a>), Coin Change II (<a href="https://leetcode.com/problems/coin-change-ii/" target="_blank">#518</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Same-day: state out loud whether each is 0/1 or unbounded knapsack, and why the loop direction matters</td>
+</tr>
+<tr>
+<td>53</td>
+<td>2-D DP/Knapsack (finish) + Subsequence DP (intro)</td>
+<td>Triangle (<a href="https://leetcode.com/problems/triangle/" target="_blank">#120</a>), Maximal Square (<a href="https://leetcode.com/problems/maximal-square/" target="_blank">#221</a>), Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/" target="_blank">#174</a>) + Longest Increasing Subsequence (<a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">#300</a>), Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">#1143</a>)</td>
+<td style="text-align: right;">5</td>
+<td>Same-day: Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/" target="_blank">#174</a>) — explain why you must compute backward from the goal</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Subsequence / String DP</td>
+<td>Longest Palindromic Substring (<a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">#5</a>), Palindromic Substrings (<a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank">#647</a>), Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/" target="_blank">#583</a>)</td>
+<td style="text-align: right;">3</td>
+<td>Next-day: redo Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/" target="_blank">#583</a>) — confirm you see it's LCS in disguise</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Subsequence / String DP (finish) — <strong>all 197 problems complete</strong></td>
+<td>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>), Distinct Subsequences (<a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank">#115</a>)</td>
+<td style="text-align: right;">2</td>
+<td>Same-day: Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>) — this is one of the single most-repeated hard interview questions; be fully fluent</td>
+</tr>
+<tr>
+<td>56</td>
+<td><strong>Full Mock Interview Day + Final Revision</strong></td>
+<td>No new problems. Run Test 8 (Part 4) as a 45-minute timed mock covering all 8 weeks. Then review your entire mistake list from Part 7 end-to-end.</td>
+<td style="text-align: right;">0</td>
+<td>This is the capstone review — see Part 8 for exactly how to run this day</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Grand total: 25 + 25 + 25 + 25 + 25 + 25 + 25 + 22 = 197 problems across 56 days.</strong></p>
 <hr />
-<h2 id="part-2-complete-dsa-pattern-list">Part 2 — Complete DSA Pattern List</h2>
-<p>For each pattern: what it is → how to recognize it → a minimal C++ template → common variations → common mistakes → the STL tools you need → the problem list (ranked within each difficulty by importance, not alphabetically). Legend: 🔥🔥🔥 = very frequently asked, 🔥🔥 = frequently asked, 🔥 = common/useful. <strong>MUST DO</strong> = highest interview value, <strong>SHOULD DO</strong> = important variation, <strong>OPTIONAL</strong> = nice-to-have.</p>
-<hr />
+
+  </div>
+</section>
+</div>
+
+<!-- PART 2: QUESTIONS SHEET -->
+<div class="layout-part" id="part-questions">
+  <h2 class="section-divider-title">📋 Questions Sheet (22 Core Patterns)</h2>
 <section class="pattern-section-card" id="1-arrays-hashing">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>1. Arrays &amp; Hashing</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Using <code>unordered_map</code>/<code>unordered_set</code> to trade space for O(1) average lookup, turning an O(n²) "check every pair/every occurrence" brute force into O(n).
@@ -528,16 +750,12 @@ for (int i = 0; i &lt; n; i++) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="2-two-pointers">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>2. Two Pointers</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Two indices moving through a (usually sorted) structure from the ends inward, or one behind the other, to avoid nested loops.
@@ -623,16 +841,12 @@ while (l &lt; r) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="3-sliding-window">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>3. Sliding Window</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> A window <code>[left, right]</code> that expands and shrinks over a contiguous run of an array/string, maintaining a running condition (count, sum, set of chars) so you never re-scan the same elements.
@@ -725,16 +939,12 @@ for (int right = 0; right &lt; n; right++) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="4-prefix-sum">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>4. Prefix Sum</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Precomputing cumulative sums so any range-sum query becomes O(1) subtraction instead of O(n) re-summation; often paired with a hash map to count how many prefixes hit a target.
@@ -799,16 +1009,12 @@ for (int x : nums) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="5-binary-search">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>5. Binary Search</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Halving a search space each step. Two flavors: (a) classic search on a sorted array, (b) "binary search on the answer" — guessing a numeric answer and using a feasibility check to decide whether to search higher or lower.
@@ -902,16 +1108,12 @@ while (lo &lt; hi) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="6-linked-lists-fast-slow-pointers">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>6. Linked Lists (+ Fast &amp; Slow Pointers)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Pointer manipulation on singly/doubly linked nodes, plus the "fast &amp; slow pointer" (tortoise-and-hare) trick for cycle detection and finding midpoints without extra space.
@@ -1010,16 +1212,12 @@ while (fast &amp;&amp; fast-&gt;next) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="7-stack-monotonic-stack-queuedeque">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>7. Stack &amp; Monotonic Stack (+ Queue/Deque)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> LIFO structure for tracking "most recent unresolved item" — parentheses matching, expression evaluation, and undo-style history. The <strong>monotonic stack</strong> variant keeps elements in increasing/decreasing order, popping whenever the new element breaks the order, which is exactly how you find "next greater/smaller element" in O(n) instead of O(n²). Queues/deques get their spotlight in BFS (Pattern 13) and sliding-window-maximum (Pattern 3) rather than as a standalone bucket here.
@@ -1106,16 +1304,12 @@ for (int i = 0; i &lt; n; i++) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="8-heap-priority-queue">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>8. Heap / Priority Queue</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> A binary heap that gives O(1) access to the min or max element and O(log n) insert/remove — the go-to structure whenever you repeatedly need "the current smallest/largest of a changing set."
@@ -1194,16 +1388,12 @@ for (int x : nums) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="9-intervals">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>9. Intervals</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Problems about ranges <code>[start, end]</code> that must be sorted (almost always by start time) and then swept left-to-right, merging or comparing overlaps as you go.
@@ -1264,16 +1454,12 @@ for (auto&amp; iv : intervals) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="10-trees-binary-tree-core">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>10. Trees (Binary Tree Core)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Recursive traversal and property computation on binary trees — nearly every tree problem is "do something at this node, then recurse on left and right, then combine."
@@ -1389,16 +1575,12 @@ while (!q.empty()) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="11-binary-search-trees">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>11. Binary Search Trees</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Binary trees with the ordering invariant <code>left &lt; node &lt; right</code>, which lets you binary-search, and makes an in-order traversal produce sorted output for free.
@@ -1458,16 +1640,12 @@ while (!q.empty()) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="12-tries-prefix-trees">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>12. Tries (Prefix Trees)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> A tree where each path from the root spells out a prefix of some stored string, so prefix search, autocomplete, and "does this word/prefix exist" become O(word length) instead of O(number of words).
@@ -1520,16 +1698,12 @@ void insert(TrieNode* root, const string&amp; word) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="13-graphs-bfs-dfs">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>13. Graphs — BFS &amp; DFS</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Traversing nodes/edges (often an implicit grid, sometimes an adjacency list) while tracking visited state, to find connectivity, shortest paths (unweighted), or explore all reachable states.
@@ -1614,16 +1788,12 @@ while (!q.empty()) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="14-topological-sort">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>14. Topological Sort</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Ordering nodes in a <strong>directed</strong> graph so every edge <code>u → v</code> places <code>u</code> before <code>v</code> — only possible if there's no cycle. Built with either repeated removal of zero-in-degree nodes (Kahn's/BFS) or DFS with post-order.
@@ -1669,16 +1839,12 @@ while (!q.empty()) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="15-union-find-disjoint-set-union">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>15. Union-Find (Disjoint Set Union)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> A structure that tracks which "group" each element belongs to and can merge two groups (<code>union</code>) or check if two elements are in the same group (<code>find</code>) in near-O(1) amortized time using path compression + union by rank.
@@ -1738,16 +1904,12 @@ bool unite(int a, int b) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="16-greedy">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>16. Greedy</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Making the locally-best choice at each step and trusting (having <em>proven</em>, not just hoped) that it leads to a globally optimal answer. The hard part isn't coding it — it's recognizing <em>when</em> a greedy choice is actually safe, versus when it's a trap that needs DP.
@@ -1811,16 +1973,12 @@ return true;
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="17-backtracking">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>17. Backtracking</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Exploring a decision tree by making a choice, recursing, and <strong>undoing</strong> the choice before trying the next one ("choose → explore → un-choose"). This is how you generate every valid combination/permutation/arrangement without writing nested loops for each position.
@@ -1893,16 +2051,12 @@ return true;
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="18-bit-manipulation">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>18. Bit Manipulation</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Using AND/OR/XOR/shifts to do arithmetic-flavored tricks in O(1) per operation — mainly for "find the unique/missing/odd-count element" problems and low-level counting.
@@ -1958,16 +2112,12 @@ for (int x : nums) result ^= x;
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="19-math-number-theory">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>19. Math / Number Theory</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> A light-touch grab bag of numeric reasoning problems that show up occasionally — not a deep number-theory course, just enough to not be blindsided.
@@ -2024,16 +2174,12 @@ int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="20-1-d-dynamic-programming">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>20. 1-D Dynamic Programming</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> Breaking a problem into overlapping subproblems indexed by a single variable (usually "up to index i"), where <code>dp[i]</code> depends on a small number of earlier <code>dp[j]</code> values, and caching results so each subproblem is solved once.
@@ -2124,16 +2270,12 @@ int solve(int i) {
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="21-2-d-dp-knapsack-style">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>21. 2-D DP / Knapsack-Style</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> DP where the state needs <strong>two</strong> dimensions — typically "position in a grid" (row, col) or "index into items, remaining capacity" (the classic knapsack shape: for each item, decide include vs. exclude, subject to a budget).
@@ -2213,16 +2355,12 @@ for (int item : items)
 
   </div>
 </section>
-<hr />
 <section class="pattern-section-card" id="22-subsequence-string-dp-lcs-lis-families">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>22. Subsequence / String DP (LCS &amp; LIS Families)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
+    <button class="toggle-section-btn" type="button" aria-label="Toggle Section"><span class="chevron-icon">▼</span></button>
   </div>
   <div class="pattern-body">
 <p><strong>What it is:</strong> DP over <strong>two</strong> strings/sequences being compared (Longest Common Subsequence family), or over <strong>one</strong> sequence looking for the longest ordered subsequence (LIS family), or over substrings checked for palindrome structure. These are the string-flavored DP problems that trip people up because the "obvious" 2-D table isn't always about a physical grid.
@@ -2292,632 +2430,17 @@ return tails.size();
 
   </div>
 </section>
-<h2 id="part-3-day-1-day-56-schedule">Part 3 — Day 1 → Day 56 Schedule</h2>
-<p><strong>How to read this table:</strong> "Revision" follows the system from Part 7 — do it <em>in addition to</em> the day's new problems, not instead of them. Days marked <strong>Test</strong> have zero new problems by design; that day is for retrieval practice on what you already solved, which research on spaced repetition shows matters more than volume for long-term retention. A few days are intentionally heavier (5-7 problems) — these come right after you've already internalized a pattern's template, when remaining problems are fast variations rather than new concepts.</p>
-<section class="pattern-section-card" id="week-1-arrays-hashing-prefix-sum-25-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 1 — Arrays &amp; Hashing, Prefix Sum (25 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Arrays &amp; Hashing (intro)</td>
-<td>Learn the pattern + review <code>vector</code>/<code>unordered_map</code>/<code>unordered_set</code>. Solve: Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>), Contains Duplicate (<a href="https://leetcode.com/problems/contains-duplicate/" target="_blank">#217</a>), Valid Anagram (<a href="https://leetcode.com/problems/valid-anagram/" target="_blank">#242</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: rewrite the Two Sum (<a href="https://leetcode.com/problems/two-sum/" target="_blank">#1</a>) template from memory, no looking</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Arrays &amp; Hashing</td>
-<td>Majority Element (<a href="https://leetcode.com/problems/majority-element/" target="_blank">#169</a>), Intersection of Two Arrays (<a href="https://leetcode.com/problems/intersection-of-two-arrays/" target="_blank">#349</a>), Merge Sorted Array (<a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">#88</a>), Missing Number (<a href="https://leetcode.com/problems/missing-number/" target="_blank">#268</a>), Word Pattern (<a href="https://leetcode.com/problems/word-pattern/" target="_blank">#290</a>)</td>
-<td style="text-align: right;">5</td>
-<td>Next-day: redo yesterday's hardest problem cold</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Arrays &amp; Hashing</td>
-<td>Group Anagrams (<a href="https://leetcode.com/problems/group-anagrams/" target="_blank">#49</a>), Top K Frequent Elements (<a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">#347</a>), Product of Array Except Self (<a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank">#238</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: write out why each needed a hash map, in one sentence each</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Arrays &amp; Hashing</td>
-<td>Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>), Encode and Decode Strings (<a href="https://leetcode.com/problems/encode-and-decode-strings/" target="_blank">#271</a>), Sort Colors (<a href="https://leetcode.com/problems/sort-colors/" target="_blank">#75</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: revisit Longest Consecutive Sequence (<a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">#128</a>) — it's the trickiest so far</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Arrays &amp; Hashing (finish)</td>
-<td>Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">#73</a>), Rotate Array (<a href="https://leetcode.com/problems/rotate-array/" target="_blank">#189</a>), 4Sum II (<a href="https://leetcode.com/problems/4sum-ii/" target="_blank">#454</a>), First Missing Positive (<a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">#41</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: note the in-place trick used in Set Matrix Zeroes (<a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">#73</a>) for your mistake list if it wasn't obvious</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Prefix Sum (heavy day — pattern is fast to apply once learned)</td>
-<td>Running Sum of 1d Array (<a href="https://leetcode.com/problems/running-sum-of-1d-array/" target="_blank">#1480</a>), Find Pivot Index (<a href="https://leetcode.com/problems/find-pivot-index/" target="_blank">#724</a>), Subarray Sum Equals K (<a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank">#560</a>), Contiguous Array (<a href="https://leetcode.com/problems/contiguous-array/" target="_blank">#525</a>), Subarray Sums Divisible by K (<a href="https://leetcode.com/problems/subarray-sums-divisible-by-k/" target="_blank">#974</a>), Range Sum Query 2D - Immutable (<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/" target="_blank">#304</a>), Count of Range Sum (<a href="https://leetcode.com/problems/count-of-range-sum/" target="_blank">#327</a>)</td>
-<td style="text-align: right;">7</td>
-<td>Same-day: confirm you understand <em>why</em> prefix sum needs <code>{0:1}</code> seeded in the map</td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong>Weekly Test</strong></td>
-<td>Mixed, unlabeled retest (see Part 4, Test 1)</td>
-<td style="text-align: right;">0</td>
-<td>Log every miss to your mistake list before looking at answers</td>
-</tr>
-</tbody>
-</table></div>
+</div>
 
-  </div>
-</section>
-<section class="pattern-section-card" id="week-2-two-pointers-sliding-window-start-binary-search-25-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 2 — Two Pointers, Sliding Window, start Binary Search (25 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>8</td>
-<td>Two Pointers (intro)</td>
-<td>Learn the pattern. Valid Palindrome (<a href="https://leetcode.com/problems/valid-palindrome/" target="_blank">#125</a>), Move Zeroes (<a href="https://leetcode.com/problems/move-zeroes/" target="_blank">#283</a>), Is Subsequence (<a href="https://leetcode.com/problems/is-subsequence/" target="_blank">#392</a>), Squares of a Sorted Array (<a href="https://leetcode.com/problems/squares-of-a-sorted-array/" target="_blank">#977</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: state in one line why sorting first matters here</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Two Pointers</td>
-<td>Two Sum II - Input Array Is Sorted (<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" target="_blank">#167</a>), 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>), Container With Most Water (<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">#11</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)'s duplicate-skipping logic from memory</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Two Pointers (finish)</td>
-<td>Boats to Save People (<a href="https://leetcode.com/problems/boats-to-save-people/" target="_blank">#881</a>), Remove Duplicates from Sorted Array II (<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/" target="_blank">#80</a>), 4Sum (<a href="https://leetcode.com/problems/4sum/" target="_blank">#18</a>), Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: compare your Trapping Rain Water (<a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">#42</a>) approach to the two-pointer <em>and</em> the monotonic-stack approach (stack pattern comes later)</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Sliding Window (intro)</td>
-<td>Learn the pattern. Best Time to Buy and Sell Stock (<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">#121</a>), Maximum Average Subarray I (<a href="https://leetcode.com/problems/maximum-average-subarray-i/" target="_blank">#643</a>), Longest Substring Without Repeating Characters (<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">#3</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: draw the window on paper for one example before coding</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Sliding Window</td>
-<td>Longest Repeating Character Replacement (<a href="https://leetcode.com/problems/longest-repeating-character-replacement/" target="_blank">#424</a>), Permutation in String (<a href="https://leetcode.com/problems/permutation-in-string/" target="_blank">#567</a>), Fruit Into Baskets (<a href="https://leetcode.com/problems/fruit-into-baskets/" target="_blank">#904</a>), Max Consecutive Ones III (<a href="https://leetcode.com/problems/max-consecutive-ones-iii/" target="_blank">#1004</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Next-day: revisit whichever of these felt hardest</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Sliding Window (finish)</td>
-<td>Find All Anagrams in a String (<a href="https://leetcode.com/problems/find-all-anagrams-in-a-string/" target="_blank">#438</a>), Minimum Size Subarray Sum (<a href="https://leetcode.com/problems/minimum-size-subarray-sum/" target="_blank">#209</a>), Longest Substring with At Most K Distinct Characters (<a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/" target="_blank">#340</a>), Minimum Window Substring (<a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">#76</a>), Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>)</td>
-<td style="text-align: right;">5</td>
-<td>Same-day: Sliding Window Maximum (<a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">#239</a>) uses a monotonic deque — note this connects to Week 4's Stack pattern</td>
-</tr>
-<tr>
-<td>14</td>
-<td><strong>Weekly Test</strong> + Binary Search (start)</td>
-<td>Test (Part 4, Test 2) + Binary Search (<a href="https://leetcode.com/problems/binary-search/" target="_blank">#704</a>), First Bad Version (<a href="https://leetcode.com/problems/first-bad-version/" target="_blank">#278</a>)</td>
-<td style="text-align: right;">2</td>
-<td>Biweekly cumulative revision: rapid-fire 8 random problems from Weeks 1-2, timed 20 min</td>
-</tr>
-</tbody>
-</table></div>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="week-3-finish-binary-search-linked-lists-start-stack-25-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 3 — Finish Binary Search, Linked Lists, start Stack (25 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>15</td>
-<td>Binary Search</td>
-<td>Search Insert Position (<a href="https://leetcode.com/problems/search-insert-position/" target="_blank">#35</a>), Search in Rotated Sorted Array (<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">#33</a>), Find Minimum in Rotated Sorted Array (<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" target="_blank">#153</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: write both the "classic" and "on the answer" templates side by side</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Binary Search</td>
-<td>Find Peak Element (<a href="https://leetcode.com/problems/find-peak-element/" target="_blank">#162</a>), Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>), Search a 2D Matrix (<a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">#74</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Koko Eating Bananas (<a href="https://leetcode.com/problems/koko-eating-bananas/" target="_blank">#875</a>) — it's the cleanest "binary search on the answer" example</td>
-</tr>
-<tr>
-<td>17</td>
-<td>Binary Search (finish)</td>
-<td>Time Based Key-Value Store (<a href="https://leetcode.com/problems/time-based-key-value-store/" target="_blank">#981</a>), Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>), Split Array Largest Sum (<a href="https://leetcode.com/problems/split-array-largest-sum/" target="_blank">#410</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: Median of Two Sorted Arrays (<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">#4</a>) is genuinely hard — re-derive the partition logic out loud</td>
-</tr>
-<tr>
-<td>18</td>
-<td>Linked Lists (intro)</td>
-<td>Learn the pattern + dummy-node trick. Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>), Merge Two Sorted Lists (<a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">#21</a>), Linked List Cycle (<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">#141</a>), Palindrome Linked List (<a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank">#234</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: draw pointer rewiring on paper for Reverse Linked List (<a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">#206</a>)</td>
-</tr>
-<tr>
-<td>19</td>
-<td>Linked Lists</td>
-<td>Add Two Numbers (<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">#2</a>), Remove Nth Node From End of List (<a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">#19</a>), Reorder List (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Reorder List (<a href="https://leetcode.com/problems/reorder-list/" target="_blank">#143</a>) — it combines 3 earlier patterns (find middle, reverse, merge)</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Linked Lists</td>
-<td>Copy List with Random Pointer (<a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank">#138</a>), Odd Even Linked List (<a href="https://leetcode.com/problems/odd-even-linked-list/" target="_blank">#328</a>), Find the Duplicate Number (<a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank">#287</a>), Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: note how Merge k Sorted Lists (<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">#23</a>) reuses the Heap pattern (coming in Week 4)</td>
-</tr>
-<tr>
-<td>21</td>
-<td><strong>Weekly Test</strong> + Linked Lists (finish) + Stack (start)</td>
-<td>Test (Part 4, Test 3) + Reverse Nodes in k-Group (<a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank">#25</a>) + Valid Parentheses (<a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">#20</a>), Baseball Game (<a href="https://leetcode.com/problems/baseball-game/" target="_blank">#682</a>), Min Stack (<a href="https://leetcode.com/problems/min-stack/" target="_blank">#155</a>), Evaluate Reverse Polish Notation (<a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank">#150</a>)</td>
-<td style="text-align: right;">5</td>
-<td>Log misses; biweekly revision not due until Day 28</td>
-</tr>
-</tbody>
-</table></div>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="week-4-finish-stack-heap-intervals-start-trees-25-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 4 — Finish Stack, Heap, Intervals, start Trees (25 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>22</td>
-<td>Stack &amp; Monotonic Stack</td>
-<td>Daily Temperatures (<a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">#739</a>), Next Greater Element II (<a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank">#503</a>), Online Stock Span (<a href="https://leetcode.com/problems/online-stock-span/" target="_blank">#901</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: rewrite the monotonic-stack template from memory, indices not values</td>
-</tr>
-<tr>
-<td>23</td>
-<td>Stack &amp; Monotonic Stack (finish medium)</td>
-<td>Asteroid Collision (<a href="https://leetcode.com/problems/asteroid-collision/" target="_blank">#735</a>), Decode String (<a href="https://leetcode.com/problems/decode-string/" target="_blank">#394</a>)</td>
-<td style="text-align: right;">2</td>
-<td>Next-day: redo whichever felt more like simulation than "the template"</td>
-</tr>
-<tr>
-<td>24</td>
-<td>Stack (finish) + Heap (intro)</td>
-<td>Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>), Maximal Rectangle (<a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank">#85</a>) + Kth Largest Element in a Stream (<a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/" target="_blank">#703</a>), Last Stone Weight (<a href="https://leetcode.com/problems/last-stone-weight/" target="_blank">#1046</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: Largest Rectangle in Histogram (<a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank">#84</a>) is a top interview-hard — make sure you can explain <em>why</em> the stack stays monotonic</td>
-</tr>
-<tr>
-<td>25</td>
-<td>Heap</td>
-<td>Kth Largest Element in an Array (<a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">#215</a>), K Closest Points to Origin (<a href="https://leetcode.com/problems/k-closest-points-to-origin/" target="_blank">#973</a>), Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Task Scheduler (<a href="https://leetcode.com/problems/task-scheduler/" target="_blank">#621</a>) — the greedy + heap combination is a common trip-up</td>
-</tr>
-<tr>
-<td>26</td>
-<td>Heap (finish)</td>
-<td>Meeting Rooms II (<a href="https://leetcode.com/problems/meeting-rooms-ii/" target="_blank">#253</a>), Reorganize String (<a href="https://leetcode.com/problems/reorganize-string/" target="_blank">#767</a>), Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>), IPO (<a href="https://leetcode.com/problems/ipo/" target="_blank">#502</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: Find Median from Data Stream (<a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">#295</a>) — confirm you know the "two heaps" trick cold</td>
-</tr>
-<tr>
-<td>27</td>
-<td>Intervals (intro)</td>
-<td>Learn the pattern. Meeting Rooms (<a href="https://leetcode.com/problems/meeting-rooms/" target="_blank">#252</a>), Insert Interval (<a href="https://leetcode.com/problems/insert-interval/" target="_blank">#57</a>), Merge Intervals (<a href="https://leetcode.com/problems/merge-intervals/" target="_blank">#56</a>), Non-overlapping Intervals (<a href="https://leetcode.com/problems/non-overlapping-intervals/" target="_blank">#435</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: state whether each new interval problem sorts by start or end, and why</td>
-</tr>
-<tr>
-<td>28</td>
-<td><strong>Weekly Test</strong> + Intervals (finish) + Trees (start)</td>
-<td>Test (Part 4, Test 4) + Minimum Number of Arrows to Burst Balloons (<a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank">#452</a>), Employee Free Time (<a href="https://leetcode.com/problems/employee-free-time/" target="_blank">#759</a>) + Invert Binary Tree (<a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">#226</a>), Maximum Depth of Binary Tree (<a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">#104</a>), Diameter of Binary Tree (<a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">#543</a>)</td>
-<td style="text-align: right;">5</td>
-<td>Biweekly cumulative revision: 10 random problems from Weeks 3-4, timed 25 min</td>
-</tr>
-</tbody>
-</table></div>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="week-5-finish-trees-bst-tries-start-graphs-25-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 5 — Finish Trees, BST, Tries, start Graphs (25 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>29</td>
-<td>Trees</td>
-<td>Balanced Binary Tree (<a href="https://leetcode.com/problems/balanced-binary-tree/" target="_blank">#110</a>), Same Tree (<a href="https://leetcode.com/problems/same-tree/" target="_blank">#100</a>), Symmetric Tree (<a href="https://leetcode.com/problems/symmetric-tree/" target="_blank">#101</a>), Merge Two Binary Trees (<a href="https://leetcode.com/problems/merge-two-binary-trees/" target="_blank">#617</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: for each, state the base case and the combine step separately</td>
-</tr>
-<tr>
-<td>30</td>
-<td>Trees (BFS)</td>
-<td>Binary Tree Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">#102</a>), Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>), Count Good Nodes in Binary Tree (<a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/" target="_blank">#1448</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Binary Tree Right Side View (<a href="https://leetcode.com/problems/binary-tree-right-side-view/" target="_blank">#199</a>) — a common variant twist on level order</td>
-</tr>
-<tr>
-<td>31</td>
-<td>Trees</td>
-<td>Binary Tree Zigzag Level Order Traversal (<a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank">#103</a>), Construct Binary Tree from Preorder and Inorder Traversal (<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/" target="_blank">#105</a>), Path Sum II (<a href="https://leetcode.com/problems/path-sum-ii/" target="_blank">#113</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: Construct Binary Tree — explain why you always find the root in preorder first</td>
-</tr>
-<tr>
-<td>32</td>
-<td>Trees (finish) + BST (intro)</td>
-<td>Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>), Serialize and Deserialize Binary Tree (<a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/" target="_blank">#297</a>) + Search in a Binary Search Tree (<a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" target="_blank">#700</a>), Convert Sorted Array to Binary Search Tree (<a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank">#108</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: Binary Tree Maximum Path Sum (<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank">#124</a>) — be explicit about "best path through node" vs "best path starting at node"</td>
-</tr>
-<tr>
-<td>33</td>
-<td>Binary Search Trees</td>
-<td>Validate Binary Search Tree (<a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">#98</a>), Kth Smallest Element in a BST (<a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank">#230</a>), Lowest Common Ancestor of a Binary Search Tree (<a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank">#235</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Validate BST using the bounds-passing technique, not just in-order-then-check</td>
-</tr>
-<tr>
-<td>34</td>
-<td>BST (finish) + Tries (start)</td>
-<td>Delete Node in a BST (<a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank">#450</a>), Binary Search Tree Iterator (<a href="https://leetcode.com/problems/binary-search-tree-iterator/" target="_blank">#173</a>) + Implement Trie (Prefix Tree), Design Add and Search Words Data Structure (<a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/" target="_blank">#211</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: write the TrieNode struct from memory</td>
-</tr>
-<tr>
-<td>35</td>
-<td><strong>Weekly Test</strong> + Tries (finish) + Graphs (start)</td>
-<td>Test (Part 4, Test 5) + Longest Word in Dictionary (<a href="https://leetcode.com/problems/longest-word-in-dictionary/" target="_blank">#720</a>), Word Search II (<a href="https://leetcode.com/problems/word-search-ii/" target="_blank">#212</a>) + Flood Fill (<a href="https://leetcode.com/problems/flood-fill/" target="_blank">#733</a>), Find if Path Exists in Graph (<a href="https://leetcode.com/problems/find-if-path-exists-in-graph/" target="_blank">#1971</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Log misses; biweekly revision not due until Day 42</td>
-</tr>
-</tbody>
-</table></div>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="week-6-finish-graphs-topological-sort-union-find-greedy-start-backtracking-25-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 6 — Finish Graphs, Topological Sort, Union-Find, Greedy, start Backtracking (25 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>36</td>
-<td>Graphs (BFS/DFS)</td>
-<td>Number of Islands (<a href="https://leetcode.com/problems/number-of-islands/" target="_blank">#200</a>), Clone Graph (<a href="https://leetcode.com/problems/clone-graph/" target="_blank">#133</a>), 01 Matrix (<a href="https://leetcode.com/problems/01-matrix/" target="_blank">#542</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: rewrite the grid-BFS template, marking visited on enqueue not dequeue</td>
-</tr>
-<tr>
-<td>37</td>
-<td>Graphs (finish medium)</td>
-<td>Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>), Rotting Oranges (<a href="https://leetcode.com/problems/rotting-oranges/" target="_blank">#994</a>), Surrounded Regions (<a href="https://leetcode.com/problems/surrounded-regions/" target="_blank">#130</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Pacific Atlantic Water Flow (<a href="https://leetcode.com/problems/pacific-atlantic-water-flow/" target="_blank">#417</a>) — the "search backward from both oceans" trick is the key insight</td>
-</tr>
-<tr>
-<td>38</td>
-<td>Graphs (finish) + Topological Sort (start)</td>
-<td>Word Ladder (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>), Word Ladder II (<a href="https://leetcode.com/problems/word-ladder-ii/" target="_blank">#126</a>) + Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>), Course Schedule II (<a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank">#210</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Same-day: state why Word Ladder (<a href="https://leetcode.com/problems/word-ladder/" target="_blank">#127</a>) is BFS (shortest path) not DFS</td>
-</tr>
-<tr>
-<td>39</td>
-<td>Topological Sort (finish) + Union-Find (start)</td>
-<td>Alien Dictionary (<a href="https://leetcode.com/problems/alien-dictionary/" target="_blank">#269</a>) + Number of Provinces (<a href="https://leetcode.com/problems/number-of-provinces/" target="_blank">#547</a>), Redundant Connection (<a href="https://leetcode.com/problems/redundant-connection/" target="_blank">#684</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Course Schedule (<a href="https://leetcode.com/problems/course-schedule/" target="_blank">#207</a>) using Kahn's algorithm from memory</td>
-</tr>
-<tr>
-<td>40</td>
-<td>Union-Find</td>
-<td>Accounts Merge (<a href="https://leetcode.com/problems/accounts-merge/" target="_blank">#721</a>), Graph Valid Tree (<a href="https://leetcode.com/problems/graph-valid-tree/" target="_blank">#261</a>), Evaluate Division (<a href="https://leetcode.com/problems/evaluate-division/" target="_blank">#399</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: write the path-compressed <code>find()</code> function from memory</td>
-</tr>
-<tr>
-<td>41</td>
-<td>Union-Find (finish) + Greedy (intro)</td>
-<td>Number of Islands II (<a href="https://leetcode.com/problems/number-of-islands-ii/" target="_blank">#305</a>) + Assign Cookies (<a href="https://leetcode.com/problems/assign-cookies/" target="_blank">#455</a>), Lemonade Change (<a href="https://leetcode.com/problems/lemonade-change/" target="_blank">#860</a>), Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>), Jump Game II (<a href="https://leetcode.com/problems/jump-game-ii/" target="_blank">#45</a>)</td>
-<td style="text-align: right;">5</td>
-<td>Same-day: for Jump Game (<a href="https://leetcode.com/problems/jump-game/" target="_blank">#55</a>), state the greedy invariant ("farthest reachable so far") in one sentence</td>
-</tr>
-<tr>
-<td>42</td>
-<td><strong>Weekly Test</strong> + Greedy (finish) + Backtracking (start)</td>
-<td>Test (Part 4, Test 6) + Gas Station (<a href="https://leetcode.com/problems/gas-station/" target="_blank">#134</a>), Partition Labels (<a href="https://leetcode.com/problems/partition-labels/" target="_blank">#763</a>), Candy (<a href="https://leetcode.com/problems/candy/" target="_blank">#135</a>) + Subsets (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>)</td>
-<td style="text-align: right;">4</td>
-<td>Biweekly cumulative revision: 10 random problems from Weeks 5-6, timed 25 min</td>
-</tr>
-</tbody>
-</table></div>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="week-7-finish-backtracking-bit-manipulation-math-start-1-d-dp-25-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 7 — Finish Backtracking, Bit Manipulation, Math, start 1-D DP (25 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p><em>(Interview-mode transition begins: from here on, treat each solve as a 25-30 minute timed attempt before checking any hint.)</em></p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>43</td>
-<td>Backtracking</td>
-<td>Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>), Combination Sum (<a href="https://leetcode.com/problems/combination-sum/" target="_blank">#39</a>), Combinations (<a href="https://leetcode.com/problems/combinations/" target="_blank">#77</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: state the one-line difference between Subsets (<a href="https://leetcode.com/problems/subsets/" target="_blank">#78</a>)/Combinations (<a href="https://leetcode.com/problems/combinations/" target="_blank">#77</a>) (start index) and Permutations (<a href="https://leetcode.com/problems/permutations/" target="_blank">#46</a>) (used array)</td>
-</tr>
-<tr>
-<td>44</td>
-<td>Backtracking</td>
-<td>Palindrome Partitioning (<a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank">#131</a>), Letter Combinations of a Phone Number (<a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">#17</a>), Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Word Search (<a href="https://leetcode.com/problems/word-search/" target="_blank">#79</a>) — grid backtracking + visited-marking combines Weeks 6 and 7</td>
-</tr>
-<tr>
-<td>45</td>
-<td>Backtracking (finish) + Bit Manipulation (intro)</td>
-<td>Combination Sum II (<a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank">#40</a>), N-Queens (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) + Single Number (<a href="https://leetcode.com/problems/single-number/" target="_blank">#136</a>), Number of 1 Bits (<a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank">#191</a>), Counting Bits (<a href="https://leetcode.com/problems/counting-bits/" target="_blank">#338</a>)</td>
-<td style="text-align: right;">5</td>
-<td>Same-day: N-Queens (<a href="https://leetcode.com/problems/n-queens/" target="_blank">#51</a>) — explain your column/diagonal-attack tracking in one sentence</td>
-</tr>
-<tr>
-<td>46</td>
-<td>Bit Manipulation (finish) + Math (intro)</td>
-<td>Sum of Two Integers (<a href="https://leetcode.com/problems/sum-of-two-integers/" target="_blank">#371</a>), Reverse Bits (<a href="https://leetcode.com/problems/reverse-bits/" target="_blank">#190</a>), Maximum XOR of Two Numbers in an Array (<a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank">#421</a>) + Happy Number (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>), Palindrome Number (<a href="https://leetcode.com/problems/palindrome-number/" target="_blank">#9</a>), Sqrt(x)</td>
-<td style="text-align: right;">6</td>
-<td>Same-day: Happy Number (<a href="https://leetcode.com/problems/happy-number/" target="_blank">#202</a>) — confirm you see the cycle-detection connection to Week 3's fast/slow pointers</td>
-</tr>
-<tr>
-<td>47</td>
-<td>Math (finish) + 1-D DP (intro — timed 25 min/problem from here on)</td>
-<td>Pow(x, n), Fraction to Recurring Decimal (<a href="https://leetcode.com/problems/fraction-to-recurring-decimal/" target="_blank">#166</a>), Basic Calculator (<a href="https://leetcode.com/problems/basic-calculator/" target="_blank">#224</a>) + Climbing Stairs (<a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">#70</a>), House Robber (<a href="https://leetcode.com/problems/house-robber/" target="_blank">#198</a>), Fibonacci Number (<a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">#509</a>)</td>
-<td style="text-align: right;">6</td>
-<td>Same-day: for every DP problem this week, write the brute-force recursion <strong>before</strong> the dp array</td>
-</tr>
-<tr>
-<td>48</td>
-<td>1-D DP</td>
-<td>House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>), Decode Ways (<a href="https://leetcode.com/problems/decode-ways/" target="_blank">#91</a>)</td>
-<td style="text-align: right;">2</td>
-<td>Next-day: redo House Robber II (<a href="https://leetcode.com/problems/house-robber-ii/" target="_blank">#213</a>) — explain why you run the linear version twice</td>
-</tr>
-<tr>
-<td>49</td>
-<td><strong>Weekly Test</strong></td>
-<td>Test (Part 4, Test 7) — pure mixed retest, no new problems</td>
-<td style="text-align: right;">0</td>
-<td>Log misses; biweekly revision not due until Day 56</td>
-</tr>
-</tbody>
-</table></div>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="week-8-finish-dp-mixed-practice-mock-interviews-22-problems">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Week 8 — Finish DP, Mixed Practice, Mock Interviews (22 problems)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p><em>(Full interview mode: every problem timed at 30-35 minutes; treat unfamiliar problems on Days 50-55 as mock-interview questions — talk through your approach out loud before coding.)</em></p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Pattern / Topic</th>
-<th>Problems</th>
-<th style="text-align: right;">#</th>
-<th>Revision</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>50</td>
-<td>1-D DP</td>
-<td>Coin Change (<a href="https://leetcode.com/problems/coin-change/" target="_blank">#322</a>), Maximum Subarray (Kadane's), Word Break (<a href="https://leetcode.com/problems/word-break/" target="_blank">#139</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: Maximum Subarray — state Kadane's one-line recurrence from memory</td>
-</tr>
-<tr>
-<td>51</td>
-<td>1-D DP (finish) + 2-D DP/Knapsack (intro)</td>
-<td>Maximum Product Subarray (<a href="https://leetcode.com/problems/maximum-product-subarray/" target="_blank">#152</a>), Delete and Earn (<a href="https://leetcode.com/problems/delete-and-earn/" target="_blank">#740</a>), Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">#132</a>) + Min Cost Climbing Stairs (<a href="https://leetcode.com/problems/min-cost-climbing-stairs/" target="_blank">#746</a>), Unique Paths (<a href="https://leetcode.com/problems/unique-paths/" target="_blank">#62</a>), Minimum Path Sum (<a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank">#64</a>)</td>
-<td style="text-align: right;">6</td>
-<td>Next-day: redo Palindrome Partitioning II (<a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">#132</a>) if it felt shaky — it's the hardest 1-D DP here</td>
-</tr>
-<tr>
-<td>52</td>
-<td>2-D DP/Knapsack</td>
-<td>Partition Equal Subset Sum (<a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank">#416</a>), Target Sum (<a href="https://leetcode.com/problems/target-sum/" target="_blank">#494</a>), Coin Change II (<a href="https://leetcode.com/problems/coin-change-ii/" target="_blank">#518</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Same-day: state out loud whether each is 0/1 or unbounded knapsack, and why the loop direction matters</td>
-</tr>
-<tr>
-<td>53</td>
-<td>2-D DP/Knapsack (finish) + Subsequence DP (intro)</td>
-<td>Triangle (<a href="https://leetcode.com/problems/triangle/" target="_blank">#120</a>), Maximal Square (<a href="https://leetcode.com/problems/maximal-square/" target="_blank">#221</a>), Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/" target="_blank">#174</a>) + Longest Increasing Subsequence (<a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">#300</a>), Longest Common Subsequence (<a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">#1143</a>)</td>
-<td style="text-align: right;">5</td>
-<td>Same-day: Dungeon Game (<a href="https://leetcode.com/problems/dungeon-game/" target="_blank">#174</a>) — explain why you must compute backward from the goal</td>
-</tr>
-<tr>
-<td>54</td>
-<td>Subsequence / String DP</td>
-<td>Longest Palindromic Substring (<a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">#5</a>), Palindromic Substrings (<a href="https://leetcode.com/problems/palindromic-substrings/" target="_blank">#647</a>), Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/" target="_blank">#583</a>)</td>
-<td style="text-align: right;">3</td>
-<td>Next-day: redo Delete Operation for Two Strings (<a href="https://leetcode.com/problems/delete-operation-for-two-strings/" target="_blank">#583</a>) — confirm you see it's LCS in disguise</td>
-</tr>
-<tr>
-<td>55</td>
-<td>Subsequence / String DP (finish) — <strong>all 197 problems complete</strong></td>
-<td>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>), Distinct Subsequences (<a href="https://leetcode.com/problems/distinct-subsequences/" target="_blank">#115</a>)</td>
-<td style="text-align: right;">2</td>
-<td>Same-day: Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>) — this is one of the single most-repeated hard interview questions; be fully fluent</td>
-</tr>
-<tr>
-<td>56</td>
-<td><strong>Full Mock Interview Day + Final Revision</strong></td>
-<td>No new problems. Run Test 8 (Part 4) as a 45-minute timed mock covering all 8 weeks. Then review your entire mistake list from Part 7 end-to-end.</td>
-<td style="text-align: right;">0</td>
-<td>This is the capstone review — see Part 8 for exactly how to run this day</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>Grand total: 25 + 25 + 25 + 25 + 25 + 25 + 25 + 22 = 197 problems across 56 days.</strong></p>
-<hr />
-
-  </div>
-</section>
-<h2 id="part-4-weekly-tests-pattern-recognition-not-memorization">Part 4 — Weekly Tests (Pattern Recognition, Not Memorization)</h2>
-<p><strong>How to use these:</strong> attempt each list cold, in one sitting, with a timer. Do <strong>not</strong> read the problems in the order given below and assume they share a pattern with the day you learned them — they're deliberately shuffled. Cover the Answer Key with your hand/another window until you've attempted every problem. The goal isn't solving speed, it's: <em>can you correctly identify the pattern within the first 2 minutes of reading each problem?</em> If you misidentify the pattern, that's more valuable information than getting the code right — log it in your mistake list (Part 7).</p>
+<!-- PART 3: WEEKLY TEST -->
+<div class="layout-part" id="part-weekly-test">
+  <h2 class="section-divider-title">🎯 Weekly Practice Tests</h2>
 <section class="pattern-section-card" id="test-1-end-of-week-1-10-minproblem">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>Test 1 — End of Week 1 (10 min/problem)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="two-sum">
@@ -2955,11 +2478,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Test 2 — End of Week 2 (12 min/problem)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="3sum">
@@ -2997,11 +2516,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Test 3 — End of Week 3 (12 min/problem)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="search-in-rotated-sorted-array">
@@ -3039,11 +2554,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Test 4 — End of Week 4 (15 min/problem)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="daily-temperatures">
@@ -3081,11 +2592,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Test 5 — End of Week 5 (15 min/problem)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="binary-tree-level-order-traversal">
@@ -3123,11 +2630,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Test 6 — End of Week 6 (15 min/problem)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="number-of-islands">
@@ -3165,11 +2668,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Test 7 — End of Week 7 (20 min/problem)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="permutations">
@@ -3207,11 +2706,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Test 8 — Day 56 Final Mock Interview (45 minutes total, all 8 problems, simulating a real loop)</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="two-sum">
@@ -3260,155 +2755,232 @@ return tails.size();
 
   </div>
 </section>
-<h2 id="part-5-final-pattern-recognition-cheat-sheet">Part 5 — Final Pattern Recognition Cheat Sheet</h2>
+</div>
+
+<!-- PART 4: PATTERN RECOGNITION CHEAT SHEET -->
+<div class="layout-part" id="part-cheat-sheet">
+  <h2 class="section-divider-title">🧠 Pattern Recognition & Revision Cheat Sheet</h2>
+<section class="pattern-section-card" id="the-revision-system">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>The Revision System</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p><strong>Same Day (right after solving):</strong> Before moving to the next problem, spend 2 minutes writing (mentally or in a notes doc) one sentence: <em>"This is [pattern] because [clue in the problem]. The template is [one-line recurrence/approach]."</em> This is the single highest-leverage habit in this entire plan — it's what converts "I solved a problem" into "I can recognize this pattern again."</p>
+<p><strong>Next Day:</strong> Before starting the new day's problems, spend 5-10 minutes re-attempting (from memory, no looking at your old code) whichever problem from <em>yesterday</em> felt hardest. If you can't reproduce it, that's fine — read your notes, not the solution, and try again.</p>
+<p><strong>End of Week (the Weekly Test, Part 4):</strong> A mixed, unlabeled set from that week's material. This tests pattern <em>recognition</em> under ambiguity, which is the actual interview skill — in a real interview nobody tells you "this is a sliding window problem."</p>
+<p><strong>Every 2 Weeks (Days 14, 28, 42, 56):</strong> A larger, timed, cumulative mixed session pulling from the last two weeks. This is where you catch pattern confusion that only shows up when multiple patterns are mixed together (e.g., confusing when a "contiguous subarray" problem needs Sliding Window vs. Prefix Sum — a very common real confusion, since both mention "subarray").</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="three-tier-mistake-classification">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Three-Tier Mistake Classification</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p>After every problem, sort it into exactly one bucket:</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>Problem Clue</th>
-<th>Pattern to Consider</th>
+<th>Tier</th>
+<th>When it applies</th>
+<th>What to do</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>"Have I seen this value before?" / count occurrences</td>
-<td>Arrays &amp; Hashing</td>
+<td><strong>Re-solve</strong></td>
+<td>You got the <em>pattern</em> wrong, not just a bug — e.g., you tried brute force on a Sliding Window problem and never saw the window insight</td>
+<td>Re-attempt fully from scratch within 48 hours, without looking at your first attempt</td>
 </tr>
 <tr>
-<td>Pair/triplet in a <strong>sorted</strong> array that hits a target</td>
-<td>Two Pointers</td>
+<td><strong>Review conceptually</strong></td>
+<td>You got the pattern right but fumbled implementation (off-by-one, wrong STL container, edge case)</td>
+<td>Re-read your one-line note and the relevant template in Part 2; you don't need to re-type the whole solution, just confirm you now see the bug</td>
 </tr>
 <tr>
-<td>Longest/shortest <strong>contiguous</strong> subarray or substring</td>
-<td>Sliding Window</td>
-</tr>
-<tr>
-<td>Subarray sum equals K / count of subarrays with property</td>
-<td>Prefix Sum + HashMap</td>
-</tr>
-<tr>
-<td>Search in sorted data, O(log n) required</td>
-<td>Binary Search</td>
-</tr>
-<tr>
-<td>"Minimize the max" / "maximize the min" / "smallest value such that..."</td>
-<td>Binary Search on the Answer</td>
-</tr>
-<tr>
-<td>Reverse / reorder / detect cycle in a linked list</td>
-<td>Linked List manipulation</td>
-</tr>
-<tr>
-<td>Detect a cycle, or find a midpoint, without extra space</td>
-<td>Fast &amp; Slow Pointers</td>
-</tr>
-<tr>
-<td>Matching pairs (parentheses, tags)</td>
-<td>Stack</td>
-</tr>
-<tr>
-<td>Next greater/smaller element, daily temperatures-style</td>
-<td>Monotonic Stack</td>
-</tr>
-<tr>
-<td>Top K / Kth largest or smallest / K closest</td>
-<td>Heap / Priority Queue</td>
-</tr>
-<tr>
-<td>Running median of a data stream</td>
-<td>Two Heaps</td>
-</tr>
-<tr>
-<td>Overlapping intervals, meeting rooms, free time</td>
-<td>Intervals (sort, then sweep)</td>
-</tr>
-<tr>
-<td>Any traversal, property, or transformation of a binary tree</td>
-<td>Tree DFS/BFS</td>
-</tr>
-<tr>
-<td>"Sorted", "Kth smallest", ordering guarantee on a tree</td>
-<td>Binary Search Tree property</td>
-</tr>
-<tr>
-<td>Prefix / autocomplete / dictionary of words</td>
-<td>Trie</td>
-</tr>
-<tr>
-<td>Shortest path in an unweighted graph</td>
-<td>BFS</td>
-</tr>
-<tr>
-<td>Explore connected pieces / does a path exist</td>
-<td>DFS / BFS / Union-Find</td>
-</tr>
-<tr>
-<td>Prerequisites / dependencies / build order</td>
-<td>Topological Sort</td>
-</tr>
-<tr>
-<td>Cycle detection or grouping in an <strong>undirected</strong> graph</td>
-<td>Union-Find</td>
-</tr>
-<tr>
-<td>"Obviously greedy" — but can you <em>prove</em> the exchange argument?</td>
-<td>Greedy (verify before trusting)</td>
-</tr>
-<tr>
-<td>Generate all combinations / permutations / valid arrangements</td>
-<td>Backtracking</td>
-</tr>
-<tr>
-<td>Every element appears twice except one / add without +/-</td>
-<td>Bit Manipulation (XOR)</td>
-</tr>
-<tr>
-<td>Digits, primes, GCD/LCM, simulate arithmetic</td>
-<td>Math</td>
-</tr>
-<tr>
-<td>"Count the ways" or "max/min value up to position i", and your first solution re-solves the same sub-case repeatedly</td>
-<td>1-D Dynamic Programming</td>
-</tr>
-<tr>
-<td>Grid, moving only right/down, count paths or minimize cost</td>
-<td>Grid DP</td>
-</tr>
-<tr>
-<td>Subset of items, each used once (or unlimited), hit a target capacity</td>
-<td>0/1 or Unbounded Knapsack</td>
-</tr>
-<tr>
-<td>Compare two strings/sequences for common structure</td>
-<td>LCS-family String DP</td>
-</tr>
-<tr>
-<td>Longest <strong>ordered</strong> (not necessarily contiguous) subsequence</td>
-<td>LIS (DP or O(n log n) binary search)</td>
-</tr>
-<tr>
-<td>Is this substring a palindrome, built from smaller palindromes</td>
-<td>Palindrome DP</td>
-</tr>
-<tr>
-<td>Minimum operations to transform string A into string B</td>
-<td>Edit Distance (<a href="https://leetcode.com/problems/edit-distance/" target="_blank">#72</a>) DP</td>
+<td><strong>Add to mistake list</strong></td>
+<td>Anything that took more than one attempt, regardless of tier above</td>
+<td>Goes into a running log (format below) that you sweep through entirely on Day 56</td>
 </tr>
 </tbody>
 </table></div>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="mistake-log-template">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Mistake Log Template</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p>Keep one running document (a spreadsheet or plain text file works fine) with a row per problem that gave you trouble:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Pattern</th>
+<th>What went wrong</th>
+<th>The fix (one line)</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(example)</em> 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)</td>
+<td>Two Pointers</td>
+<td>Didn't skip duplicate values after a match, got duplicate triplets</td>
+<td>After finding a match, <code>while (l&lt;r &amp;&amp; nums[l]==nums[l-1]) l++;</code></td>
+<td>Review conceptually</td>
+</tr>
+</tbody>
+</table></div>
+<p>By Day 56 this log becomes your single most valuable revision artifact — it's a custom "greatest hits of my own blind spots" list, far more efficient to review than re-scanning all 197 problems.</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="what-not-to-do">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>What NOT to Do</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<ul>
+<li>Don't re-solve a problem you got right on the first try just because it's been two weeks — recognition-check it in the weekly/biweekly tests instead.</li>
+<li>Don't move on from a <strong>Re-solve</strong> tier problem without actually re-attempting it — reading the solution and nodding along feels like progress but doesn't build recall.</li>
+<li>Don't skip writing the same-day one-liner because you're in a hurry — it takes 2 minutes and is the difference between this being a "pattern recognition" plan versus just another "200 problems solved" checkbox exercise.</li>
+</ul>
 <hr />
-<h2 id="part-6-top-100-high-roi-interview-problems">Part 6 - Top 100 High-ROI Interview Problems</h2>
-<p>This is the subset of the 197-problem plan to have absolutely cold before any interview. Selected from the MUST DO tier across all 22 patterns, ranked by interview value within each difficulty tier (most essential first), not by LeetCode's difficulty label.</p>
-<p>Split: 25 Easy / 60 Medium / 15 Hard.</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="how-to-run-day-56-the-capstone">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>How to Run Day 56 (the capstone)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<ol>
+<li><strong>Morning (45 min):</strong> Take Test 8 from Part 4 as a single timed block — 8 problems, ~5-6 min each to <em>identify the pattern and outline an approach</em> (not fully code all 8; this is a recognition drill, not a coding marathon). Write down your pattern guess for each before checking the answer key.</li>
+<li><strong>Afternoon:</strong> Fully code 2-3 of those 8 problems under real interview conditions (45 min each, no hints, explain your approach out loud as if to an interviewer, including time/space complexity, before writing code).</li>
+<li><strong>Evening:</strong> Read your entire mistake log from Part 7, start to finish. For every "Re-solve" tier entry you haven't cleared yet, do one final attempt.</li>
+</ol>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="how-weeks-7-8-should-feel-different-from-weeks-1-6">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>How Weeks 7-8 Should Feel Different From Weeks 1-6</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p>In Weeks 1-6 the goal was learning — it's fine to look at recognition clues before attempting a problem. From Week 7 onward, treat every new problem as a mini mock interview:
+- <strong>Read the problem once, then talk through your approach out loud</strong> (or in writing) before coding anything, including a brute force and why it's insufficient.
+- <strong>State time and space complexity</strong> before you finish coding, not as an afterthought.
+- <strong>Write test cases yourself</strong> (including an edge case: empty input, single element, all-duplicate values) rather than only checking against the examples given.
+- <strong>Timebox strictly.</strong> If you're stuck past the time limit, look at only the <em>pattern name</em>, not the solution, and try to finish it yourself from there.</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="mock-interview-practice-beyond-day-56">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Mock Interview Practice (Beyond Day 56)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p>Two to three times during Weeks 7-8, run a fuller mock: pick 1-2 problems you haven't seen from this plan's "OPTIONAL" tier (they're real problems you skipped, which makes them genuinely unseen), give yourself 35-45 minutes total, and — if possible — have a friend, peer, or even a rubber duck simulate an interviewer by asking you to explain your reasoning at each step. The skill being tested in a real loop is not "can you solve this" in isolation, it's "can you solve this while narrating your thought process, handling a hint gracefully, and writing clean code under mild social pressure." Practicing silently only builds half of that skill.</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="weak-topic-revision-priority-if-time-is-short-in-week-8">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Weak-Topic Revision Priority (if time is short in Week 8)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p>If you have to cut something in the final week, cut in this order (least costly first): OPTIONAL-tagged problems you haven't done yet → SHOULD DO problems in patterns you've already tested well on → SHOULD DO problems in patterns from your mistake log. <strong>Never cut:</strong> anything tagged MUST DO, and never cut same-day/next-day revision on problems you got wrong — those are the highest-value minutes in the entire plan.</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="beyond-pure-dsa-a-brief-note">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Beyond Pure DSA (a brief note)</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<p>This plan covers algorithmic pattern recognition, which is necessary but not sufficient for a full interview loop. Two things worth 30-60 minutes total, not part of the daily problem count above: (1) a template for narrating your approach out loud in the first 60 seconds of any coding interview (restate the problem, state a brute force, state its complexity, then say what you'd optimize and why); (2) if your target roles include senior/broader loops, a short read-through of system-design and behavioral-interview basics — outside this plan's scope, but worth not leaving to the last week.</p>
+
+  </div>
+</section>
+<section class="pattern-section-card" id="final-readiness-checklist">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>Final Readiness Checklist</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+<ul>
+<li>[ ] I can state the recognition clue for all 22 patterns without looking at Part 5</li>
+<li>[ ] I can write the core C++ template for each pattern from memory (not the exact problem, the <em>shape</em> of the code)</li>
+<li>[ ] My mistake log has zero remaining "Re-solve" tier entries</li>
+<li>[ ] I've completed all 8 Weekly Tests and Test 8 (final mock) with a self-identified pattern-accuracy above ~90%</li>
+<li>[ ] I can explain, out loud, in under 60 seconds each: why Sliding Window beats brute force, why a monotonic stack is O(n) not O(n²), why 0/1 knapsack iterates capacity downward, and the difference between BFS and DFS use cases</li>
+<li>[ ] I've done at least 2 full mock interviews narrating my approach out loud, not just silent coding</li>
+</ul>
+<hr />
+
+  </div>
+</section>
+<section class="pattern-section-card" id="modal-title">
+  <div class="pattern-header">
+    <div class="pattern-title-group">
+      <h3>📝 Question Notes</h3>
+    </div>
+    </div>
+  <div class="pattern-body">
+        <div id="modal-subtitle" class="modal-subtitle">Stored in browser memory</div>
+      </div>
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <textarea id="note-textarea" class="modal-textarea" placeholder="Write your notes, key insights, C++ code snippet, or edge cases here..."></textarea>
+    </div>
+    <div class="modal-footer">
+      <div id="save-status" class="save-status">Auto-saves as you type...</div>
+      <div>
+        <button id="modal-clear-btn" class="btn btn-sm">Clear Note</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+  </div>
+</section>
+</div>
+
+<!-- PART 5: TOP 100 ROI PROBLEMS -->
+<div class="layout-part" id="part-top-roi">
+  <h2 class="section-divider-title">⭐ Top 100 ROI Problems</h2>
 <section class="pattern-section-card" id="easy-25-ranked-by-importance">
   <div class="pattern-header">
     <div class="pattern-title-group">
       <h3>Easy (25) - ranked by importance</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="two-sum">
@@ -3545,11 +3117,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Medium (60) - ranked by importance</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="group-anagrams">
@@ -3861,11 +3429,7 @@ return tails.size();
     <div class="pattern-title-group">
       <h3>Hard (15) - ranked by importance</h3>
     </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
+    </div>
   <div class="pattern-body">
 <ol>
 <li class="question-item" data-slug="trapping-rain-water">
@@ -3948,279 +3512,26 @@ return tails.size();
 
   </div>
 </section>
-<h2 id="part-7-mistake-revision-strategy">Part 7 — Mistake &amp; Revision Strategy</h2>
-<p>You will <strong>not</strong> re-solve all 197 problems from scratch multiple times — that's a low-value use of 8 weeks. Instead, use a tiered system where only the problems that actually gave you trouble get repeated attention, and everything else gets lighter-touch review.</p>
-<section class="pattern-section-card" id="the-revision-system">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>The Revision System</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p><strong>Same Day (right after solving):</strong> Before moving to the next problem, spend 2 minutes writing (mentally or in a notes doc) one sentence: <em>"This is [pattern] because [clue in the problem]. The template is [one-line recurrence/approach]."</em> This is the single highest-leverage habit in this entire plan — it's what converts "I solved a problem" into "I can recognize this pattern again."</p>
-<p><strong>Next Day:</strong> Before starting the new day's problems, spend 5-10 minutes re-attempting (from memory, no looking at your old code) whichever problem from <em>yesterday</em> felt hardest. If you can't reproduce it, that's fine — read your notes, not the solution, and try again.</p>
-<p><strong>End of Week (the Weekly Test, Part 4):</strong> A mixed, unlabeled set from that week's material. This tests pattern <em>recognition</em> under ambiguity, which is the actual interview skill — in a real interview nobody tells you "this is a sliding window problem."</p>
-<p><strong>Every 2 Weeks (Days 14, 28, 42, 56):</strong> A larger, timed, cumulative mixed session pulling from the last two weeks. This is where you catch pattern confusion that only shows up when multiple patterns are mixed together (e.g., confusing when a "contiguous subarray" problem needs Sliding Window vs. Prefix Sum — a very common real confusion, since both mention "subarray").</p>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="three-tier-mistake-classification">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Three-Tier Mistake Classification</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p>After every problem, sort it into exactly one bucket:</p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Tier</th>
-<th>When it applies</th>
-<th>What to do</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Re-solve</strong></td>
-<td>You got the <em>pattern</em> wrong, not just a bug — e.g., you tried brute force on a Sliding Window problem and never saw the window insight</td>
-<td>Re-attempt fully from scratch within 48 hours, without looking at your first attempt</td>
-</tr>
-<tr>
-<td><strong>Review conceptually</strong></td>
-<td>You got the pattern right but fumbled implementation (off-by-one, wrong STL container, edge case)</td>
-<td>Re-read your one-line note and the relevant template in Part 2; you don't need to re-type the whole solution, just confirm you now see the bug</td>
-</tr>
-<tr>
-<td><strong>Add to mistake list</strong></td>
-<td>Anything that took more than one attempt, regardless of tier above</td>
-<td>Goes into a running log (format below) that you sweep through entirely on Day 56</td>
-</tr>
-</tbody>
-</table></div>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="mistake-log-template">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Mistake Log Template</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p>Keep one running document (a spreadsheet or plain text file works fine) with a row per problem that gave you trouble:</p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Problem</th>
-<th>Pattern</th>
-<th>What went wrong</th>
-<th>The fix (one line)</th>
-<th>Tier</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>(example)</em> 3Sum (<a href="https://leetcode.com/problems/3sum/" target="_blank">#15</a>)</td>
-<td>Two Pointers</td>
-<td>Didn't skip duplicate values after a match, got duplicate triplets</td>
-<td>After finding a match, <code>while (l&lt;r &amp;&amp; nums[l]==nums[l-1]) l++;</code></td>
-<td>Review conceptually</td>
-</tr>
-</tbody>
-</table></div>
-<p>By Day 56 this log becomes your single most valuable revision artifact — it's a custom "greatest hits of my own blind spots" list, far more efficient to review than re-scanning all 197 problems.</p>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="what-not-to-do">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>What NOT to Do</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<ul>
-<li>Don't re-solve a problem you got right on the first try just because it's been two weeks — recognition-check it in the weekly/biweekly tests instead.</li>
-<li>Don't move on from a <strong>Re-solve</strong> tier problem without actually re-attempting it — reading the solution and nodding along feels like progress but doesn't build recall.</li>
-<li>Don't skip writing the same-day one-liner because you're in a hurry — it takes 2 minutes and is the difference between this being a "pattern recognition" plan versus just another "200 problems solved" checkbox exercise.</li>
-</ul>
-<hr />
-
-  </div>
-</section>
-<h2 id="part-8-final-interview-preparation-strategy">Part 8 — Final Interview Preparation Strategy</h2>
-<section class="pattern-section-card" id="how-to-run-day-56-the-capstone">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>How to Run Day 56 (the capstone)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<ol>
-<li><strong>Morning (45 min):</strong> Take Test 8 from Part 4 as a single timed block — 8 problems, ~5-6 min each to <em>identify the pattern and outline an approach</em> (not fully code all 8; this is a recognition drill, not a coding marathon). Write down your pattern guess for each before checking the answer key.</li>
-<li><strong>Afternoon:</strong> Fully code 2-3 of those 8 problems under real interview conditions (45 min each, no hints, explain your approach out loud as if to an interviewer, including time/space complexity, before writing code).</li>
-<li><strong>Evening:</strong> Read your entire mistake log from Part 7, start to finish. For every "Re-solve" tier entry you haven't cleared yet, do one final attempt.</li>
-</ol>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="how-weeks-7-8-should-feel-different-from-weeks-1-6">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>How Weeks 7-8 Should Feel Different From Weeks 1-6</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p>In Weeks 1-6 the goal was learning — it's fine to look at recognition clues before attempting a problem. From Week 7 onward, treat every new problem as a mini mock interview:
-- <strong>Read the problem once, then talk through your approach out loud</strong> (or in writing) before coding anything, including a brute force and why it's insufficient.
-- <strong>State time and space complexity</strong> before you finish coding, not as an afterthought.
-- <strong>Write test cases yourself</strong> (including an edge case: empty input, single element, all-duplicate values) rather than only checking against the examples given.
-- <strong>Timebox strictly.</strong> If you're stuck past the time limit, look at only the <em>pattern name</em>, not the solution, and try to finish it yourself from there.</p>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="mock-interview-practice-beyond-day-56">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Mock Interview Practice (Beyond Day 56)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p>Two to three times during Weeks 7-8, run a fuller mock: pick 1-2 problems you haven't seen from this plan's "OPTIONAL" tier (they're real problems you skipped, which makes them genuinely unseen), give yourself 35-45 minutes total, and — if possible — have a friend, peer, or even a rubber duck simulate an interviewer by asking you to explain your reasoning at each step. The skill being tested in a real loop is not "can you solve this" in isolation, it's "can you solve this while narrating your thought process, handling a hint gracefully, and writing clean code under mild social pressure." Practicing silently only builds half of that skill.</p>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="weak-topic-revision-priority-if-time-is-short-in-week-8">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Weak-Topic Revision Priority (if time is short in Week 8)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p>If you have to cut something in the final week, cut in this order (least costly first): OPTIONAL-tagged problems you haven't done yet → SHOULD DO problems in patterns you've already tested well on → SHOULD DO problems in patterns from your mistake log. <strong>Never cut:</strong> anything tagged MUST DO, and never cut same-day/next-day revision on problems you got wrong — those are the highest-value minutes in the entire plan.</p>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="beyond-pure-dsa-a-brief-note">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Beyond Pure DSA (a brief note)</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<p>This plan covers algorithmic pattern recognition, which is necessary but not sufficient for a full interview loop. Two things worth 30-60 minutes total, not part of the daily problem count above: (1) a template for narrating your approach out loud in the first 60 seconds of any coding interview (restate the problem, state a brute force, state its complexity, then say what you'd optimize and why); (2) if your target roles include senior/broader loops, a short read-through of system-design and behavioral-interview basics — outside this plan's scope, but worth not leaving to the last week.</p>
-
-  </div>
-</section>
-<section class="pattern-section-card" id="final-readiness-checklist">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>Final Readiness Checklist</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-<ul>
-<li>[ ] I can state the recognition clue for all 22 patterns without looking at Part 5</li>
-<li>[ ] I can write the core C++ template for each pattern from memory (not the exact problem, the <em>shape</em> of the code)</li>
-<li>[ ] My mistake log has zero remaining "Re-solve" tier entries</li>
-<li>[ ] I've completed all 8 Weekly Tests and Test 8 (final mock) with a self-identified pattern-accuracy above ~90%</li>
-<li>[ ] I can explain, out loud, in under 60 seconds each: why Sliding Window beats brute force, why a monotonic stack is O(n) not O(n²), why 0/1 knapsack iterates capacity downward, and the difference between BFS and DFS use cases</li>
-<li>[ ] I've done at least 2 full mock interviews narrating my approach out loud, not just silent coding</li>
-</ul>
-<hr />
-
-  </div>
-</section>
-<h2 id="sources-evidence-note">Sources &amp; Evidence Note</h2>
-<p>Frequency and pattern-importance claims in this plan are a synthesis of: NeetCode 150 and Blind 75 pattern groupings (educative.io comparative write-ups, 2025-2026), Grind 75's "top 169 by popularity, ranked to 75" methodology, LeetCode company-tag aggregation repositories (e.g. community-maintained "leetcode-company-wise-problems" datasets), a 2025 "most-asked questions by company" community round-up (LeetCode Discuss), and pattern-focused breakdowns of Dynamic Programming (0/1 &amp; unbounded knapsack, LCS, LIS, Kadane's, palindrome DP) from multiple 2025 DP-pattern guides. None of these publish exact percentages, and none is a single authoritative source — LeetCode itself does not release real interview frequency data publicly, and per-company frequency shifts over time and across interview loops. Where this plan says "MUST DO" or gives a 🔥 rating, treat it as a defensible synthesis converging across these sources, not a verified statistic — and remember the plan's own goal (pattern recognition over memorization) matters more than any single problem's ranking.</p>
 </div>
-<script>
-function toggleTheme() {
-  var root = document.documentElement;
-  var current = root.getAttribute('data-theme');
-  if (current === 'dark') { root.setAttribute('data-theme', 'light'); }
-  else if (current === 'light') { root.removeAttribute('data-theme'); }
-  else { root.setAttribute('data-theme', 'dark'); }
-}
-</script>
-</main>
 
 <!-- Note Modal -->
-<div id="note-modal" class="modal-overlay">
-  <div class="modal-container">
+<div id="note-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-card">
     <div class="modal-header">
-      <div class="modal-title-group">
-        <section class="pattern-section-card" id="modal-title">
-  <div class="pattern-header">
-    <div class="pattern-title-group">
-      <h3>📝 Question Notes</h3>
-    </div>
-    <button class="toggle-section-btn" type="button">
-      <span class="toggle-text">Close Section</span>
-      <span class="chevron-icon">▼</span>
-    </button>
-  </div>
-  <div class="pattern-body">
-        <div id="modal-subtitle" class="modal-subtitle">Stored in browser memory</div>
-      </div>
-      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close">&times;</button>
+      <div><h3 id="modal-title">Problem Note</h3><span id="modal-subtitle"></span></div>
+      <button id="modal-close-btn" class="close-btn">&times;</button>
     </div>
     <div class="modal-body">
-      <textarea id="note-textarea" class="modal-textarea" placeholder="Write your notes, key insights, C++ code snippet, or edge cases here..."></textarea>
+      <textarea id="note-textarea" placeholder="Write your notes, intuition, edge cases, time complexity..."></textarea>
     </div>
     <div class="modal-footer">
-      <div id="save-status" class="save-status">Auto-saves as you type...</div>
-      <div>
-        <button id="modal-clear-btn" class="btn btn-sm">Clear Note</button>
-      </div>
+      <span id="save-status" class="save-status">Saved</span>
+      <button id="modal-clear-btn" class="btn btn-danger">Delete Note</button>
     </div>
   </div>
 </div>
-<script src="script.js"></script>
 
+</main>
+<script src="script.js"></script>
 </body>
 </html>
-
-  </div>
-</section>
